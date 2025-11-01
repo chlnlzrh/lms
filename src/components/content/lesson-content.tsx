@@ -174,24 +174,106 @@ export function LessonContent({
     { label: lesson.frontmatter.title }
   ]
 
-  // Process content - simple HTML rendering for stability
+  // Process content with enhanced formatting and structure
   const processContent = (htmlContent: string) => {
-    // Always render enhanced HTML with consistent styling
-    const enhancedContent = htmlContent.replace(
-      /<pre><code class="language-(\w+)">([\s\S]*?)<\/code><\/pre>/g,
-      (match, language, code) => {
-        return `<div class="my-4 relative">
-          <div class="bg-gray-800 text-gray-200 rounded-t-lg px-3 py-1 text-xs font-mono">
-            ${language || 'code'}
-          </div>
-          <pre class="bg-gray-900 text-gray-100 rounded-b-lg p-4 overflow-x-auto"><code class="language-${language}">${code}</code></pre>
+    // Enhanced content processing with better formatting
+    let enhancedContent = htmlContent
+      // Style code blocks with proper spacing and language labels
+      .replace(
+        /<pre><code class="language-(\w+)">([\s\S]*?)<\/code><\/pre>/g,
+        (match, language, code) => {
+          return `<div class="my-8 relative">
+            <div class="bg-gray-800 text-gray-200 rounded-t-lg px-4 py-2 text-xs font-mono border-l-4 border-blue-500">
+              ${language || 'code'}
+            </div>
+            <pre class="bg-gray-900 text-gray-100 rounded-b-lg p-4 overflow-x-auto border-l-4 border-blue-500"><code class="language-${language}">${code}</code></pre>
+          </div>`
+        }
+      )
+      // Style plain code blocks without language
+      .replace(/<pre><code>([\s\S]*?)<\/code><\/pre>/g, 
+        `<div class="my-8 relative">
+          <pre class="bg-gray-900 text-gray-100 rounded-lg p-4 overflow-x-auto border-l-4 border-blue-500"><code>$1</code></pre>
         </div>`
-      }
-    )
+      )
+      // Style inline code
+      .replace(/<code>/g, '<code class="bg-gray-100 dark:bg-gray-800 px-1.5 py-0.5 rounded text-sm font-mono text-gray-800 dark:text-gray-200">')
+      // Style headings with proper spacing and typography
+      .replace(/<h1>/g, '<h1 class="text-3xl font-bold text-gray-900 dark:text-white mt-12 mb-6 pb-3 border-b-2 border-gray-200 dark:border-gray-700">')
+      .replace(/<h2>/g, '<h2 class="text-2xl font-semibold text-gray-900 dark:text-white mt-10 mb-5 pb-2 border-b border-gray-200 dark:border-gray-700">')
+      .replace(/<h3>/g, '<h3 class="text-xl font-medium text-gray-900 dark:text-white mt-8 mb-4">')
+      .replace(/<h4>/g, '<h4 class="text-lg font-medium text-gray-900 dark:text-white mt-6 mb-3">')
+      .replace(/<h5>/g, '<h5 class="text-base font-medium text-gray-900 dark:text-white mt-5 mb-2">')
+      .replace(/<h6>/g, '<h6 class="text-sm font-medium text-gray-900 dark:text-white mt-4 mb-2">')
+      // Style paragraphs with proper spacing
+      .replace(/<p>/g, '<p class="mb-6 leading-7 text-gray-700 dark:text-gray-300 text-base tracking-wide">')
+      // Special handling for question headers
+      .replace(/(<h[1-6][^>]*>)What is ([^?<]+)\?(<\/h[1-6]>)/gi, '$1<span class="text-blue-600 dark:text-blue-400">❓</span> What is $2?$3')
+      // Special handling for "Key Importance:" sections
+      .replace(/(<strong[^>]*>|\*\*)?Key Importance:?(\*\*|<\/strong>)?/gi, 
+        '<div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 my-6"><h4 class="text-lg font-semibold text-blue-700 dark:text-blue-300 mb-3 flex items-center"><span class="mr-2">🔑</span>Key Importance</h4>')
+      // Special handling for "Complexity Level:" sections
+      .replace(/(<strong[^>]*>|\*\*)?Complexity Level:?(\*\*|<\/strong>)?/gi, 
+        '<div class="bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-lg p-4 my-6"><h4 class="text-lg font-semibold text-purple-700 dark:text-purple-300 mb-3 flex items-center"><span class="mr-2">📊</span>Complexity Level</h4>')
+      // Special handling for "Core Concepts" sections
+      .replace(/(<h[1-6][^>]*>)Core Concepts(<\/h[1-6]>)/gi, '$1<span class="text-green-600 dark:text-green-400">💡</span> Core Concepts$2')
+      // Special handling for "Theory" sections
+      .replace(/(<h[1-6][^>]*>)Theory(<\/h[1-6]>)/gi, '$1<span class="text-indigo-600 dark:text-indigo-400">📚</span> Theory$2')
+      // Special handling for "Why It Matters" sections
+      .replace(/(<h[1-6][^>]*>)Why It Matters([^<]*)?(<\/h[1-6]>)/gi, '$1<span class="text-orange-600 dark:text-orange-400">🎯</span> Why It Matters$2$3')
+      // Special handling for "Real-World Applications" sections
+      .replace(/(<h[1-6][^>]*>)Real-World Applications?(<\/h[1-6]>)/gi, '$1<span class="text-teal-600 dark:text-teal-400">🌍</span> Real-World Applications$2')
+      // Special handling for "Implementation" sections
+      .replace(/(<h[1-6][^>]*>)Implementation([^<]*)?(<\/h[1-6]>)/gi, '$1<span class="text-red-600 dark:text-red-400">⚙️</span> Implementation$2$3')
+      // Special handling for "Best Practices" sections
+      .replace(/(<h[1-6][^>]*>)Best Practices(<\/h[1-6]>)/gi, '$1<span class="text-emerald-600 dark:text-emerald-400">✅</span> Best Practices$2')
+      // Special handling for "Hands-On Exercises" sections
+      .replace(/(<h[1-6][^>]*>)Hands-On Exercises?(<\/h[1-6]>)/gi, '$1<span class="text-cyan-600 dark:text-cyan-400">🛠️</span> Hands-On Exercises$2')
+      // Special handling for "Common Challenges" sections
+      .replace(/(<h[1-6][^>]*>)Common Challenges([^<]*)?(<\/h[1-6]>)/gi, '$1<span class="text-amber-600 dark:text-amber-400">⚠️</span> Common Challenges$2$3')
+      // Special handling for "Key Takeaways" sections
+      .replace(/(<h[1-6][^>]*>)Key Takeaways(<\/h[1-6]>)/gi, '$1<span class="text-green-600 dark:text-green-400">🎯</span> Key Takeaways$2')
+      // Special handling for "Next Steps" sections
+      .replace(/(<h[1-6][^>]*>)Next Steps(<\/h[1-6]>)/gi, '$1<span class="text-blue-600 dark:text-blue-400">🚀</span> Next Steps$2')
+      // Special handling for scenario callouts
+      .replace(/(<strong[^>]*>|\*\*)?Scenario \d+:([^*<]+)(\*\*|<\/strong>)?/gi, 
+        '<div class="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 my-4"><h4 class="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2 flex items-center"><span class="mr-2">📋</span>Scenario: $2</h4>')
+      // Special handling for "Do" and "Avoid" lists
+      .replace(/✅ \*\*Do:\*\*/g, '<div class="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4 my-4"><h5 class="text-lg font-semibold text-green-700 dark:text-green-300 mb-3 flex items-center"><span class="mr-2">✅</span>Do</h5>')
+      .replace(/❌ \*\*Avoid:\*\*/g, '<div class="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-4 my-4"><h5 class="text-lg font-semibold text-red-700 dark:text-red-300 mb-3 flex items-center"><span class="mr-2">❌</span>Avoid</h5>')
+      // Style platform names with icons
+      .replace(/(\*\*)?Data Warehousing:?(\*\*)?/gi, '<strong class="font-semibold text-gray-900 dark:text-white"><span class="mr-1">🏗️</span>Data Warehousing:</strong>')
+      .replace(/(\*\*)?Snowflake Platform:?(\*\*)?/gi, '<strong class="font-semibold text-gray-900 dark:text-white"><span class="mr-1">❄️</span>Snowflake Platform:</strong>')
+      .replace(/(\*\*)?Data Quality:?(\*\*)?/gi, '<strong class="font-semibold text-gray-900 dark:text-white"><span class="mr-1">✅</span>Data Quality:</strong>')
+      .replace(/(\*\*)?Performance:?(\*\*)?/gi, '<strong class="font-semibold text-gray-900 dark:text-white"><span class="mr-1">⚡</span>Performance:</strong>')
+      .replace(/(\*\*)?ThoughtSpot:?(\*\*)?/gi, '<strong class="font-semibold text-gray-900 dark:text-white"><span class="mr-1">💭</span>ThoughtSpot:</strong>')
+      .replace(/(\*\*)?ETL\/ELT:?(\*\*)?/gi, '<strong class="font-semibold text-gray-900 dark:text-white"><span class="mr-1">🔄</span>ETL/ELT:</strong>')
+      // Style lists with better spacing and bullets
+      .replace(/<ul>/g, '<ul class="mb-6 space-y-2 ml-6">')
+      .replace(/<ol>/g, '<ol class="mb-6 space-y-2 ml-6">')
+      .replace(/<li>/g, '<li class="text-gray-700 dark:text-gray-300 leading-7 pl-2 marker:text-blue-500">')
+      // Style blockquotes
+      .replace(/<blockquote>/g, '<blockquote class="border-l-4 border-blue-500 pl-6 py-4 my-6 bg-blue-50 dark:bg-blue-900/20 rounded-r-lg italic text-gray-700 dark:text-gray-300">')
+      // Style strong/bold text
+      .replace(/<strong>/g, '<strong class="font-semibold text-gray-900 dark:text-white">')
+      // Style emphasis/italic text
+      .replace(/<em>/g, '<em class="italic text-gray-800 dark:text-gray-200">')
+      // Style tables
+      .replace(/<table>/g, '<div class="overflow-x-auto my-8"><table class="min-w-full border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden shadow-sm">')
+      .replace(/<\/table>/g, '</table></div>')
+      .replace(/<thead>/g, '<thead class="bg-gray-50 dark:bg-gray-800">')
+      .replace(/<th>/g, '<th class="px-6 py-3 text-left text-xs font-semibold text-gray-700 dark:text-gray-300 uppercase tracking-wider border-b border-gray-200 dark:border-gray-700">')
+      .replace(/<td>/g, '<td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300 border-b border-gray-200 dark:border-gray-700">')
+      // Style horizontal rules with better spacing
+      .replace(/<hr>/g, '<hr class="my-12 border-gray-200 dark:border-gray-700">')
+      // Close special section divs
+      .replace(/(<\/h[1-6]>)(\s*<p[^>]*>)/g, '$1</div>$2')
+      // Clean up any double divs that might have been created
+      .replace(/<\/div><\/div>/g, '</div>')
     
     return (
       <div 
-        className="prose prose-sm max-w-none dark:prose-invert"
+        className="lesson-content max-w-none prose-lg"
         dangerouslySetInnerHTML={{ __html: enhancedContent }}
       />
     )
@@ -290,10 +372,8 @@ export function LessonContent({
       </div>
 
       {/* Lesson Content */}
-      <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6">
-        <div className="prose prose-sm max-w-none dark:prose-invert">
-          {processContent(lesson.htmlContent)}
-        </div>
+      <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-8">
+        {processContent(lesson.htmlContent)}
       </div>
 
       {/* Prerequisites */}
