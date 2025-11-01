@@ -11,6 +11,14 @@ const CONTENT_BASE_PATH = path.join(process.cwd(), 'src', 'data')
 class ContentParser {
   private processor = remark().use(remarkGfm).use(remarkHtml)
 
+  private getTrackDirectory(track: 'ai' | 'data-engineering'): string {
+    const trackDirectoryMap = {
+      'ai': 'ai',
+      'data-engineering': 'de'
+    }
+    return trackDirectoryMap[track]
+  }
+
   async parseMarkdownToHtml(markdown: string): Promise<string> {
     const result = await this.processor.process(markdown)
     return result.toString()
@@ -118,7 +126,7 @@ class ContentParser {
       if (!moduleMatch) return null
       
       const moduleNumber = parseInt(moduleMatch[1])
-      const track = filePath.includes('/ai/') ? 'ai' : 'data-engineering'
+      const track = filePath.includes('/ai/') ? 'ai' : filePath.includes('/de/') ? 'data-engineering' : 'data-engineering'
       
       // Parse content for structured information
       const durationMatch = content.match(/\*\*Duration:\*\*\s*(.+)/i)
@@ -151,7 +159,8 @@ class ContentParser {
   }
 
   async getAllLessons(track: 'ai' | 'data-engineering'): Promise<ParsedLesson[]> {
-    const lessonsPath = path.join(CONTENT_BASE_PATH, track, 'lessons')
+    const trackDir = this.getTrackDirectory(track)
+    const lessonsPath = path.join(CONTENT_BASE_PATH, trackDir, 'lessons')
     
     if (!fs.existsSync(lessonsPath)) {
       console.warn(`Lessons directory not found: ${lessonsPath}`)
@@ -187,7 +196,8 @@ class ContentParser {
 
   async getAllModules(track: 'ai' | 'data-engineering'): Promise<ModuleDescription[]> {
     // First try to get modules from description files
-    const modulesPath = path.join(CONTENT_BASE_PATH, track, 'modules-descriptions')
+    const trackDir = this.getTrackDirectory(track)
+    const modulesPath = path.join(CONTENT_BASE_PATH, trackDir, 'modules-descriptions')
     
     if (fs.existsSync(modulesPath)) {
       const files = fs.readdirSync(modulesPath)
