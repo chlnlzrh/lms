@@ -1,0 +1,51 @@
+import {
+  Home,
+  ClipboardList,
+  BookOpen,
+  Bot,
+  Database,
+  Link,
+  Settings,
+  Cloud,
+  Shield,
+  ScrollText,
+  Briefcase,
+  GraduationCap,
+  Calendar,
+  Book,
+  Search,
+  User,
+  MessageCircle,
+  Circle,
+  ChevronRight,
+  ChevronDown,
+  Menu,
+  X
+} from 'lucide-react'
+
+export const Icons = {
+  Home,
+  ClipboardList,
+  BookOpen,
+  Bot,
+  Database,
+  Link,
+  Settings,
+  Cloud,
+  Shield,
+  ScrollText,
+  Briefcase,
+  GraduationCap,
+  Calendar,
+  Book,
+  Search,
+  User,
+  MessageCircle,
+  Circle,
+  ChevronRight,
+  ChevronDown,
+  Menu,
+  X
+} as const
+
+export type IconName = keyof typeof Icons
