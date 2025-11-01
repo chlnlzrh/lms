@@ -11,8 +11,7 @@ const nextConfig: NextConfig = {
   
   // Optimize for development performance
   devIndicators: {
-    buildActivity: true,
-    buildActivityPosition: 'bottom-right'
+    position: 'bottom-right'
   },
 
   // Enable source maps for better debugging

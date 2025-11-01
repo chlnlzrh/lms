@@ -6,6 +6,7 @@ import { Icons } from '@/components/ui/icons'
 import { cn } from '@/lib/utils'
 import { progressTracker } from '@/lib/progress-tracker'
 import { CodeBlock } from '@/components/ui/code-block'
+import { AICoachChat } from '@/components/ai-coach/ai-coach-chat'
 import { useState, useEffect } from 'react'
 import React from 'react'
 
@@ -425,6 +426,20 @@ export function LessonContent({
           <div></div>
         )}
       </div>
+
+      {/* AI Coach Chat */}
+      <AICoachChat 
+        lessonContext={{
+          title: lesson.frontmatter.title,
+          content: lesson.content,
+          track: lesson.track,
+          moduleNumber: lesson.moduleNumber,
+          estimatedReadTime: lesson.estimatedReadTime,
+          complexity: lesson.frontmatter.complexity,
+          topics: lesson.frontmatter.topics,
+          learningObjectives: lesson.frontmatter.learningObjectives
+        }}
+      />
     </div>
   )
 }

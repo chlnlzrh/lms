@@ -27,7 +27,8 @@ import {
   Bookmark,
   Flame,
   Trophy,
-  AlertCircle
+  AlertCircle,
+  Send
 } from 'lucide-react'
 
 export const Icons = {
@@ -59,7 +60,8 @@ export const Icons = {
   Bookmark,
   Flame,
   Trophy,
-  AlertCircle
+  AlertCircle,
+  Send
 } as const
 
 export type IconName = keyof typeof Icons
