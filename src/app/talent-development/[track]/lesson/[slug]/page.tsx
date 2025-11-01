@@ -37,9 +37,6 @@ async function LessonPageContent({ params }: LessonPageProps) {
         lesson={lesson}
         previousLesson={previousLesson}
         nextLesson={nextLesson}
-        onMarkComplete={() => {
-          // This will be handled client-side
-        }}
       />
     </MainLayout>
   )

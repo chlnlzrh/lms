@@ -1,0 +1,227 @@
+[
+  {
+    "id": "module-1",
+    "title": "Data & Database Fundamentals",
+    "subtitle": "Relational database concepts, data types, schema design, indexes and ACID properties",
+    "duration": "23 hours",
+    "lessons": 23,
+    "labs": 3,
+    "prerequisites": ["No prerequisites required"],
+    "keyTopics": [
+      "Database Fundamentals",
+      "ACID Properties",
+      "Data Types and Schema Design",
+      "Normalization",
+      "Indexing and Performance"
+    ],
+    "skillsGained": [
+      "Master relational database fundamentals and ACID properties",
+      "Understand data types, schema design, and normalization principles",
+      "Learn indexing strategies for optimal query performance",
+      "Distinguish between OLTP and OLAP systems",
+      "Apply database design best practices in real-world scenarios"
+    ]
+  },
+  {
+    "id": "module-2",
+    "title": "SQL & ELT Concepts",
+    "subtitle": "SQL fundamentals, advanced queries, window functions, and ELT paradigm",
+    "duration": "53 hours",
+    "lessons": 53,
+    "labs": 5,
+    "prerequisites": ["Module 1: Data & Database Fundamentals"],
+    "keyTopics": [
+      "Advanced SQL Techniques",
+      "Window Functions",
+      "ELT vs ETL Paradigms",
+      "Query Performance Optimization",
+      "Data Transformation Patterns"
+    ],
+    "skillsGained": [
+      "Master advanced SQL techniques including joins, CTEs, and window functions",
+      "Understand ELT vs ETL paradigms and when to use each approach",
+      "Optimize SQL queries for performance in large datasets",
+      "Apply SQL best practices for data transformation workflows",
+      "Design efficient data processing pipelines using SQL"
+    ]
+  },
+  {
+    "id": "module-3",
+    "title": "Data Warehousing Principles",
+    "subtitle": "Data warehouse architecture, loading patterns, and data quality principles",
+    "duration": "19 hours",
+    "lessons": 19,
+    "labs": 3,
+    "prerequisites": [
+      "Module 1: Data & Database Fundamentals",
+      "Module 2: SQL & ELT Concepts"
+    ],
+    "keyTopics": [
+      "Data Warehouse Architecture",
+      "ETL/ELT Loading Patterns",
+      "Data Quality Management",
+      "Modern Data Architecture"
+    ],
+    "skillsGained": [
+      "Understand data warehouse architecture and design principles",
+      "Master ETL/ELT loading patterns and batch processing techniques",
+      "Implement data quality frameworks and validation processes",
+      "Design dimensional models for analytical workloads",
+      "Apply governance and security best practices"
+    ]
+  },
+  {
+    "id": "module-4",
+    "title": "Data Modeling",
+    "subtitle": "Dimensional modeling, star schemas, slowly changing dimensions, and ERDs",
+    "duration": "33 hours",
+    "lessons": 33,
+    "labs": 4,
+    "prerequisites": ["Module 3: Data Warehousing Principles"],
+    "keyTopics": [
+      "Dimensional Modeling Fundamentals",
+      "Fact Table Design",
+      "Dimension Table Design",
+      "Slowly Changing Dimensions"
+    ],
+    "skillsGained": [
+      "Master dimensional modeling techniques for analytical systems",
+      "Design and implement star and snowflake schemas",
+      "Handle slowly changing dimensions with various SCD types",
+      "Create comprehensive entity relationship diagrams",
+      "Apply data modeling best practices for enterprise systems"
+    ]
+  },
+  {
+    "id": "module-5",
+    "title": "Snowflake-Specific Knowledge",
+    "subtitle": "Snowflake architecture, virtual warehouses, data loading, and optimization",
+    "duration": "55 hours",
+    "lessons": 55,
+    "labs": 6,
+    "prerequisites": ["Module 4: Data Modeling"],
+    "keyTopics": [
+      "Snowflake Architecture",
+      "Virtual Warehouses",
+      "Data Loading and Integration",
+      "Performance Optimization"
+    ],
+    "skillsGained": [
+      "Master Snowflake's unique architecture and components",
+      "Configure and optimize virtual warehouses for different workloads",
+      "Implement efficient data loading strategies in Snowflake",
+      "Apply Snowflake-specific performance optimization techniques",
+      "Understand Snowflake security and governance features"
+    ]
+  },
+  {
+    "id": "module-6",
+    "title": "ETL/ELT Design & Best Practices",
+    "subtitle": "Pipeline design principles, transformation patterns, and incremental loading",
+    "duration": "28 hours",
+    "lessons": 28,
+    "labs": 4,
+    "prerequisites": ["Module 5: Snowflake-Specific Knowledge"],
+    "keyTopics": [
+      "Pipeline Architecture",
+      "Data Transformation Patterns",
+      "Incremental Processing",
+      "Data Lineage and Governance"
+    ],
+    "skillsGained": [
+      "Design robust and scalable ETL/ELT pipelines",
+      "Implement advanced transformation patterns and techniques",
+      "Master incremental loading strategies for efficient processing",
+      "Establish data lineage and impact analysis capabilities",
+      "Apply pipeline design best practices for maintainability"
+    ]
+  },
+  {
+    "id": "module-7",
+    "title": "Data Governance, Quality & Metadata",
+    "subtitle": "Data governance principles, quality implementation, and testing strategies",
+    "duration": "32 hours",
+    "lessons": 32,
+    "labs": 3,
+    "prerequisites": ["Module 6: ETL/ELT Design & Best Practices"],
+    "keyTopics": [
+      "Data Governance Framework",
+      "Data Quality Management",
+      "Testing Strategies",
+      "Metadata Management"
+    ],
+    "skillsGained": [
+      "Establish comprehensive data governance frameworks",
+      "Implement automated data quality monitoring systems",
+      "Design and execute data testing strategies",
+      "Manage metadata and data catalog systems",
+      "Apply compliance and regulatory requirements"
+    ]
+  },
+  {
+    "id": "module-8",
+    "title": "Snowflake Security & Access Control",
+    "subtitle": "Authentication, authorization, RBAC, and security best practices",
+    "duration": "20 hours",
+    "lessons": 20,
+    "labs": 2,
+    "prerequisites": ["Module 7: Data Governance, Quality & Metadata"],
+    "keyTopics": [
+      "Authentication Systems",
+      "Role-Based Access Control",
+      "Data Security",
+      "Compliance and Auditing"
+    ],
+    "skillsGained": [
+      "Implement robust authentication and authorization systems",
+      "Configure Role-Based Access Control (RBAC) in Snowflake",
+      "Apply security policies and compliance requirements",
+      "Manage user access and privilege escalation",
+      "Monitor and audit security events and access patterns"
+    ]
+  },
+  {
+    "id": "module-9",
+    "title": "Reporting & BI Concepts",
+    "subtitle": "BI tools, ThoughtSpot, visualization design, and semantic layers",
+    "duration": "39 hours",
+    "lessons": 39,
+    "labs": 4,
+    "prerequisites": ["Module 8: Snowflake Security & Access Control"],
+    "keyTopics": [
+      "BI Platform Architecture",
+      "ThoughtSpot Implementation",
+      "Visualization Design",
+      "Semantic Layer Design"
+    ],
+    "skillsGained": [
+      "Master business intelligence tools and platforms",
+      "Design effective visualizations and dashboards",
+      "Implement semantic layers for business users",
+      "Optimize reporting performance and user experience",
+      "Apply BI best practices for enterprise deployments"
+    ]
+  },
+  {
+    "id": "module-10",
+    "title": "Unix/Linux & File Handling",
+    "subtitle": "Unix fundamentals, shell scripting, file processing, and log analysis",
+    "duration": "25 hours",
+    "lessons": 25,
+    "labs": 3,
+    "prerequisites": ["Module 9: Reporting & BI Concepts"],
+    "keyTopics": [
+      "Unix/Linux Fundamentals",
+      "Shell Scripting",
+      "File Processing",
+      "Log Analysis"
+    ],
+    "skillsGained": [
+      "Master Unix/Linux command line operations",
+      "Write efficient shell scripts for automation",
+      "Process large files and perform data manipulation",
+      "Analyze log files and extract meaningful insights",
+      "Apply Unix tools for data engineering workflows"
+    ]
+  }
+]

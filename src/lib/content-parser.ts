@@ -6,7 +6,7 @@ import remarkHtml from 'remark-html'
 import remarkGfm from 'remark-gfm'
 import { ParsedLesson, LessonFrontmatter, ModuleDescription, TrackInfo } from '@/types/content'
 
-const CONTENT_BASE_PATH = path.join(process.cwd(), '..', '..', 'ai', 'training')
+const CONTENT_BASE_PATH = path.join(process.cwd(), 'src', 'data')
 
 class ContentParser {
   private processor = remark().use(remarkGfm).use(remarkHtml)

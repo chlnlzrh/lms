@@ -19,8 +19,15 @@ import {
   Circle,
   ChevronRight,
   ChevronDown,
+  ChevronLeft,
   Menu,
-  X
+  X,
+  Clock,
+  Timer,
+  Bookmark,
+  Flame,
+  Trophy,
+  AlertCircle
 } from 'lucide-react'
 
 export const Icons = {
@@ -44,8 +51,15 @@ export const Icons = {
   Circle,
   ChevronRight,
   ChevronDown,
+  ChevronLeft,
   Menu,
-  X
+  X,
+  Clock,
+  Timer,
+  Bookmark,
+  Flame,
+  Trophy,
+  AlertCircle
 } as const
 
 export type IconName = keyof typeof Icons
