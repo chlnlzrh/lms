@@ -5,6 +5,7 @@ import { Icons } from '@/components/ui/icons'
 import { ProgressBar } from '@/components/ui/progress-bar'
 import { contentParser } from '@/lib/content-parser'
 import { progressTracker } from '@/lib/progress-tracker'
+import { ModuleDetailsSection } from '@/components/module/module-details-section'
 import { Suspense } from 'react'
 import Link from 'next/link'
 
@@ -14,6 +15,8 @@ interface ModulePageProps {
     module: string
   }>
 }
+
+
 
 async function ModulePageContent({ params }: ModulePageProps) {
   const resolvedParams = await params
@@ -161,6 +164,9 @@ async function ModulePageContent({ params }: ModulePageProps) {
             />
           </div>
         </div>
+
+        {/* Enhanced Module Information */}
+        <ModuleDetailsSection moduleNumber={moduleNumber} color={color} />
 
         {/* Learning Objectives */}
         {selectedModule.learningObjectives && selectedModule.learningObjectives.length > 0 && (
@@ -314,6 +320,7 @@ function LoadingFallback() {
     </MainLayout>
   )
 }
+
 
 export default function ModulePage({ params }: ModulePageProps) {
   return (
