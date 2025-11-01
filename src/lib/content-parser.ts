@@ -39,12 +39,23 @@ class ContentParser {
       }
     }
 
-    // DE lessons: Topic-Area--specific-topic--date.md
-    const deMatch = filename.match(/^(.+?)--(.+?)--\d{4}-\d{2}-\d{2}\.md$/)
+    // DE lessons: M01-L001-topic-name--date.md
+    const deMatch = filename.match(/^M(\d+)-L(\d+)-(.+?)--\d{4}-\d{2}-\d{2}\.md$/)
     if (deMatch) {
       return {
         track: 'data-engineering',
-        slug: `${deMatch[1]}-${deMatch[2]}`
+        moduleNumber: parseInt(deMatch[1]),
+        lessonNumber: parseInt(deMatch[2]),
+        slug: deMatch[3]
+      }
+    }
+
+    // Legacy DE lessons: Topic-Area--specific-topic--date.md
+    const legacyDeMatch = filename.match(/^(.+?)--(.+?)--\d{4}-\d{2}-\d{2}\.md$/)
+    if (legacyDeMatch) {
+      return {
+        track: 'data-engineering',
+        slug: `${legacyDeMatch[1]}-${legacyDeMatch[2]}`
       }
     }
 
@@ -155,28 +166,114 @@ class ContentParser {
       files.map(file => this.parseLesson(path.join(lessonsPath, file)))
     )
 
-    return lessons.filter(lesson => lesson !== null) as ParsedLesson[]
+    const validLessons = lessons.filter(lesson => lesson !== null) as ParsedLesson[]
+
+    // Sort lessons by module number, then by lesson number
+    return validLessons.sort((a, b) => {
+      // First sort by module number
+      if (a.moduleNumber && b.moduleNumber && a.moduleNumber !== b.moduleNumber) {
+        return a.moduleNumber - b.moduleNumber
+      }
+      
+      // Then sort by lesson number within the same module
+      if (a.lessonNumber && b.lessonNumber) {
+        return a.lessonNumber - b.lessonNumber
+      }
+      
+      // Fallback to alphabetical sorting if no numbers available
+      return a.slug.localeCompare(b.slug)
+    })
   }
 
   async getAllModules(track: 'ai' | 'data-engineering'): Promise<ModuleDescription[]> {
+    // First try to get modules from description files
     const modulesPath = path.join(CONTENT_BASE_PATH, track, 'modules-descriptions')
     
-    if (!fs.existsSync(modulesPath)) {
-      console.warn(`Modules directory not found: ${modulesPath}`)
-      return []
+    if (fs.existsSync(modulesPath)) {
+      const files = fs.readdirSync(modulesPath)
+        .filter(file => file.endsWith('.md'))
+        .filter(file => !file.startsWith('.'))
+
+      if (files.length > 0) {
+        const modules = await Promise.all(
+          files.map(file => this.parseModuleDescription(path.join(modulesPath, file)))
+        )
+
+        return modules
+          .filter(module => module !== null)
+          .sort((a, b) => a!.moduleNumber - b!.moduleNumber) as ModuleDescription[]
+      }
     }
 
-    const files = fs.readdirSync(modulesPath)
-      .filter(file => file.endsWith('.md'))
-      .filter(file => !file.startsWith('.'))
+    // If no module descriptions found, generate modules dynamically from lessons
+    console.log(`No module descriptions found for ${track}, generating from lessons...`)
+    return this.generateModulesFromLessons(track)
+  }
 
-    const modules = await Promise.all(
-      files.map(file => this.parseModuleDescription(path.join(modulesPath, file)))
-    )
+  async generateModulesFromLessons(track: 'ai' | 'data-engineering'): Promise<ModuleDescription[]> {
+    const lessons = await this.getAllLessons(track)
+    
+    // Group lessons by module number
+    const moduleGroups: { [moduleNumber: number]: ParsedLesson[] } = {}
+    
+    lessons.forEach(lesson => {
+      if (lesson.moduleNumber) {
+        if (!moduleGroups[lesson.moduleNumber]) {
+          moduleGroups[lesson.moduleNumber] = []
+        }
+        moduleGroups[lesson.moduleNumber].push(lesson)
+      }
+    })
+
+    // Content Structure mappings for module titles
+    const aiModuleTitles = {
+      1: 'AI Foundation & Tool Fluency',
+      2: 'AI in the Software Development Lifecycle', 
+      3: 'AI-Augmented Engineering (Role-Specific)',
+      4: 'AI Agent & Platform Architecture',
+      5: 'AI Strategy, Delivery & Governance',
+      6: 'Continuous Learning & Innovation Culture'
+    }
+
+    const deModuleTitles = {
+      1: 'Data Engineering Foundations',
+      2: 'SQL & Data Modeling',
+      3: 'Python for Data Engineering',
+      4: 'Modern Warehouse & Transformation',
+      5: 'Batch Processing & Cloud Platforms', 
+      6: 'Orchestration & DataOps',
+      7: 'Real-Time Data & Streaming'
+    }
+
+    const moduleTitles = track === 'ai' ? aiModuleTitles : deModuleTitles
+
+    // Generate module descriptions
+    const modules: ModuleDescription[] = Object.entries(moduleGroups)
+      .map(([moduleNumStr, moduleLessons]) => {
+        const moduleNumber = parseInt(moduleNumStr)
+        const title = moduleTitles[moduleNumber as keyof typeof moduleTitles] || `Module ${moduleNumber}`
+        
+        // Calculate estimated duration (assume 5 minutes per lesson)
+        const estimatedMinutes = moduleLessons.length * 5
+        const hours = Math.ceil(estimatedMinutes / 60)
+        
+        return {
+          id: `${track}-module-${moduleNumber}`,
+          title,
+          description: `Learn key concepts and practical skills in ${title.toLowerCase()}`,
+          duration: `${hours} hours`,
+          lessonCount: moduleLessons.length,
+          labCount: 0,
+          prerequisites: [],
+          learningObjectives: [],
+          topics: [],
+          track: track as 'ai' | 'data-engineering',
+          moduleNumber
+        }
+      })
+      .sort((a, b) => a.moduleNumber - b.moduleNumber)
 
     return modules
-      .filter(module => module !== null)
-      .sort((a, b) => a!.moduleNumber - b!.moduleNumber) as ModuleDescription[]
   }
 
   async getTrackInfo(track: 'ai' | 'data-engineering'): Promise<TrackInfo> {
