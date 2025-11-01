@@ -5,15 +5,14 @@ import { Breadcrumbs } from '@/components/ui/breadcrumbs'
 import { Icons } from '@/components/ui/icons'
 import { cn } from '@/lib/utils'
 import { progressTracker } from '@/lib/progress-tracker'
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
-import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
+import { CodeBlock } from '@/components/ui/code-block'
 import { useState, useEffect } from 'react'
+import React from 'react'
 
 interface LessonContentProps {
   lesson: ParsedLesson
   previousLesson?: ParsedLesson
   nextLesson?: ParsedLesson
-  onMarkComplete?: () => void
   isCompleted?: boolean
   className?: string
 }
@@ -22,7 +21,6 @@ export function LessonContent({
   lesson, 
   previousLesson, 
   nextLesson, 
-  onMarkComplete,
   isCompleted = false,
   className 
 }: LessonContentProps) {
@@ -69,12 +67,92 @@ export function LessonContent({
     }
   }, [lesson])
 
+  // Add syntax highlighting CSS after mount
+  useEffect(() => {
+    // Add enhanced syntax highlighting styles
+    const addSyntaxHighlightingCSS = () => {
+      if (document.getElementById('syntax-highlighting-styles')) return
+      
+      const style = document.createElement('style')
+      style.id = 'syntax-highlighting-styles'
+      style.textContent = `
+        .language-python .token.comment,
+        .language-python .token.prolog,
+        .language-python .token.doctype,
+        .language-python .token.cdata {
+          color: #8e9aaf !important;
+        }
+        .language-python .token.punctuation {
+          color: #d6deeb !important;
+        }
+        .language-python .token.property,
+        .language-python .token.tag,
+        .language-python .token.boolean,
+        .language-python .token.number,
+        .language-python .token.constant,
+        .language-python .token.symbol,
+        .language-python .token.deleted {
+          color: #addb67 !important;
+        }
+        .language-python .token.selector,
+        .language-python .token.attr-name,
+        .language-python .token.string,
+        .language-python .token.char,
+        .language-python .token.builtin,
+        .language-python .token.inserted {
+          color: #ecc48d !important;
+        }
+        .language-python .token.operator,
+        .language-python .token.entity,
+        .language-python .token.url {
+          color: #7fdbca !important;
+        }
+        .language-python .token.atrule,
+        .language-python .token.attr-value,
+        .language-python .token.keyword {
+          color: #c792ea !important;
+        }
+        .language-python .token.function,
+        .language-python .token.class-name {
+          color: #82aaff !important;
+        }
+        .language-python .token.regex,
+        .language-python .token.important,
+        .language-python .token.variable {
+          color: #d6deeb !important;
+        }
+        .language-python .token.important,
+        .language-python .token.bold {
+          font-weight: bold !important;
+        }
+        .language-python .token.italic {
+          font-style: italic !important;
+        }
+      `
+      document.head.appendChild(style)
+    }
+
+    // Run Prism highlighting on code blocks
+    const highlightCodeBlocks = () => {
+      if (typeof window !== 'undefined' && (window as any).Prism) {
+        (window as any).Prism.highlightAll()
+      } else {
+        // Load Prism if not available
+        import('prismjs').then((Prism) => {
+          import('prismjs/components/prism-python').then(() => {
+            Prism.highlightAll()
+          })
+        })
+      }
+    }
+
+    addSyntaxHighlightingCSS()
+    highlightCodeBlocks()
+  }, [])
+
   const handleMarkComplete = () => {
     progressTracker.markLessonComplete(lesson, timeSpent)
     setCompleted(true)
-    if (onMarkComplete) {
-      onMarkComplete()
-    }
   }
 
   const handleToggleBookmark = () => {
@@ -96,45 +174,27 @@ export function LessonContent({
     { label: lesson.frontmatter.title }
   ]
 
-  // Process content to highlight code blocks
-  const processContent = (content: string) => {
-    // Split content by code blocks
-    const parts = content.split(/(```[\s\S]*?```)/g)
-    
-    return parts.map((part, index) => {
-      if (part.startsWith('```')) {
-        // Extract language and code
-        const lines = part.split('\n')
-        const language = lines[0].replace('```', '').trim() || 'text'
-        const code = lines.slice(1, -1).join('\n')
-        
-        return (
-          <div key={index} className="my-4">
-            <SyntaxHighlighter
-              language={language}
-              style={tomorrow}
-              customStyle={{
-                background: '#1a1a1a',
-                borderRadius: '8px',
-                fontSize: '12px',
-                lineHeight: '1.4'
-              }}
-            >
-              {code}
-            </SyntaxHighlighter>
+  // Process content - simple HTML rendering for stability
+  const processContent = (htmlContent: string) => {
+    // Always render enhanced HTML with consistent styling
+    const enhancedContent = htmlContent.replace(
+      /<pre><code class="language-(\w+)">([\s\S]*?)<\/code><\/pre>/g,
+      (match, language, code) => {
+        return `<div class="my-4 relative">
+          <div class="bg-gray-800 text-gray-200 rounded-t-lg px-3 py-1 text-xs font-mono">
+            ${language || 'code'}
           </div>
-        )
-      } else {
-        // Regular markdown content
-        return (
-          <div 
-            key={index}
-            className="prose prose-sm max-w-none dark:prose-invert"
-            dangerouslySetInnerHTML={{ __html: part }}
-          />
-        )
+          <pre class="bg-gray-900 text-gray-100 rounded-b-lg p-4 overflow-x-auto"><code class="language-${language}">${code}</code></pre>
+        </div>`
       }
-    })
+    )
+    
+    return (
+      <div 
+        className="prose prose-sm max-w-none dark:prose-invert"
+        dangerouslySetInnerHTML={{ __html: enhancedContent }}
+      />
+    )
   }
 
   return (
@@ -232,7 +292,7 @@ export function LessonContent({
       {/* Lesson Content */}
       <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6">
         <div className="prose prose-sm max-w-none dark:prose-invert">
-          {processContent(lesson.content)}
+          {processContent(lesson.htmlContent)}
         </div>
       </div>
 
