@@ -28,18 +28,7 @@ class ContentParser {
     lessonNumber?: number
     slug: string
   } {
-    // AI lessons: M01-L001-topic-name.md
-    const aiMatch = filename.match(/^M(\d+)-L(\d+)-(.+)\.md$/)
-    if (aiMatch) {
-      return {
-        track: 'ai',
-        moduleNumber: parseInt(aiMatch[1]),
-        lessonNumber: parseInt(aiMatch[2]),
-        slug: aiMatch[3]
-      }
-    }
-
-    // DE lessons: M01-L001-topic-name--date.md
+    // DE lessons: M01-L001-topic-name--date.md (check first - more specific)
     const deMatch = filename.match(/^M(\d+)-L(\d+)-(.+?)--\d{4}-\d{2}-\d{2}\.md$/)
     if (deMatch) {
       return {
@@ -47,6 +36,17 @@ class ContentParser {
         moduleNumber: parseInt(deMatch[1]),
         lessonNumber: parseInt(deMatch[2]),
         slug: deMatch[3]
+      }
+    }
+
+    // AI lessons: M01-L001-topic-name.md (check second - more general)
+    const aiMatch = filename.match(/^M(\d+)-L(\d+)-(.+)\.md$/)
+    if (aiMatch) {
+      return {
+        track: 'ai',
+        moduleNumber: parseInt(aiMatch[1]),
+        lessonNumber: parseInt(aiMatch[2]),
+        slug: aiMatch[3]
       }
     }
 
