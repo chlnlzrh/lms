@@ -22,12 +22,12 @@ async function ModulePageContent({ params }: ModulePageProps) {
   const resolvedParams = await params
   const { track, module } = resolvedParams
   
-  if (!['ai', 'data-engineering'].includes(track)) {
+  if (!['ai', 'data-engineering', 'saas'].includes(track)) {
     notFound()
   }
 
   // Get track info and modules
-  const trackInfo = await contentParser.getTrackInfo(track as 'ai' | 'data-engineering')
+  const trackInfo = await contentParser.getTrackInfo(track as 'ai' | 'data-engineering' | 'saas')
   const modules = trackInfo.modules
   // Extract module number from module parameter (e.g., "module-1" -> 1)
   const moduleNumber = parseInt(module.replace('module-', ''))
@@ -39,7 +39,7 @@ async function ModulePageContent({ params }: ModulePageProps) {
   }
 
   // Get all lessons for this track and filter by module
-  const allLessons = await contentParser.getAllLessons(track as 'ai' | 'data-engineering')
+  const allLessons = await contentParser.getAllLessons(track as 'ai' | 'data-engineering' | 'saas')
   const moduleLessons = allLessons.filter(lesson => lesson.moduleNumber === moduleNumber)
 
   // Get user progress
@@ -60,12 +60,14 @@ async function ModulePageContent({ params }: ModulePageProps) {
 
   const trackColors = {
     ai: 'blue',
-    'data-engineering': 'green'
+    'data-engineering': 'green',
+    'saas': 'purple'
   }
 
   const trackIcons = {
     ai: Icons.Bot,
-    'data-engineering': Icons.Database
+    'data-engineering': Icons.Database,
+    'saas': Icons.Cloud
   }
 
   const color = trackColors[track as keyof typeof trackColors]
@@ -75,7 +77,7 @@ async function ModulePageContent({ params }: ModulePageProps) {
     { label: 'Dashboard', href: '/' },
     { label: 'Talent Development', href: '/talent-development' },
     { 
-      label: track === 'ai' ? 'AI Training' : 'Data Engineering', 
+      label: track === 'ai' ? 'AI Training' : track === 'saas' ? 'SaaS Development' : 'Data Engineering', 
       href: `/talent-development/${track}` 
     },
     { label: selectedModule.title }

@@ -23,16 +23,14 @@ const mockModuleProgress = {
 
 async function TrackPageContent({ params }: TrackPageProps) {
   const resolvedParams = await params
-  const trackId = resolvedParams.track as 'ai' | 'data-engineering'
+  const trackId = resolvedParams.track as 'ai' | 'data-engineering' | 'saas'
   
-  if (!['ai', 'data-engineering'].includes(trackId)) {
+  if (!['ai', 'data-engineering', 'saas'].includes(trackId)) {
     notFound()
   }
 
-  const [trackInfo, modules] = await Promise.all([
-    contentParser.getTrackInfo(trackId),
-    contentParser.getTrackInfo(trackId).then(track => track.modules)
-  ])
+  const trackInfo = await contentParser.getTrackInfo(trackId)
+  const modules = trackInfo.modules
 
   if (!trackInfo) {
     notFound()
@@ -40,12 +38,14 @@ async function TrackPageContent({ params }: TrackPageProps) {
 
   const trackIcons = {
     ai: Icons.Bot,
-    'data-engineering': Icons.Database
+    'data-engineering': Icons.Database,
+    'saas': Icons.Cloud
   }
 
   const trackColors = {
     ai: 'blue',
-    'data-engineering': 'green'
+    'data-engineering': 'green',
+    'saas': 'purple'
   }
 
   const IconComponent = trackIcons[trackId]
@@ -146,14 +146,14 @@ async function TrackPageContent({ params }: TrackPageProps) {
               
               <div className="text-center p-3 bg-gray-50 dark:bg-gray-700 rounded">
                 <div className={`text-lg font-bold text-${color}-600 mb-1`}>
-                  {trackId === 'ai' ? '8.5' : '2.5'}h
+                  {trackId === 'ai' ? '8.5' : trackId === 'saas' ? '12.3' : '2.5'}h
                 </div>
                 <div className="text-xs text-gray-600 dark:text-gray-300">Time Spent</div>
               </div>
               
               <div className="text-center p-3 bg-gray-50 dark:bg-gray-700 rounded">
                 <div className={`text-lg font-bold text-${color}-600 mb-1`}>
-                  {trackId === 'ai' ? '7' : '3'}
+                  {trackId === 'ai' ? '7' : trackId === 'saas' ? '5' : '3'}
                 </div>
                 <div className="text-xs text-gray-600 dark:text-gray-300">Day Streak</div>
               </div>
@@ -173,14 +173,14 @@ async function TrackPageContent({ params }: TrackPageProps) {
               <div className="flex-1">
                 <h3 className="text-sm font-bold text-gray-900 dark:text-white mb-1">
                   {totalCompletedLessons > 0 
-                    ? `Continue with ${trackId === 'ai' ? 'AI Foundation & Tool Fluency' : 'Database Fundamentals'}`
-                    : `Begin with ${trackId === 'ai' ? 'AI Foundation & Tool Fluency' : 'Database Fundamentals'}`
+                    ? `Continue with ${trackId === 'ai' ? 'AI Foundation & Tool Fluency' : trackId === 'saas' ? 'SaaS Architecture & System Design' : 'Database Fundamentals'}`
+                    : `Begin with ${trackId === 'ai' ? 'AI Foundation & Tool Fluency' : trackId === 'saas' ? 'SaaS Architecture & System Design' : 'Database Fundamentals'}`
                   }
                 </h3>
                 <p className="text-xs text-gray-600 dark:text-gray-300 mb-3">
                   {totalCompletedLessons > 0 
                     ? `${totalCompletedLessons} lessons completed • Keep up the momentum!`
-                    : `Start with Module 1 and build your ${trackId === 'ai' ? 'AI expertise' : 'data engineering skills'} step by step`
+                    : `Start with Module 1 and build your ${trackId === 'ai' ? 'AI expertise' : trackId === 'saas' ? 'SaaS development skills' : 'data engineering skills'} step by step`
                   }
                 </p>
                 <div className="flex items-center space-x-3">
@@ -238,6 +238,37 @@ async function TrackPageContent({ params }: TrackPageProps) {
                       <div>
                         <h4 className="text-xs font-bold text-gray-900 dark:text-white mb-1">Agent Architecture</h4>
                         <p className="text-xs text-gray-600 dark:text-gray-300">Build sophisticated AI agents and platforms</p>
+                      </div>
+                    </div>
+                  </>
+                ) : trackId === 'saas' ? (
+                  <>
+                    <div className="flex items-start space-x-3">
+                      <Icons.Cloud className="w-5 h-5 text-purple-600 mt-0.5" />
+                      <div>
+                        <h4 className="text-xs font-bold text-gray-900 dark:text-white mb-1">Multi-Tenant Architecture</h4>
+                        <p className="text-xs text-gray-600 dark:text-gray-300">Scalable SaaS architecture patterns and isolation strategies</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <Icons.Settings className="w-5 h-5 text-purple-600 mt-0.5" />
+                      <div>
+                        <h4 className="text-xs font-bold text-gray-900 dark:text-white mb-1">Modern Stack</h4>
+                        <p className="text-xs text-gray-600 dark:text-gray-300">TypeScript, React, Next.js, Node.js, and PostgreSQL</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <Icons.Shield className="w-5 h-5 text-purple-600 mt-0.5" />
+                      <div>
+                        <h4 className="text-xs font-bold text-gray-900 dark:text-white mb-1">Security & Compliance</h4>
+                        <p className="text-xs text-gray-600 dark:text-gray-300">Authentication, authorization, and enterprise compliance</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <Icons.BookOpen className="w-5 h-5 text-purple-600 mt-0.5" />
+                      <div>
+                        <h4 className="text-xs font-bold text-gray-900 dark:text-white mb-1">Platform Engineering</h4>
+                        <p className="text-xs text-gray-600 dark:text-gray-300">CI/CD, observability, and production-ready systems</p>
                       </div>
                     </div>
                   </>

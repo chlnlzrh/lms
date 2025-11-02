@@ -1,26 +1,29 @@
 import { NextResponse } from 'next/server'
 import { contentParser } from '@/lib/content-parser'
+import { SearchIndexEntry } from '@/types/content'
 
 export async function GET() {
   try {
-    // Load both tracks in parallel to utilize multi-core system
-    const [aiTrack, deTrack] = await Promise.all([
+    // Load all tracks in parallel to utilize multi-core system
+    const [aiTrack, deTrack, saasTrack] = await Promise.all([
       contentParser.getTrackInfo('ai'),
-      contentParser.getTrackInfo('data-engineering')
+      contentParser.getTrackInfo('data-engineering'),
+      contentParser.getTrackInfo('saas')
     ])
 
     // Load all lessons in parallel
-    const [aiLessons, deLessons] = await Promise.all([
+    const [aiLessons, deLessons, saasLessons] = await Promise.all([
       contentParser.getAllLessons('ai'),
-      contentParser.getAllLessons('data-engineering')
+      contentParser.getAllLessons('data-engineering'),
+      contentParser.getAllLessons('saas')
     ])
 
-    const allLessons = [...aiLessons, ...deLessons]
-    const allModules = [...aiTrack.modules, ...deTrack.modules]
-    const tracks = [aiTrack, deTrack]
+    const allLessons = [...aiLessons, ...deLessons, ...saasLessons]
+    const allModules = [...aiTrack.modules, ...deTrack.modules, ...saasTrack.modules]
+    const tracks = [aiTrack, deTrack, saasTrack]
 
     // Build search index
-    const searchIndex = allLessons.map(lesson => ({
+    const searchIndex: SearchIndexEntry[] = allLessons.map(lesson => ({
       id: lesson.id,
       title: lesson.frontmatter.title,
       content: lesson.content.substring(0, 1000), // First 1000 chars for search
@@ -31,7 +34,7 @@ export async function GET() {
         ...lesson.frontmatter.topics || [],
         lesson.track,
         lesson.frontmatter.complexity || '',
-        lesson.slug.split('-')
+        ...lesson.slug.split('-')
       ].filter(Boolean)
     }))
 

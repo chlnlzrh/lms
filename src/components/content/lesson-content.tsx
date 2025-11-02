@@ -31,12 +31,14 @@ export function LessonContent({
 
   const trackColors = {
     ai: 'blue',
-    'data-engineering': 'green'
+    'data-engineering': 'green',
+    'saas': 'purple'
   }
 
   const trackIcons = {
     ai: Icons.Bot,
-    'data-engineering': Icons.Database
+    'data-engineering': Icons.Database,
+    'saas': Icons.Cloud
   }
 
   const color = trackColors[lesson.track]
@@ -140,7 +142,7 @@ export function LessonContent({
       } else {
         // Load Prism if not available
         import('prismjs').then((Prism) => {
-          import('prismjs/components/prism-python').then(() => {
+          import('prismjs/components/prism-python' as any).then(() => {
             Prism.highlightAll()
           })
         })

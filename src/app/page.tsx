@@ -20,7 +20,7 @@ export default function HomePage() {
             Welcome to the Learning Management System
           </h1>
           <p className="text-xs text-gray-600 dark:text-gray-300">
-            Continue your learning journey across AI Training and Data Engineering tracks.
+            Continue your learning journey across AI Training, Data Engineering, and SaaS Development tracks.
           </p>
         </div>
 
@@ -48,7 +48,7 @@ export default function HomePage() {
         </div>
 
         {/* Progress Overview */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* AI Training Track Progress */}
           <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6">
             <div className="flex items-center space-x-3 mb-4">
@@ -98,6 +98,33 @@ export default function HomePage() {
                 <div>
                   <span className="text-gray-600 dark:text-gray-300">Time Spent</span>
                   <div className="text-gray-900 dark:text-white font-normal">2.5 hours</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* SaaS Development Track Progress */}
+          <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6">
+            <div className="flex items-center space-x-3 mb-4">
+              <Icons.Cloud className="w-5 h-5 text-purple-600" />
+              <h3 className="text-xs font-bold text-gray-900 dark:text-white">
+                SaaS Development Track
+              </h3>
+            </div>
+            <div className="space-y-3">
+              <div className="flex justify-between text-xs">
+                <span className="text-gray-600 dark:text-gray-300">Progress</span>
+                <span className="text-gray-900 dark:text-white">8 of 632 lessons</span>
+              </div>
+              <ProgressBar value={8} max={632} showPercentage />
+              <div className="grid grid-cols-2 gap-4 text-xs">
+                <div>
+                  <span className="text-gray-600 dark:text-gray-300">Modules</span>
+                  <div className="text-gray-900 dark:text-white font-normal">0 of 19</div>
+                </div>
+                <div>
+                  <span className="text-gray-600 dark:text-gray-300">Time Spent</span>
+                  <div className="text-gray-900 dark:text-white font-normal">4.2 hours</div>
                 </div>
               </div>
             </div>

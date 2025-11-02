@@ -11,10 +11,11 @@ const CONTENT_BASE_PATH = path.join(process.cwd(), 'src', 'data')
 class ContentParser {
   private processor = remark().use(remarkGfm).use(remarkHtml)
 
-  private getTrackDirectory(track: 'ai' | 'data-engineering'): string {
+  private getTrackDirectory(track: 'ai' | 'data-engineering' | 'saas'): string {
     const trackDirectoryMap = {
       'ai': 'ai',
-      'data-engineering': 'de'
+      'data-engineering': 'de',
+      'saas': 'saas'
     }
     return trackDirectoryMap[track]
   }
@@ -31,12 +32,23 @@ class ContentParser {
   }
 
   extractLessonMetadata(filename: string): {
-    track: 'ai' | 'data-engineering'
+    track: 'ai' | 'data-engineering' | 'saas'
     moduleNumber?: number
     lessonNumber?: number
     slug: string
   } {
-    // DE lessons: M01-L001-topic-name--date.md (check first - more specific)
+    // SaaS lessons: M00-L001-topic-name--date.md (check first - most specific)
+    const saasMatch = filename.match(/^M(\d+)-L(\d+)-(.+?)--\d{4}-\d{2}-\d{2}\.md$/)
+    if (saasMatch) {
+      return {
+        track: 'saas',
+        moduleNumber: parseInt(saasMatch[1]),
+        lessonNumber: parseInt(saasMatch[2]),
+        slug: saasMatch[3]
+      }
+    }
+
+    // DE lessons: M01-L001-topic-name--date.md (check second - more specific)
     const deMatch = filename.match(/^M(\d+)-L(\d+)-(.+?)--\d{4}-\d{2}-\d{2}\.md$/)
     if (deMatch) {
       return {
@@ -47,7 +59,7 @@ class ContentParser {
       }
     }
 
-    // AI lessons: M01-L001-topic-name.md (check second - more general)
+    // AI lessons: M01-L001-topic-name.md (check third - more general)
     const aiMatch = filename.match(/^M(\d+)-L(\d+)-(.+)\.md$/)
     if (aiMatch) {
       return {
@@ -126,7 +138,7 @@ class ContentParser {
       if (!moduleMatch) return null
       
       const moduleNumber = parseInt(moduleMatch[1])
-      const track = filePath.includes('/ai/') ? 'ai' : filePath.includes('/de/') ? 'data-engineering' : 'data-engineering'
+      const track = filePath.includes('/ai/') ? 'ai' : filePath.includes('/de/') ? 'data-engineering' : filePath.includes('/saas/') ? 'saas' : 'data-engineering'
       
       // Parse content for structured information
       const durationMatch = content.match(/\*\*Duration:\*\*\s*(.+)/i)
@@ -149,7 +161,7 @@ class ContentParser {
         prerequisites: frontmatter.prerequisites || [],
         learningObjectives: frontmatter.learningObjectives || [],
         topics: frontmatter.topics || [],
-        track: track as 'ai' | 'data-engineering',
+        track: track as 'ai' | 'data-engineering' | 'saas',
         moduleNumber
       }
     } catch (error) {
@@ -158,7 +170,7 @@ class ContentParser {
     }
   }
 
-  async getAllLessons(track: 'ai' | 'data-engineering'): Promise<ParsedLesson[]> {
+  async getAllLessons(track: 'ai' | 'data-engineering' | 'saas'): Promise<ParsedLesson[]> {
     const trackDir = this.getTrackDirectory(track)
     const lessonsPath = path.join(CONTENT_BASE_PATH, trackDir, 'lessons')
     
@@ -194,9 +206,63 @@ class ContentParser {
     })
   }
 
-  async getAllModules(track: 'ai' | 'data-engineering'): Promise<ModuleDescription[]> {
-    // First try to get modules from description files
+  async getAllModules(track: 'ai' | 'data-engineering' | 'saas'): Promise<ModuleDescription[]> {
     const trackDir = this.getTrackDirectory(track)
+    
+    // For SaaS track, try to load from modules-descriptions JSON file first
+    if (track === 'saas') {
+      const moduleDescJsonPath = path.join(CONTENT_BASE_PATH, trackDir, 'modules-descriptions', 'module.json')
+      if (fs.existsSync(moduleDescJsonPath)) {
+        try {
+          const jsonContent = fs.readFileSync(moduleDescJsonPath, 'utf-8')
+          const modules = JSON.parse(jsonContent)
+          
+          return modules.map((module: any) => ({
+            id: `saas-module-${module.id.split('-')[1]}`,
+            title: module.title,
+            description: module.subtitle,
+            duration: module.duration,
+            lessonCount: module.lessons,
+            labCount: module.labs || 0,
+            prerequisites: module.prerequisites || [],
+            learningObjectives: module.skillsGained || [],
+            topics: module.keyTopics || [],
+            track: 'saas' as const,
+            moduleNumber: parseInt(module.id.split('-')[1])
+          }))
+        } catch (error) {
+          console.error(`Error loading SaaS modules from modules-descriptions JSON:`, error)
+        }
+      }
+      
+      // Fallback to the other JSON file
+      const jsonPath = path.join(CONTENT_BASE_PATH, trackDir, 'module.json')
+      if (fs.existsSync(jsonPath)) {
+        try {
+          const jsonContent = fs.readFileSync(jsonPath, 'utf-8')
+          const data = JSON.parse(jsonContent)
+          const modules = data.modules || data
+          
+          return modules.map((module: any, index: number) => ({
+            id: `saas-module-${module.moduleNumber}`,
+            title: module.title,
+            description: module.description,
+            duration: module.duration,
+            lessonCount: module.lessonCount,
+            labCount: module.labCount || 0,
+            prerequisites: module.prerequisites || [],
+            learningObjectives: module.learningObjectives || [],
+            topics: module.skillsGained || [],
+            track: 'saas' as const,
+            moduleNumber: module.moduleNumber
+          }))
+        } catch (error) {
+          console.error(`Error loading SaaS modules from JSON:`, error)
+        }
+      }
+    }
+    
+    // First try to get modules from description files
     const modulesPath = path.join(CONTENT_BASE_PATH, trackDir, 'modules-descriptions')
     
     if (fs.existsSync(modulesPath)) {
@@ -220,7 +286,7 @@ class ContentParser {
     return this.generateModulesFromLessons(track)
   }
 
-  async generateModulesFromLessons(track: 'ai' | 'data-engineering'): Promise<ModuleDescription[]> {
+  async generateModulesFromLessons(track: 'ai' | 'data-engineering' | 'saas'): Promise<ModuleDescription[]> {
     const lessons = await this.getAllLessons(track)
     
     // Group lessons by module number
@@ -255,13 +321,13 @@ class ContentParser {
       7: 'Real-Time Data & Streaming'
     }
 
-    const moduleTitles = track === 'ai' ? aiModuleTitles : deModuleTitles
+    const moduleTitles = track === 'ai' ? aiModuleTitles : track === 'saas' ? {} : deModuleTitles
 
     // Generate module descriptions
     const modules: ModuleDescription[] = Object.entries(moduleGroups)
       .map(([moduleNumStr, moduleLessons]) => {
         const moduleNumber = parseInt(moduleNumStr)
-        const title = moduleTitles[moduleNumber as keyof typeof moduleTitles] || `Module ${moduleNumber}`
+        const title = (moduleTitles as any)[moduleNumber] || `Module ${moduleNumber}`
         
         // Calculate estimated duration (assume 5 minutes per lesson)
         const estimatedMinutes = moduleLessons.length * 5
@@ -277,7 +343,7 @@ class ContentParser {
           prerequisites: [],
           learningObjectives: [],
           topics: [],
-          track: track as 'ai' | 'data-engineering',
+          track: track,
           moduleNumber
         }
       })
@@ -286,7 +352,7 @@ class ContentParser {
     return modules
   }
 
-  async getTrackInfo(track: 'ai' | 'data-engineering'): Promise<TrackInfo> {
+  async getTrackInfo(track: 'ai' | 'data-engineering' | 'saas'): Promise<TrackInfo> {
     const [lessons, modules] = await Promise.all([
       this.getAllLessons(track),
       this.getAllModules(track)
@@ -299,12 +365,14 @@ class ContentParser {
 
     const trackTitles = {
       ai: 'AI Training Track',
-      'data-engineering': 'Data Engineering Track'
+      'data-engineering': 'Data Engineering Track',
+      'saas': 'SaaS Development Track'
     }
 
     const trackDescriptions = {
       ai: 'Master AI tools, prompt engineering, and modern AI development workflows',
-      'data-engineering': 'Learn data warehousing, SQL, ETL/ELT, and modern data engineering practices'
+      'data-engineering': 'Learn data warehousing, SQL, ETL/ELT, and modern data engineering practices',
+      'saas': 'Build scalable SaaS applications with modern architecture patterns and best practices'
     }
 
     return {
