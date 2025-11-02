@@ -15,7 +15,7 @@ export interface ParsedLesson {
   content: string
   htmlContent: string
   filePath: string
-  track: 'ai' | 'data-engineering'
+  track: 'ai' | 'data-engineering' | 'saas'
   moduleNumber?: number
   lessonNumber?: number
   estimatedReadTime: number
@@ -31,12 +31,12 @@ export interface ModuleDescription {
   prerequisites: string[]
   learningObjectives: string[]
   topics: string[]
-  track: 'ai' | 'data-engineering'
+  track: 'ai' | 'data-engineering' | 'saas'
   moduleNumber: number
 }
 
 export interface TrackInfo {
-  id: 'ai' | 'data-engineering'
+  id: 'ai' | 'data-engineering' | 'saas'
   title: string
   description: string
   totalLessons: number

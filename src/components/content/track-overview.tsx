@@ -19,12 +19,14 @@ interface TrackOverviewProps {
 export function TrackOverview({ track, progress, className }: TrackOverviewProps) {
   const trackIcons = {
     ai: Icons.Bot,
-    'data-engineering': Icons.Database
+    'data-engineering': Icons.Database,
+    'saas': Icons.Cloud
   }
 
   const trackColors = {
     ai: 'blue',
-    'data-engineering': 'green'
+    'data-engineering': 'green',
+    'saas': 'purple'
   }
 
   const IconComponent = trackIcons[track.id]

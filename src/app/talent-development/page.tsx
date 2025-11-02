@@ -15,15 +15,21 @@ const mockProgress = {
     completedLessons: 5,
     completedModules: 0,
     timeSpent: 2.5
+  },
+  'saas': {
+    completedLessons: 8,
+    completedModules: 0,
+    timeSpent: 4.2
   }
 }
 
 async function TalentDevelopmentContent() {
-  const [aiTrack, deTrack] = await Promise.all([
+  const [aiTrack, deTrack, saasTrack] = await Promise.all([
     contentParser.getTrackInfo('ai'),
-    contentParser.getTrackInfo('data-engineering')
+    contentParser.getTrackInfo('data-engineering'),
+    contentParser.getTrackInfo('saas')
   ])
-  const tracks = [aiTrack, deTrack]
+  const tracks = [aiTrack, deTrack, saasTrack]
 
   const breadcrumbItems = [
     { label: 'Dashboard', href: '/' },
@@ -65,7 +71,7 @@ async function TalentDevelopmentContent() {
           <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6 text-center">
             <div className="text-2xl font-bold text-purple-600 mb-1">6</div>
             <div className="text-xs text-gray-600 dark:text-gray-300">Learning Tracks</div>
-            <div className="text-xs text-orange-600 mt-1">2 Active, 4 Coming Soon</div>
+            <div className="text-xs text-orange-600 mt-1">3 Active, 3 Coming Soon</div>
           </div>
         </div>
 
@@ -75,7 +81,7 @@ async function TalentDevelopmentContent() {
             Active Learning Tracks
           </h2>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             {tracks.map((track) => (
               <TrackOverview
                 key={track.id}
@@ -92,10 +98,9 @@ async function TalentDevelopmentContent() {
             Coming Soon
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
               { name: 'Integration Track', icon: '🔗', description: 'API design, Workato, enterprise patterns' },
-              { name: 'SaaS App Build Track', icon: '⚙️', description: 'Multi-tenant architecture, cloud services' },
               { name: 'Salesforce Track', icon: '☁️', description: 'Apex, Lightning, platform development' },
               { name: 'MDM & Data Governance Track', icon: '🛡️', description: 'Data quality, governance, compliance' }
             ].map((track) => (

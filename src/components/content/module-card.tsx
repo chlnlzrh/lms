@@ -18,7 +18,8 @@ interface ModuleCardProps {
 export function ModuleCard({ module, progress, className }: ModuleCardProps) {
   const trackColors = {
     ai: 'blue',
-    'data-engineering': 'green'
+    'data-engineering': 'green',
+    saas: 'purple'
   }
 
   const color = trackColors[module.track]
