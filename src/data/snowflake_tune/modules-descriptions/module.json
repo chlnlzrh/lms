@@ -1,0 +1,271 @@
+[
+  {
+    "id": "snowflake_tune-module-0",
+    "title": "Fundamentals & Foundation",
+    "subtitle": "Core concepts and introduction to Snowflake Performance",
+    "duration": "2 weeks",
+    "lessons": 24,
+    "labs": 6,
+    "prerequisites": [
+      "Basic technical knowledge",
+      "Familiarity with web technologies"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Understanding of SNOWFLAKE_TUNE fundamentals",
+      "Technical terminology and concepts",
+      "Platform navigation and basic operations"
+    ]
+  },
+  {
+    "id": "snowflake_tune-module-1",
+    "title": "Architecture & Design",
+    "subtitle": "System architecture and design patterns for Snowflake Performance",
+    "duration": "2 weeks",
+    "lessons": 24,
+    "labs": 6,
+    "prerequisites": [
+      "Completion of Module 0: Fundamentals"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Understanding of SNOWFLAKE_TUNE fundamentals",
+      "Technical terminology and concepts",
+      "Platform navigation and basic operations"
+    ]
+  },
+  {
+    "id": "snowflake_tune-module-2",
+    "title": "Implementation & Development",
+    "subtitle": "Hands-on development and implementation techniques",
+    "duration": "2 weeks",
+    "lessons": 24,
+    "labs": 6,
+    "prerequisites": [
+      "Completion of Module 1",
+      "Understanding of previous module concepts"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Understanding of SNOWFLAKE_TUNE fundamentals",
+      "Technical terminology and concepts",
+      "Platform navigation and basic operations"
+    ]
+  },
+  {
+    "id": "snowflake_tune-module-3",
+    "title": "Integration & Connectivity",
+    "subtitle": "Integration patterns and connectivity solutions",
+    "duration": "2 weeks",
+    "lessons": 24,
+    "labs": 6,
+    "prerequisites": [
+      "Completion of Module 2",
+      "Understanding of previous module concepts"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Understanding of SNOWFLAKE_TUNE fundamentals",
+      "Technical terminology and concepts",
+      "Platform navigation and basic operations"
+    ]
+  },
+  {
+    "id": "snowflake_tune-module-4",
+    "title": "Advanced Features",
+    "subtitle": "Advanced capabilities and specialized features",
+    "duration": "2 weeks",
+    "lessons": 24,
+    "labs": 6,
+    "prerequisites": [
+      "Completion of Module 3",
+      "Understanding of previous module concepts"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Understanding of SNOWFLAKE_TUNE fundamentals",
+      "Technical terminology and concepts",
+      "Platform navigation and basic operations"
+    ]
+  },
+  {
+    "id": "snowflake_tune-module-5",
+    "title": "Performance & Optimization",
+    "subtitle": "Performance tuning and optimization strategies",
+    "duration": "2 weeks",
+    "lessons": 24,
+    "labs": 6,
+    "prerequisites": [
+      "Completion of Module 4",
+      "Understanding of previous module concepts"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Understanding of SNOWFLAKE_TUNE fundamentals",
+      "Technical terminology and concepts",
+      "Platform navigation and basic operations"
+    ]
+  },
+  {
+    "id": "snowflake_tune-module-6",
+    "title": "Security & Compliance",
+    "subtitle": "Security best practices and compliance requirements",
+    "duration": "2 weeks",
+    "lessons": 24,
+    "labs": 6,
+    "prerequisites": [
+      "Completion of Module 5",
+      "Understanding of previous module concepts"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Implementation of performance optimization",
+      "Configuration and customization techniques",
+      "Integration with external systems"
+    ]
+  },
+  {
+    "id": "snowflake_tune-module-7",
+    "title": "Monitoring & Observability",
+    "subtitle": "Monitoring, logging, and observability practices",
+    "duration": "2 weeks",
+    "lessons": 24,
+    "labs": 6,
+    "prerequisites": [
+      "Completion of Module 6",
+      "Understanding of previous module concepts"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Implementation of performance optimization",
+      "Configuration and customization techniques",
+      "Integration with external systems"
+    ]
+  },
+  {
+    "id": "snowflake_tune-module-8",
+    "title": "Automation & Workflows",
+    "subtitle": "Automation strategies and workflow optimization",
+    "duration": "2 weeks",
+    "lessons": 24,
+    "labs": 6,
+    "prerequisites": [
+      "Completion of Module 7",
+      "Understanding of previous module concepts"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Implementation of performance optimization",
+      "Configuration and customization techniques",
+      "Integration with external systems"
+    ]
+  },
+  {
+    "id": "snowflake_tune-module-9",
+    "title": "Data Management",
+    "subtitle": "Data handling, quality, and lifecycle management",
+    "duration": "2 weeks",
+    "lessons": 24,
+    "labs": 6,
+    "prerequisites": [
+      "Completion of Module 8",
+      "Understanding of previous module concepts"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Implementation of performance optimization",
+      "Configuration and customization techniques",
+      "Integration with external systems"
+    ]
+  },
+  {
+    "id": "snowflake_tune-module-10",
+    "title": "Governance & Standards",
+    "subtitle": "Governance frameworks and industry standards",
+    "duration": "2 weeks",
+    "lessons": 24,
+    "labs": 6,
+    "prerequisites": [
+      "Completion of Module 9",
+      "Understanding of previous module concepts"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Implementation of performance optimization",
+      "Configuration and customization techniques",
+      "Integration with external systems"
+    ]
+  },
+  {
+    "id": "snowflake_tune-module-11",
+    "title": "Analytics & Reporting",
+    "subtitle": "Analytics implementation and reporting solutions",
+    "duration": "2 weeks",
+    "lessons": 24,
+    "labs": 6,
+    "prerequisites": [
+      "Completion of Module 10",
+      "Understanding of previous module concepts"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Implementation of performance optimization",
+      "Configuration and customization techniques",
+      "Integration with external systems"
+    ]
+  },
+  {
+    "id": "snowflake_tune-module-12",
+    "title": "AI & Machine Learning",
+    "subtitle": "AI/ML integration and intelligent automation",
+    "duration": "2 weeks",
+    "lessons": 24,
+    "labs": 6,
+    "prerequisites": [
+      "Completion of Module 11",
+      "Understanding of previous module concepts"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Implementation of performance optimization",
+      "Configuration and customization techniques",
+      "Integration with external systems"
+    ]
+  },
+  {
+    "id": "snowflake_tune-module-13",
+    "title": "Enterprise Patterns",
+    "subtitle": "Enterprise-scale patterns and best practices",
+    "duration": "2 weeks",
+    "lessons": 24,
+    "labs": 6,
+    "prerequisites": [
+      "Completion of Module 12",
+      "Understanding of previous module concepts"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Advanced tuning strategies",
+      "Complex problem-solving approaches",
+      "Leadership in technical decision-making"
+    ]
+  },
+  {
+    "id": "snowflake_tune-module-14",
+    "title": "Platform Operations",
+    "subtitle": "Operations, maintenance, and platform management",
+    "duration": "2 weeks",
+    "lessons": 24,
+    "labs": 6,
+    "prerequisites": [
+      "Completion of Module 13",
+      "Understanding of previous module concepts"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Advanced tuning strategies",
+      "Complex problem-solving approaches",
+      "Leadership in technical decision-making"
+    ]
+  }
+]

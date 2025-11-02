@@ -1,0 +1,407 @@
+[
+  {
+    "id": "data-gov-module-0",
+    "title": "Data Governance Fundamentals & Principles",
+    "subtitle": "Foundation concepts, business value, risk management, and governance frameworks for SaaS platforms",
+    "duration": "18 hours",
+    "lessons": 24,
+    "labs": 3,
+    "prerequisites": ["No prerequisites required"],
+    "keyTopics": [
+      "Governance Value Chains & Business Impact",
+      "Federated Governance Models",
+      "Data as a Product Principles",
+      "Risk, Compliance & Trust Frameworks",
+      "DAMA-DMBOK & Industry Standards",
+      "Crown Jewels & Data Classification",
+      "Tenant Isolation & Multi-tenancy",
+      "Policy Hierarchies & Control Objectives"
+    ],
+    "skillsGained": [
+      "Articulate business value and ROI of data governance programs",
+      "Design federated governance models balancing autonomy and control",
+      "Implement tenant-aware governance controls in SaaS architectures",
+      "Apply DAMA-DMBOK and industry frameworks to organizational needs",
+      "Identify and classify crown jewels and critical data elements",
+      "Establish policy hierarchies and control objectives aligned to business risk"
+    ]
+  },
+  {
+    "id": "data-gov-module-1",
+    "title": "Operating Model, Roles & RACI",
+    "subtitle": "Governance councils, organizational design, roles, responsibilities, and funding models",
+    "duration": "18 hours",
+    "lessons": 24,
+    "labs": 3,
+    "prerequisites": ["Module 0: Data Governance Fundamentals & Principles"],
+    "keyTopics": [
+      "Executive, Architecture & Stewardship Councils",
+      "Central vs Federated vs Hybrid Models",
+      "Data Product Teams & Ownership Patterns",
+      "RACI Matrices & Decision Rights",
+      "Data Owner, Custodian & Steward Roles",
+      "Funding Models & Chargeback Systems",
+      "Incentives, OKRs & Skills Development",
+      "Operating Rhythms & Escalation Paths"
+    ],
+    "skillsGained": [
+      "Establish effective governance councils with clear mandates and KPIs",
+      "Design RACI matrices for data governance processes and decisions",
+      "Implement funding models with chargeback and showback mechanisms",
+      "Create operating rhythms that balance decision velocity with oversight",
+      "Define roles and responsibilities across data product teams",
+      "Build incentive structures that drive governance adoption and compliance"
+    ]
+  },
+  {
+    "id": "data-gov-module-2",
+    "title": "Policies, Standards & Controls",
+    "subtitle": "Policy hierarchies, control catalogs, standards authoring, and automated control testing",
+    "duration": "18 hours",
+    "lessons": 24,
+    "labs": 3,
+    "prerequisites": ["Module 1: Operating Model, Roles & RACI"],
+    "keyTopics": [
+      "Policy vs Standard vs Procedure Hierarchies",
+      "Control Objectives & Risk Mapping",
+      "Data Contract & Schema Standards",
+      "Access, Privacy & Retention Standards",
+      "Naming, Classification & Tagging Standards",
+      "Exception & Waiver Processes",
+      "Automated Control Testing & Monitoring",
+      "Control Rationalization & Cost-Benefit"
+    ],
+    "skillsGained": [
+      "Author comprehensive policy hierarchies with clear control objectives",
+      "Implement automated control testing and continuous compliance monitoring",
+      "Design data contract standards that enforce quality and compatibility",
+      "Establish exception and waiver processes with proper risk assessment",
+      "Create control catalogs with reusable patterns and testing procedures",
+      "Apply control rationalization techniques to optimize compliance costs"
+    ]
+  },
+  {
+    "id": "data-gov-module-3",
+    "title": "Metadata, Catalog & Business Glossary",
+    "subtitle": "Metadata management, catalog implementation, business glossaries, and semantic governance",
+    "duration": "18 hours",
+    "lessons": 24,
+    "labs": 3,
+    "prerequisites": ["Module 2: Policies, Standards & Controls"],
+    "keyTopics": [
+      "Business vs Technical Metadata Governance",
+      "Catalog Discovery & Registration Patterns",
+      "Business Glossary & Term Management",
+      "Tags, Classifications & Sensitivity Labels",
+      "Metadata Quality & Completeness KPIs",
+      "Federated Catalogs & Cross-Domain Search",
+      "KPI Definitions & Metric Contracts",
+      "OpenLineage & EDC API Standards"
+    ],
+    "skillsGained": [
+      "Implement comprehensive metadata catalogs with automated discovery",
+      "Design business glossaries with proper governance workflows",
+      "Establish metadata quality KPIs and measurement frameworks",
+      "Configure federated catalogs for multi-domain organizations",
+      "Apply semantic governance to ensure consistent business definitions",
+      "Integrate catalog systems with lineage and quality monitoring tools"
+    ]
+  },
+  {
+    "id": "data-gov-module-4",
+    "title": "Data Quality Governance",
+    "subtitle": "Quality frameworks, critical data elements, monitoring, and continuous improvement",
+    "duration": "18 hours",
+    "lessons": 24,
+    "labs": 3,
+    "prerequisites": ["Module 3: Metadata, Catalog & Business Glossary"],
+    "keyTopics": [
+      "Quality Dimensions: Accuracy, Completeness, Consistency",
+      "Critical Data Elements & Crown Jewels",
+      "Quality Target Setting & Risk-Based Prioritization",
+      "Batch vs Streaming Quality Monitors",
+      "Issue Management & Remediation Workflows",
+      "Quality Scorecards & Executive Dashboards",
+      "Golden Datasets & Regression Testing",
+      "Continuous Improvement & Quality OKRs"
+    ],
+    "skillsGained": [
+      "Design comprehensive data quality frameworks with measurable dimensions",
+      "Implement automated quality monitoring for batch and streaming data",
+      "Establish quality scorecards and executive reporting mechanisms",
+      "Create issue management workflows with proper SLAs and escalations",
+      "Apply risk-based prioritization to optimize quality investments",
+      "Build continuous improvement processes tied to business outcomes"
+    ]
+  },
+  {
+    "id": "data-gov-module-5",
+    "title": "Lineage, Traceability & Impact Analysis",
+    "subtitle": "Data lineage capture, impact analysis, change management, and certification processes",
+    "duration": "18 hours",
+    "lessons": 24,
+    "labs": 3,
+    "prerequisites": ["Module 4: Data Quality Governance"],
+    "keyTopics": [
+      "Table & Column Lineage Fundamentals",
+      "Manual vs Automated Lineage Capture",
+      "Job, Pipeline, BI & ML Lineage",
+      "Cross-Platform Stitching Techniques",
+      "Upstream-Downstream Impact Analysis",
+      "Change Advisory & Release Gates",
+      "Dataset Certification & Trust Badges",
+      "Evidence Packs & Audit Compliance"
+    ],
+    "skillsGained": [
+      "Implement table and column-level lineage capture systems",
+      "Design impact analysis workflows for change management",
+      "Build certification processes for trusted datasets",
+      "Create change gates that prevent breaking downstream consumers",
+      "Establish lineage-based evidence collection for audit compliance",
+      "Apply cross-platform stitching for end-to-end data visibility"
+    ]
+  },
+  {
+    "id": "data-gov-module-6",
+    "title": "Access, Privacy & Ethics Governance",
+    "subtitle": "Access controls, privacy compliance, ethical frameworks, and responsible data use",
+    "duration": "18 hours",
+    "lessons": 24,
+    "labs": 3,
+    "prerequisites": ["Module 5: Lineage, Traceability & Impact Analysis"],
+    "keyTopics": [
+      "Role-Based vs Attribute-Based Access Controls",
+      "Data Classification & Entitlement Models",
+      "Joiner/Mover/Leaver (JML) Processes",
+      "PII/PHI/PCI Scope & Privacy Inventories",
+      "GDPR, CCPA & Cross-Border Compliance",
+      "Data Subject Rights & DSAR Processes",
+      "Ethical Review Boards & Bias Risk Assessment",
+      "De-identification & Re-identification Testing"
+    ],
+    "skillsGained": [
+      "Design comprehensive access control systems with proper segregation of duties",
+      "Implement privacy compliance programs for multiple regulatory regimes",
+      "Establish ethical review processes for sensitive data use cases",
+      "Create automated workflows for data subject access requests",
+      "Apply de-identification techniques with proper risk assessment",
+      "Build privacy-by-design frameworks for product development"
+    ]
+  },
+  {
+    "id": "data-gov-module-7",
+    "title": "Data Lifecycle, Retention & Records",
+    "subtitle": "Lifecycle management, retention schedules, records management, and secure disposal",
+    "duration": "18 hours",
+    "lessons": 24,
+    "labs": 3,
+    "prerequisites": ["Module 6: Access, Privacy & Ethics Governance"],
+    "keyTopics": [
+      "Data Lifecycle: Create-Store-Use-Share-Archive-Dispose",
+      "Classification & Handling by Lifecycle Stage",
+      "Retention Schedules & Jurisdictional Requirements",
+      "Legal Hold & eDiscovery Integration",
+      "Tiered Storage & Cost Optimization",
+      "Records vs Non-Records Determination",
+      "Secure Disposal & Verification Processes",
+      "Chain of Custody & Tamper Evidence"
+    ],
+    "skillsGained": [
+      "Design comprehensive data lifecycle management programs",
+      "Implement retention schedules that balance legal and business requirements",
+      "Establish records management programs with proper classification",
+      "Create secure disposal processes with verification and certification",
+      "Apply cost optimization through tiered storage strategies",
+      "Build legal hold capabilities integrated with eDiscovery workflows"
+    ]
+  },
+  {
+    "id": "data-gov-module-8",
+    "title": "Data Sharing, Contracts & Intercompany Governance",
+    "subtitle": "Data contracts, external sharing, monetization strategies, and partnership governance",
+    "duration": "18 hours",
+    "lessons": 24,
+    "labs": 3,
+    "prerequisites": ["Module 7: Data Lifecycle, Retention & Records"],
+    "keyTopics": [
+      "Producer-Consumer SLAs & Data Contracts",
+      "Backward Compatibility & Versioning",
+      "Contract Testing & Golden Datasets",
+      "Intercompany DPAs & Standard Contractual Clauses",
+      "Anonymization & Synthetic Data Strategies",
+      "Clean Rooms & Query Controls",
+      "Data Monetization & Pricing Models",
+      "Partner Onboarding & Marketplace Governance"
+    ],
+    "skillsGained": [
+      "Design robust data contracts with SLAs and backward compatibility",
+      "Implement secure data sharing mechanisms with proper anonymization",
+      "Create monetization strategies with appropriate pricing models",
+      "Establish partner governance programs with clear onboarding procedures",
+      "Apply clean room technologies for privacy-preserving analytics",
+      "Build marketplace governance frameworks for data products"
+    ]
+  },
+  {
+    "id": "data-gov-module-9",
+    "title": "Risk, Compliance & Audit",
+    "subtitle": "Risk management frameworks, compliance mapping, audit preparation, and regulatory alignment",
+    "duration": "18 hours",
+    "lessons": 24,
+    "labs": 3,
+    "prerequisites": ["Module 8: Data Sharing, Contracts & Intercompany Governance"],
+    "keyTopics": [
+      "Data Risk Taxonomy & Treatment Plans",
+      "Key Risk Indicators & Early Warning Systems",
+      "SOC2, ISO 27001, PCI & HIPAA Compliance",
+      "GDPR, CCPA & Data Protection Regulations",
+      "Control Mapping & Crosswalk Techniques",
+      "Evidence Management & Audit Preparation",
+      "Continuous Auditing & Automation",
+      "Board & Executive Risk Reporting"
+    ],
+    "skillsGained": [
+      "Develop comprehensive risk management frameworks for data programs",
+      "Map controls across multiple compliance frameworks efficiently",
+      "Prepare robust evidence packages for regulatory audits",
+      "Implement continuous auditing with automated control testing",
+      "Create executive risk reporting with actionable insights",
+      "Design key risk indicators that provide early warning of issues"
+    ]
+  },
+  {
+    "id": "data-gov-module-10",
+    "title": "Cloud/SaaS Governance & Platform Guardrails",
+    "subtitle": "Cloud governance, landing zones, SaaS controls, cost management, and infrastructure guardrails",
+    "duration": "18 hours",
+    "lessons": 24,
+    "labs": 3,
+    "prerequisites": ["Module 9: Risk, Compliance & Audit"],
+    "keyTopics": [
+      "Landing Zones & Account Structures",
+      "Network Perimeters & Data Isolation",
+      "Key Management & Encryption Controls",
+      "Multi-Tenant Isolation Patterns",
+      "SaaS Procurement & Security Reviews",
+      "Cost Controls & Budget Management",
+      "Backup, DR & Business Continuity",
+      "Shadow SaaS Discovery & Controls"
+    ],
+    "skillsGained": [
+      "Design cloud landing zones with appropriate guardrails and automation",
+      "Implement multi-tenant isolation patterns for SaaS architectures",
+      "Establish SaaS governance programs with procurement and security controls",
+      "Create cost management frameworks with chargeback and optimization",
+      "Apply encryption and key management best practices across cloud platforms",
+      "Build disaster recovery and business continuity capabilities"
+    ]
+  },
+  {
+    "id": "data-gov-module-11",
+    "title": "Analytics & BI Governance",
+    "subtitle": "Metrics governance, semantic layers, BI content lifecycle, and experimentation frameworks",
+    "duration": "18 hours",
+    "lessons": 24,
+    "labs": 3,
+    "prerequisites": ["Module 10: Cloud/SaaS Governance & Platform Guardrails"],
+    "keyTopics": [
+      "Metric Definitions & Ownership Models",
+      "Semantic Layer Contracts & Governance",
+      "KPI Trees & North-Star Metrics",
+      "BI Content Cataloging & Lifecycle",
+      "Report Certification & Deprecation",
+      "Row-Level Security & Access Controls",
+      "Experimentation Ethics & Governance",
+      "A/B Testing & Statistical Standards"
+    ],
+    "skillsGained": [
+      "Establish metric governance frameworks with clear ownership and definitions",
+      "Design semantic layers that provide consistent business views",
+      "Implement BI content lifecycle management with proper controls",
+      "Create experimentation governance with ethical guidelines and statistical rigor",
+      "Apply row-level security for multi-tenant analytics environments",
+      "Build KPI governance that aligns metrics to business outcomes"
+    ]
+  },
+  {
+    "id": "data-gov-module-12",
+    "title": "AI/ML Governance & Responsible AI",
+    "subtitle": "Model governance, responsible AI frameworks, LLM-specific controls, and AI risk management",
+    "duration": "18 hours",
+    "lessons": 24,
+    "labs": 3,
+    "prerequisites": ["Module 11: Analytics & BI Governance"],
+    "keyTopics": [
+      "Model Inventory & Registration Systems",
+      "Data Provenance & Feature Governance",
+      "Model Cards & Documentation Standards",
+      "Fairness, Bias & Harm Assessment",
+      "Explainability & Contestability Requirements",
+      "LLM Prompt & Content Governance",
+      "AI Safety Cases & Risk Tiers",
+      "Monitoring & Incident Response for AI"
+    ],
+    "skillsGained": [
+      "Design comprehensive AI/ML governance frameworks covering the full model lifecycle",
+      "Implement responsible AI practices with bias detection and fairness testing",
+      "Establish LLM-specific governance for prompt management and content moderation",
+      "Create model documentation standards that ensure transparency and accountability",
+      "Build AI risk management programs with proper safety cases and controls",
+      "Apply AI governance standards from NIST, EU AI Act, and other regulatory frameworks"
+    ]
+  },
+  {
+    "id": "data-gov-module-13",
+    "title": "Stewardship Workflows & Issue Management",
+    "subtitle": "Operational stewardship, workflow automation, issue triage, and productivity optimization",
+    "duration": "18 hours",
+    "lessons": 24,
+    "labs": 3,
+    "prerequisites": ["Module 12: AI/ML Governance & Responsible AI"],
+    "keyTopics": [
+      "Stewardship Request Types & Workflows",
+      "Queue Management & SLA Optimization",
+      "Issue Intake, Triage & Categorization",
+      "Root Cause Analysis & Knowledge Base",
+      "Workflow Automation & Bot Integration",
+      "Steward Training & Certification Programs",
+      "Evidence Capture & Audit Trails",
+      "Productivity Analytics & Optimization"
+    ],
+    "skillsGained": [
+      "Design efficient stewardship workflows with proper SLAs and prioritization",
+      "Implement automated workflow systems that reduce manual effort",
+      "Create comprehensive issue management processes with root cause analysis",
+      "Build steward training and certification programs for consistent quality",
+      "Apply workflow automation and bot technologies to improve productivity",
+      "Establish evidence capture systems that support audit and compliance requirements"
+    ]
+  },
+  {
+    "id": "data-gov-module-14",
+    "title": "Program Execution, KPIs & Change — Capstone",
+    "subtitle": "Governance program implementation, KPI frameworks, change management, and organizational scaling",
+    "duration": "18 hours",
+    "lessons": 24,
+    "labs": 5,
+    "prerequisites": ["Module 13: Stewardship Workflows & Issue Management"],
+    "keyTopics": [
+      "Program Vision, Scope & Charter Development",
+      "Stakeholder Mapping & RACI Implementation",
+      "Roadmap Planning & Pilot Execution",
+      "KPI Catalog & Value Realization Metrics",
+      "Executive Dashboards & Business Impact",
+      "Capstone Implementation Project",
+      "Organizational Change Management",
+      "Scaling & Continuous Improvement"
+    ],
+    "skillsGained": [
+      "Execute comprehensive data governance program implementations from vision to scale",
+      "Design KPI frameworks that demonstrate business value and ROI",
+      "Create executive reporting mechanisms that drive continued investment",
+      "Apply change management techniques for successful governance adoption",
+      "Build pilot programs that prove value before organizational scaling",
+      "Establish continuous improvement processes that adapt to evolving business needs"
+    ]
+  }
+]

@@ -1,0 +1,811 @@
+[
+  {
+    "id": "finance-module-0",
+    "title": "Fundamentals & Foundation",
+    "subtitle": "Core concepts and introduction to Financial Technology",
+    "duration": "1 week",
+    "lessons": 7,
+    "labs": 2,
+    "prerequisites": [
+      "Basic technical knowledge",
+      "Familiarity with web technologies"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Understanding of FINANCE fundamentals",
+      "Technical terminology and concepts",
+      "Platform navigation and basic operations"
+    ]
+  },
+  {
+    "id": "finance-module-1",
+    "title": "Architecture & Design",
+    "subtitle": "System architecture and design patterns for Financial Technology",
+    "duration": "1 week",
+    "lessons": 8,
+    "labs": 2,
+    "prerequisites": [
+      "Completion of Module 0: Fundamentals"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Understanding of FINANCE fundamentals",
+      "Technical terminology and concepts",
+      "Platform navigation and basic operations"
+    ]
+  },
+  {
+    "id": "finance-module-2",
+    "title": "Implementation & Development",
+    "subtitle": "Hands-on development and implementation techniques",
+    "duration": "1 week",
+    "lessons": 8,
+    "labs": 2,
+    "prerequisites": [
+      "Completion of Module 1",
+      "Understanding of previous module concepts"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Understanding of FINANCE fundamentals",
+      "Technical terminology and concepts",
+      "Platform navigation and basic operations"
+    ]
+  },
+  {
+    "id": "finance-module-3",
+    "title": "Integration & Connectivity",
+    "subtitle": "Integration patterns and connectivity solutions",
+    "duration": "1 week",
+    "lessons": 8,
+    "labs": 2,
+    "prerequisites": [
+      "Completion of Module 2",
+      "Understanding of previous module concepts"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Understanding of FINANCE fundamentals",
+      "Technical terminology and concepts",
+      "Platform navigation and basic operations"
+    ]
+  },
+  {
+    "id": "finance-module-4",
+    "title": "Advanced Features",
+    "subtitle": "Advanced capabilities and specialized features",
+    "duration": "1 week",
+    "lessons": 8,
+    "labs": 2,
+    "prerequisites": [
+      "Completion of Module 3",
+      "Understanding of previous module concepts"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Understanding of FINANCE fundamentals",
+      "Technical terminology and concepts",
+      "Platform navigation and basic operations"
+    ]
+  },
+  {
+    "id": "finance-module-5",
+    "title": "Performance & Optimization",
+    "subtitle": "Performance tuning and optimization strategies",
+    "duration": "1 week",
+    "lessons": 8,
+    "labs": 2,
+    "prerequisites": [
+      "Completion of Module 4",
+      "Understanding of previous module concepts"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Understanding of FINANCE fundamentals",
+      "Technical terminology and concepts",
+      "Platform navigation and basic operations"
+    ]
+  },
+  {
+    "id": "finance-module-6",
+    "title": "Security & Compliance",
+    "subtitle": "Security best practices and compliance requirements",
+    "duration": "1 week",
+    "lessons": 8,
+    "labs": 2,
+    "prerequisites": [
+      "Completion of Module 5",
+      "Understanding of previous module concepts"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Implementation of financial systems",
+      "Configuration and customization techniques",
+      "Integration with external systems"
+    ]
+  },
+  {
+    "id": "finance-module-7",
+    "title": "Monitoring & Observability",
+    "subtitle": "Monitoring, logging, and observability practices",
+    "duration": "1 week",
+    "lessons": 8,
+    "labs": 2,
+    "prerequisites": [
+      "Completion of Module 6",
+      "Understanding of previous module concepts"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Implementation of financial systems",
+      "Configuration and customization techniques",
+      "Integration with external systems"
+    ]
+  },
+  {
+    "id": "finance-module-8",
+    "title": "Automation & Workflows",
+    "subtitle": "Automation strategies and workflow optimization",
+    "duration": "1 week",
+    "lessons": 8,
+    "labs": 2,
+    "prerequisites": [
+      "Completion of Module 7",
+      "Understanding of previous module concepts"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Implementation of financial systems",
+      "Configuration and customization techniques",
+      "Integration with external systems"
+    ]
+  },
+  {
+    "id": "finance-module-9",
+    "title": "Data Management",
+    "subtitle": "Data handling, quality, and lifecycle management",
+    "duration": "1 week",
+    "lessons": 8,
+    "labs": 2,
+    "prerequisites": [
+      "Completion of Module 8",
+      "Understanding of previous module concepts"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Implementation of financial systems",
+      "Configuration and customization techniques",
+      "Integration with external systems"
+    ]
+  },
+  {
+    "id": "finance-module-10",
+    "title": "Governance & Standards",
+    "subtitle": "Governance frameworks and industry standards",
+    "duration": "1 week",
+    "lessons": 8,
+    "labs": 2,
+    "prerequisites": [
+      "Completion of Module 9",
+      "Understanding of previous module concepts"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Implementation of financial systems",
+      "Configuration and customization techniques",
+      "Integration with external systems"
+    ]
+  },
+  {
+    "id": "finance-module-11",
+    "title": "Analytics & Reporting",
+    "subtitle": "Analytics implementation and reporting solutions",
+    "duration": "1 week",
+    "lessons": 8,
+    "labs": 2,
+    "prerequisites": [
+      "Completion of Module 10",
+      "Understanding of previous module concepts"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Implementation of financial systems",
+      "Configuration and customization techniques",
+      "Integration with external systems"
+    ]
+  },
+  {
+    "id": "finance-module-12",
+    "title": "AI & Machine Learning",
+    "subtitle": "AI/ML integration and intelligent automation",
+    "duration": "1 week",
+    "lessons": 8,
+    "labs": 2,
+    "prerequisites": [
+      "Completion of Module 11",
+      "Understanding of previous module concepts"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Implementation of financial systems",
+      "Configuration and customization techniques",
+      "Integration with external systems"
+    ]
+  },
+  {
+    "id": "finance-module-13",
+    "title": "Enterprise Patterns",
+    "subtitle": "Enterprise-scale patterns and best practices",
+    "duration": "1 week",
+    "lessons": 8,
+    "labs": 2,
+    "prerequisites": [
+      "Completion of Module 12",
+      "Understanding of previous module concepts"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Advanced compliance strategies",
+      "Complex problem-solving approaches",
+      "Leadership in technical decision-making"
+    ]
+  },
+  {
+    "id": "finance-module-14",
+    "title": "Platform Operations",
+    "subtitle": "Operations, maintenance, and platform management",
+    "duration": "1 week",
+    "lessons": 8,
+    "labs": 2,
+    "prerequisites": [
+      "Completion of Module 13",
+      "Understanding of previous module concepts"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Advanced compliance strategies",
+      "Complex problem-solving approaches",
+      "Leadership in technical decision-making"
+    ]
+  },
+  {
+    "id": "finance-module-15",
+    "title": "Innovation & Future",
+    "subtitle": "Innovation strategies and future roadmap",
+    "duration": "1 week",
+    "lessons": 8,
+    "labs": 2,
+    "prerequisites": [
+      "Completion of Module 14",
+      "Understanding of previous module concepts"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Advanced compliance strategies",
+      "Complex problem-solving approaches",
+      "Leadership in technical decision-making"
+    ]
+  },
+  {
+    "id": "finance-module-16",
+    "title": "Troubleshooting & Support",
+    "subtitle": "Diagnostic techniques and support processes",
+    "duration": "1 week",
+    "lessons": 8,
+    "labs": 2,
+    "prerequisites": [
+      "Completion of Module 15",
+      "Understanding of previous module concepts"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Advanced compliance strategies",
+      "Complex problem-solving approaches",
+      "Leadership in technical decision-making"
+    ]
+  },
+  {
+    "id": "finance-module-17",
+    "title": "Migration & Transformation",
+    "subtitle": "Migration strategies and digital transformation",
+    "duration": "1 week",
+    "lessons": 8,
+    "labs": 2,
+    "prerequisites": [
+      "Completion of Module 16",
+      "Understanding of previous module concepts"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Advanced compliance strategies",
+      "Complex problem-solving approaches",
+      "Leadership in technical decision-making"
+    ]
+  },
+  {
+    "id": "finance-module-18",
+    "title": "Leadership & Strategy",
+    "subtitle": "Leadership skills and strategic planning",
+    "duration": "1 week",
+    "lessons": 8,
+    "labs": 2,
+    "prerequisites": [
+      "Completion of Module 17",
+      "Understanding of previous module concepts"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Advanced compliance strategies",
+      "Complex problem-solving approaches",
+      "Leadership in technical decision-making"
+    ]
+  },
+  {
+    "id": "finance-module-19",
+    "title": "Capstone & Assessment",
+    "subtitle": "Comprehensive project work and skill assessment",
+    "duration": "1 week",
+    "lessons": 8,
+    "labs": 2,
+    "prerequisites": [
+      "Completion of Module 18",
+      "Understanding of previous module concepts"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Advanced compliance strategies",
+      "Complex problem-solving approaches",
+      "Leadership in technical decision-making"
+    ]
+  },
+  {
+    "id": "finance-module-20",
+    "title": "Module 20",
+    "subtitle": "Advanced Financial Technology topics and specialized applications",
+    "duration": "1 week",
+    "lessons": 8,
+    "labs": 2,
+    "prerequisites": [
+      "Completion of Module 19",
+      "Understanding of previous module concepts"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Advanced compliance strategies",
+      "Complex problem-solving approaches",
+      "Leadership in technical decision-making"
+    ]
+  },
+  {
+    "id": "finance-module-21",
+    "title": "Module 21",
+    "subtitle": "Advanced Financial Technology topics and specialized applications",
+    "duration": "1 week",
+    "lessons": 8,
+    "labs": 2,
+    "prerequisites": [
+      "Completion of Module 20",
+      "Understanding of previous module concepts"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Advanced compliance strategies",
+      "Complex problem-solving approaches",
+      "Leadership in technical decision-making"
+    ]
+  },
+  {
+    "id": "finance-module-22",
+    "title": "Module 22",
+    "subtitle": "Advanced Financial Technology topics and specialized applications",
+    "duration": "1 week",
+    "lessons": 8,
+    "labs": 2,
+    "prerequisites": [
+      "Completion of Module 21",
+      "Understanding of previous module concepts"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Advanced compliance strategies",
+      "Complex problem-solving approaches",
+      "Leadership in technical decision-making"
+    ]
+  },
+  {
+    "id": "finance-module-23",
+    "title": "Module 23",
+    "subtitle": "Advanced Financial Technology topics and specialized applications",
+    "duration": "1 week",
+    "lessons": 8,
+    "labs": 2,
+    "prerequisites": [
+      "Completion of Module 22",
+      "Understanding of previous module concepts"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Advanced compliance strategies",
+      "Complex problem-solving approaches",
+      "Leadership in technical decision-making"
+    ]
+  },
+  {
+    "id": "finance-module-24",
+    "title": "Module 24",
+    "subtitle": "Advanced Financial Technology topics and specialized applications",
+    "duration": "1 week",
+    "lessons": 8,
+    "labs": 2,
+    "prerequisites": [
+      "Completion of Module 23",
+      "Understanding of previous module concepts"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Advanced compliance strategies",
+      "Complex problem-solving approaches",
+      "Leadership in technical decision-making"
+    ]
+  },
+  {
+    "id": "finance-module-25",
+    "title": "Module 25",
+    "subtitle": "Advanced Financial Technology topics and specialized applications",
+    "duration": "1 week",
+    "lessons": 8,
+    "labs": 2,
+    "prerequisites": [
+      "Completion of Module 24",
+      "Understanding of previous module concepts"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Advanced compliance strategies",
+      "Complex problem-solving approaches",
+      "Leadership in technical decision-making"
+    ]
+  },
+  {
+    "id": "finance-module-26",
+    "title": "Module 26",
+    "subtitle": "Advanced Financial Technology topics and specialized applications",
+    "duration": "1 week",
+    "lessons": 8,
+    "labs": 2,
+    "prerequisites": [
+      "Completion of Module 25",
+      "Understanding of previous module concepts"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Advanced compliance strategies",
+      "Complex problem-solving approaches",
+      "Leadership in technical decision-making"
+    ]
+  },
+  {
+    "id": "finance-module-27",
+    "title": "Module 27",
+    "subtitle": "Advanced Financial Technology topics and specialized applications",
+    "duration": "1 week",
+    "lessons": 8,
+    "labs": 2,
+    "prerequisites": [
+      "Completion of Module 26",
+      "Understanding of previous module concepts"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Advanced compliance strategies",
+      "Complex problem-solving approaches",
+      "Leadership in technical decision-making"
+    ]
+  },
+  {
+    "id": "finance-module-28",
+    "title": "Module 28",
+    "subtitle": "Advanced Financial Technology topics and specialized applications",
+    "duration": "1 week",
+    "lessons": 8,
+    "labs": 2,
+    "prerequisites": [
+      "Completion of Module 27",
+      "Understanding of previous module concepts"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Advanced compliance strategies",
+      "Complex problem-solving approaches",
+      "Leadership in technical decision-making"
+    ]
+  },
+  {
+    "id": "finance-module-29",
+    "title": "Module 29",
+    "subtitle": "Advanced Financial Technology topics and specialized applications",
+    "duration": "1 week",
+    "lessons": 8,
+    "labs": 2,
+    "prerequisites": [
+      "Completion of Module 28",
+      "Understanding of previous module concepts"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Advanced compliance strategies",
+      "Complex problem-solving approaches",
+      "Leadership in technical decision-making"
+    ]
+  },
+  {
+    "id": "finance-module-30",
+    "title": "Module 30",
+    "subtitle": "Advanced Financial Technology topics and specialized applications",
+    "duration": "1 week",
+    "lessons": 8,
+    "labs": 2,
+    "prerequisites": [
+      "Completion of Module 29",
+      "Understanding of previous module concepts"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Advanced compliance strategies",
+      "Complex problem-solving approaches",
+      "Leadership in technical decision-making"
+    ]
+  },
+  {
+    "id": "finance-module-31",
+    "title": "Module 31",
+    "subtitle": "Advanced Financial Technology topics and specialized applications",
+    "duration": "1 week",
+    "lessons": 8,
+    "labs": 2,
+    "prerequisites": [
+      "Completion of Module 30",
+      "Understanding of previous module concepts"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Advanced compliance strategies",
+      "Complex problem-solving approaches",
+      "Leadership in technical decision-making"
+    ]
+  },
+  {
+    "id": "finance-module-32",
+    "title": "Module 32",
+    "subtitle": "Advanced Financial Technology topics and specialized applications",
+    "duration": "1 week",
+    "lessons": 8,
+    "labs": 2,
+    "prerequisites": [
+      "Completion of Module 31",
+      "Understanding of previous module concepts"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Advanced compliance strategies",
+      "Complex problem-solving approaches",
+      "Leadership in technical decision-making"
+    ]
+  },
+  {
+    "id": "finance-module-33",
+    "title": "Module 33",
+    "subtitle": "Advanced Financial Technology topics and specialized applications",
+    "duration": "1 week",
+    "lessons": 8,
+    "labs": 2,
+    "prerequisites": [
+      "Completion of Module 32",
+      "Understanding of previous module concepts"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Advanced compliance strategies",
+      "Complex problem-solving approaches",
+      "Leadership in technical decision-making"
+    ]
+  },
+  {
+    "id": "finance-module-34",
+    "title": "Module 34",
+    "subtitle": "Advanced Financial Technology topics and specialized applications",
+    "duration": "1 week",
+    "lessons": 8,
+    "labs": 2,
+    "prerequisites": [
+      "Completion of Module 33",
+      "Understanding of previous module concepts"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Advanced compliance strategies",
+      "Complex problem-solving approaches",
+      "Leadership in technical decision-making"
+    ]
+  },
+  {
+    "id": "finance-module-35",
+    "title": "Module 35",
+    "subtitle": "Advanced Financial Technology topics and specialized applications",
+    "duration": "1 week",
+    "lessons": 8,
+    "labs": 2,
+    "prerequisites": [
+      "Completion of Module 34",
+      "Understanding of previous module concepts"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Advanced compliance strategies",
+      "Complex problem-solving approaches",
+      "Leadership in technical decision-making"
+    ]
+  },
+  {
+    "id": "finance-module-36",
+    "title": "Module 36",
+    "subtitle": "Advanced Financial Technology topics and specialized applications",
+    "duration": "1 week",
+    "lessons": 8,
+    "labs": 2,
+    "prerequisites": [
+      "Completion of Module 35",
+      "Understanding of previous module concepts"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Advanced compliance strategies",
+      "Complex problem-solving approaches",
+      "Leadership in technical decision-making"
+    ]
+  },
+  {
+    "id": "finance-module-37",
+    "title": "Module 37",
+    "subtitle": "Advanced Financial Technology topics and specialized applications",
+    "duration": "1 week",
+    "lessons": 8,
+    "labs": 2,
+    "prerequisites": [
+      "Completion of Module 36",
+      "Understanding of previous module concepts"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Advanced compliance strategies",
+      "Complex problem-solving approaches",
+      "Leadership in technical decision-making"
+    ]
+  },
+  {
+    "id": "finance-module-38",
+    "title": "Module 38",
+    "subtitle": "Advanced Financial Technology topics and specialized applications",
+    "duration": "1 week",
+    "lessons": 8,
+    "labs": 2,
+    "prerequisites": [
+      "Completion of Module 37",
+      "Understanding of previous module concepts"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Advanced compliance strategies",
+      "Complex problem-solving approaches",
+      "Leadership in technical decision-making"
+    ]
+  },
+  {
+    "id": "finance-module-39",
+    "title": "Module 39",
+    "subtitle": "Advanced Financial Technology topics and specialized applications",
+    "duration": "1 week",
+    "lessons": 8,
+    "labs": 2,
+    "prerequisites": [
+      "Completion of Module 38",
+      "Understanding of previous module concepts"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Advanced compliance strategies",
+      "Complex problem-solving approaches",
+      "Leadership in technical decision-making"
+    ]
+  },
+  {
+    "id": "finance-module-40",
+    "title": "Module 40",
+    "subtitle": "Advanced Financial Technology topics and specialized applications",
+    "duration": "1 week",
+    "lessons": 8,
+    "labs": 2,
+    "prerequisites": [
+      "Completion of Module 39",
+      "Understanding of previous module concepts"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Advanced compliance strategies",
+      "Complex problem-solving approaches",
+      "Leadership in technical decision-making"
+    ]
+  },
+  {
+    "id": "finance-module-41",
+    "title": "Module 41",
+    "subtitle": "Advanced Financial Technology topics and specialized applications",
+    "duration": "1 week",
+    "lessons": 8,
+    "labs": 2,
+    "prerequisites": [
+      "Completion of Module 40",
+      "Understanding of previous module concepts"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Advanced compliance strategies",
+      "Complex problem-solving approaches",
+      "Leadership in technical decision-making"
+    ]
+  },
+  {
+    "id": "finance-module-42",
+    "title": "Module 42",
+    "subtitle": "Advanced Financial Technology topics and specialized applications",
+    "duration": "1 week",
+    "lessons": 8,
+    "labs": 2,
+    "prerequisites": [
+      "Completion of Module 41",
+      "Understanding of previous module concepts"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Advanced compliance strategies",
+      "Complex problem-solving approaches",
+      "Leadership in technical decision-making"
+    ]
+  },
+  {
+    "id": "finance-module-43",
+    "title": "Module 43",
+    "subtitle": "Advanced Financial Technology topics and specialized applications",
+    "duration": "1 week",
+    "lessons": 8,
+    "labs": 2,
+    "prerequisites": [
+      "Completion of Module 42",
+      "Understanding of previous module concepts"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Advanced compliance strategies",
+      "Complex problem-solving approaches",
+      "Leadership in technical decision-making"
+    ]
+  },
+  {
+    "id": "finance-module-44",
+    "title": "Module 44",
+    "subtitle": "Advanced Financial Technology topics and specialized applications",
+    "duration": "1 week",
+    "lessons": 8,
+    "labs": 2,
+    "prerequisites": [
+      "Completion of Module 43",
+      "Understanding of previous module concepts"
+    ],
+    "keyTopics": [],
+    "skillsGained": [
+      "Advanced compliance strategies",
+      "Complex problem-solving approaches",
+      "Leadership in technical decision-making"
+    ]
+  }
+]

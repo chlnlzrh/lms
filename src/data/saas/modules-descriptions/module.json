@@ -1,0 +1,427 @@
+[
+  {
+    "id": "module-0",
+    "title": "SaaS Architecture & System Design",
+    "subtitle": "Multi-tenancy, architectural patterns, consistency models, and distributed systems fundamentals",
+    "duration": "54 hours",
+    "lessons": 72,
+    "labs": 8,
+    "prerequisites": ["No prerequisites required"],
+    "keyTopics": [
+      "Multi-Tenancy & Isolation Models",
+      "Architectural Patterns",
+      "Domain-Driven Design",
+      "Consistency & Reliability",
+      "Caching Strategies",
+      "Rate Limiting & Fairness",
+      "API Lifecycle Management",
+      "Platform Engineering"
+    ],
+    "skillsGained": [
+      "Master multi-tenant architecture patterns and isolation strategies",
+      "Design scalable SaaS systems with proper tenancy models",
+      "Implement distributed caching and rate limiting mechanisms",
+      "Apply domain-driven design principles to complex systems",
+      "Build reliable APIs with proper versioning and governance",
+      "Design platform-as-a-product architectures for team autonomy"
+    ]
+  },
+  {
+    "id": "module-1",
+    "title": "Frontend Foundations (TypeScript/React/Next.js)",
+    "subtitle": "Modern frontend development with type safety, component architecture, and user experience",
+    "duration": "42 hours",
+    "lessons": 56,
+    "labs": 6,
+    "prerequisites": ["Module 0: SaaS Architecture & System Design"],
+    "keyTopics": [
+      "TypeScript Essentials",
+      "React Component Architecture",
+      "Next.js App Router",
+      "Forms & Validation",
+      "State Management & Data Fetching",
+      "Accessibility & UX",
+      "Design Systems"
+    ],
+    "skillsGained": [
+      "Master TypeScript for type-safe frontend development",
+      "Build scalable React applications with modern patterns",
+      "Implement server-side rendering and data fetching with Next.js",
+      "Create accessible and user-friendly interfaces",
+      "Design and maintain consistent design systems",
+      "Manage complex application state effectively"
+    ]
+  },
+  {
+    "id": "module-2",
+    "title": "Backend & API Development",
+    "subtitle": "Node.js runtime, API design patterns, webhooks, and event-driven architectures",
+    "duration": "36 hours",
+    "lessons": 48,
+    "labs": 5,
+    "prerequisites": ["Module 1: Frontend Foundations"],
+    "keyTopics": [
+      "Node.js Runtime & Performance",
+      "API Design Patterns",
+      "Resource Design & Consistency",
+      "Webhooks & Integrations",
+      "Security & Resiliency",
+      "Event-Driven Architecture"
+    ],
+    "skillsGained": [
+      "Master Node.js runtime optimization and performance tuning",
+      "Design RESTful and GraphQL APIs following best practices",
+      "Implement secure webhook systems and third-party integrations",
+      "Build resilient systems with proper error handling and circuit breakers",
+      "Apply event-driven architecture patterns for scalability",
+      "Ensure API security and compliance with industry standards"
+    ]
+  },
+  {
+    "id": "module-3",
+    "title": "Data, Storage & ORM",
+    "subtitle": "Database design, performance optimization, multi-tenancy, and data management patterns",
+    "duration": "36 hours",
+    "lessons": 48,
+    "labs": 5,
+    "prerequisites": ["Module 2: Backend & API Development"],
+    "keyTopics": [
+      "Data Modeling & SQL",
+      "Indexing & Performance",
+      "Transactions & Isolation",
+      "Multi-Tenancy Data Patterns",
+      "Prisma ORM & Best Practices",
+      "Backup & Disaster Recovery"
+    ],
+    "skillsGained": [
+      "Design efficient database schemas and optimize query performance",
+      "Implement multi-tenant data isolation strategies",
+      "Master transaction management and ACID compliance",
+      "Use Prisma ORM effectively for type-safe database operations",
+      "Plan and execute database migrations safely",
+      "Implement comprehensive backup and disaster recovery strategies"
+    ]
+  },
+  {
+    "id": "module-4",
+    "title": "Search, Retrieval & Recommendations",
+    "subtitle": "Full-text search, vector search, search engines, and recommendation systems",
+    "duration": "30 hours",
+    "lessons": 40,
+    "labs": 4,
+    "prerequisites": ["Module 3: Data, Storage & ORM"],
+    "keyTopics": [
+      "Full-Text Search Implementation",
+      "Dedicated Search Engines",
+      "Vector Search & AI Retrieval",
+      "Index Lifecycle Management",
+      "Query Observability & Quality"
+    ],
+    "skillsGained": [
+      "Implement robust full-text search with PostgreSQL and dedicated engines",
+      "Design and deploy vector search systems for AI applications",
+      "Manage search index lifecycle and operations at scale",
+      "Optimize search relevance and user experience",
+      "Monitor and improve search quality with analytics and A/B testing"
+    ]
+  },
+  {
+    "id": "module-5",
+    "title": "Identity, AuthN/Z & Privacy",
+    "subtitle": "Authentication, authorization, security, and privacy compliance frameworks",
+    "duration": "36 hours",
+    "lessons": 48,
+    "labs": 5,
+    "prerequisites": ["Module 4: Search, Retrieval & Recommendations"],
+    "keyTopics": [
+      "Identity & Authentication",
+      "Role-Based Access Control",
+      "Secrets Management",
+      "Privacy & Data Protection",
+      "Threat Modeling & Security",
+      "Compliance & Hardening"
+    ],
+    "skillsGained": [
+      "Implement secure authentication and authorization systems",
+      "Design granular permission systems with RBAC/ABAC",
+      "Manage secrets and cryptographic keys securely",
+      "Ensure privacy compliance with GDPR and other regulations",
+      "Conduct threat modeling and security assessments",
+      "Harden applications against common security vulnerabilities"
+    ]
+  },
+  {
+    "id": "module-6",
+    "title": "Payments, Billing & Monetization",
+    "subtitle": "Payment processing, subscription management, and revenue optimization strategies",
+    "duration": "18 hours",
+    "lessons": 24,
+    "labs": 3,
+    "prerequisites": ["Module 5: Identity, AuthN/Z & Privacy"],
+    "keyTopics": [
+      "Stripe Integration & Payment Processing",
+      "Subscription & Entitlement Management",
+      "Commercial Strategy & Pricing"
+    ],
+    "skillsGained": [
+      "Integrate Stripe for secure payment processing",
+      "Implement complex subscription and billing models",
+      "Design entitlement systems tied to pricing tiers",
+      "Optimize pricing strategies and revenue recognition",
+      "Handle international payments and compliance requirements"
+    ]
+  },
+  {
+    "id": "module-7",
+    "title": "Files, Media & CDN",
+    "subtitle": "Object storage, media processing, content delivery, and edge computing",
+    "duration": "18 hours",
+    "lessons": 24,
+    "labs": 3,
+    "prerequisites": ["Module 6: Payments, Billing & Monetization"],
+    "keyTopics": [
+      "Object Storage & File Management",
+      "Image & Video Processing",
+      "CDN & Edge Computing"
+    ],
+    "skillsGained": [
+      "Implement secure file storage with object storage systems",
+      "Process and optimize images and videos at scale",
+      "Design global content delivery strategies",
+      "Leverage edge computing for performance optimization",
+      "Manage media lifecycle and cost optimization"
+    ]
+  },
+  {
+    "id": "module-8",
+    "title": "Jobs, Schedulers & Integrations",
+    "subtitle": "Background processing, job queues, scheduling, and third-party integrations",
+    "duration": "18 hours",
+    "lessons": 24,
+    "labs": 3,
+    "prerequisites": ["Module 7: Files, Media & CDN"],
+    "keyTopics": [
+      "Job Queues & Background Processing",
+      "Third-Party Integrations",
+      "Workflow Orchestration"
+    ],
+    "skillsGained": [
+      "Design reliable background job processing systems",
+      "Implement robust third-party API integrations",
+      "Build workflow orchestration with proper error handling",
+      "Manage job scheduling and resource allocation",
+      "Monitor and troubleshoot distributed job systems"
+    ]
+  },
+  {
+    "id": "module-9",
+    "title": "Testing & Quality Engineering",
+    "subtitle": "Testing strategies, quality assurance, and automated testing frameworks",
+    "duration": "18 hours",
+    "lessons": 24,
+    "labs": 3,
+    "prerequisites": ["Module 8: Jobs, Schedulers & Integrations"],
+    "keyTopics": [
+      "Testing Strategy & Foundations",
+      "Unit & Integration Testing",
+      "End-to-End & Performance Testing"
+    ],
+    "skillsGained": [
+      "Design comprehensive testing strategies for SaaS applications",
+      "Implement automated testing pipelines with high coverage",
+      "Conduct performance and load testing effectively",
+      "Build quality gates and continuous testing processes",
+      "Apply testing best practices for distributed systems"
+    ]
+  },
+  {
+    "id": "module-10",
+    "title": "CI/CD, Release & Environments",
+    "subtitle": "Continuous integration, deployment pipelines, and environment management",
+    "duration": "18 hours",
+    "lessons": 24,
+    "labs": 3,
+    "prerequisites": ["Module 9: Testing & Quality Engineering"],
+    "keyTopics": [
+      "Git Workflows & Branching",
+      "CI/CD Pipelines & Security",
+      "Environment & Release Management"
+    ],
+    "skillsGained": [
+      "Design robust CI/CD pipelines with security best practices",
+      "Implement blue-green and canary deployment strategies",
+      "Manage multi-environment deployments effectively",
+      "Automate release processes with proper rollback mechanisms",
+      "Ensure supply chain security in deployment pipelines"
+    ]
+  },
+  {
+    "id": "module-11",
+    "title": "Observability, SRE & Operations",
+    "subtitle": "Monitoring, alerting, incident response, and site reliability engineering",
+    "duration": "18 hours",
+    "lessons": 24,
+    "labs": 3,
+    "prerequisites": ["Module 10: CI/CD, Release & Environments"],
+    "keyTopics": [
+      "Telemetry & Observability",
+      "Incident Response & Management",
+      "Capacity Planning & Reliability"
+    ],
+    "skillsGained": [
+      "Implement comprehensive observability with metrics, logs, and traces",
+      "Design effective alerting and incident response processes",
+      "Plan capacity and manage system reliability",
+      "Conduct post-incident reviews and continuous improvement",
+      "Apply SRE principles for operational excellence"
+    ]
+  },
+  {
+    "id": "module-12",
+    "title": "Cloud, Infra & Platform Engineering",
+    "subtitle": "Cloud infrastructure, containerization, and platform engineering practices",
+    "duration": "18 hours",
+    "lessons": 24,
+    "labs": 3,
+    "prerequisites": ["Module 11: Observability, SRE & Operations"],
+    "keyTopics": [
+      "Cloud Infrastructure & Networking",
+      "Infrastructure as Code & Containers",
+      "Platform Engineering & Edge Computing"
+    ],
+    "skillsGained": [
+      "Design secure cloud infrastructure with proper networking",
+      "Implement Infrastructure as Code with Terraform and containers",
+      "Build internal developer platforms and golden paths",
+      "Leverage edge computing and global infrastructure",
+      "Manage multi-cloud and hybrid cloud strategies"
+    ]
+  },
+  {
+    "id": "module-13",
+    "title": "Analytics, Experimentation & Product",
+    "subtitle": "Product analytics, A/B testing, and data-driven product development",
+    "duration": "18 hours",
+    "lessons": 24,
+    "labs": 3,
+    "prerequisites": ["Module 12: Cloud, Infra & Platform Engineering"],
+    "keyTopics": [
+      "Event Tracking & Analytics",
+      "Product Metrics & KPIs",
+      "A/B Testing & Experimentation"
+    ],
+    "skillsGained": [
+      "Design comprehensive product analytics and event tracking",
+      "Implement A/B testing frameworks and statistical analysis",
+      "Build data-driven product development processes",
+      "Measure and optimize key product metrics",
+      "Apply privacy-conscious analytics practices"
+    ]
+  },
+  {
+    "id": "module-14",
+    "title": "AI-Native Capabilities",
+    "subtitle": "Large language models, retrieval systems, and AI feature development",
+    "duration": "18 hours",
+    "lessons": 24,
+    "labs": 3,
+    "prerequisites": ["Module 13: Analytics, Experimentation & Product"],
+    "keyTopics": [
+      "LLM Integration & Management",
+      "Retrieval-Augmented Generation",
+      "AI System Productionization"
+    ],
+    "skillsGained": [
+      "Integrate large language models into production applications",
+      "Build robust retrieval-augmented generation systems",
+      "Implement AI safety and content moderation",
+      "Design cost-effective AI feature architectures",
+      "Monitor and evaluate AI system performance"
+    ]
+  },
+  {
+    "id": "module-15",
+    "title": "Security, Compliance & Risk",
+    "subtitle": "Application security, compliance frameworks, and risk management",
+    "duration": "24 hours",
+    "lessons": 32,
+    "labs": 4,
+    "prerequisites": ["Module 14: AI-Native Capabilities"],
+    "keyTopics": [
+      "Application Security Fundamentals",
+      "Data Protection & Encryption",
+      "Compliance Programs",
+      "Risk Management & Governance"
+    ],
+    "skillsGained": [
+      "Implement comprehensive application security controls",
+      "Design data protection and encryption strategies",
+      "Establish SOC2 and ISO 27001 compliance programs",
+      "Manage enterprise risk and security governance",
+      "Conduct security assessments and penetration testing"
+    ]
+  },
+  {
+    "id": "module-16",
+    "title": "Documentation, Process & Knowledge",
+    "subtitle": "Technical documentation, process management, and knowledge sharing",
+    "duration": "18 hours",
+    "lessons": 24,
+    "labs": 3,
+    "prerequisites": ["Module 15: Security, Compliance & Risk"],
+    "keyTopics": [
+      "Runbooks & Operational Documentation",
+      "Architecture Decision Records",
+      "Knowledge Management & Sharing"
+    ],
+    "skillsGained": [
+      "Create comprehensive technical documentation and runbooks",
+      "Design decision-making processes with proper documentation",
+      "Build effective knowledge sharing and learning systems",
+      "Implement documentation-as-code practices",
+      "Establish technical writing and communication standards"
+    ]
+  },
+  {
+    "id": "module-17",
+    "title": "Leadership & Career Skills",
+    "subtitle": "Technical leadership, project management, and career development",
+    "duration": "18 hours",
+    "lessons": 24,
+    "labs": 3,
+    "prerequisites": ["Module 16: Documentation, Process & Knowledge"],
+    "keyTopics": [
+      "Execution & Project Management",
+      "Technical Leadership",
+      "People & Organizational Management"
+    ],
+    "skillsGained": [
+      "Lead technical projects and cross-functional teams",
+      "Develop technical vision and architectural roadmaps",
+      "Manage engineering teams and organizational culture",
+      "Communicate effectively with stakeholders and executives",
+      "Build and scale engineering organizations"
+    ]
+  },
+  {
+    "id": "module-18",
+    "title": "Capstone Projects",
+    "subtitle": "Hands-on projects integrating all SaaS development concepts and skills",
+    "duration": "18 hours",
+    "lessons": 24,
+    "labs": 8,
+    "prerequisites": ["Module 17: Leadership & Career Skills"],
+    "keyTopics": [
+      "Foundation Capstone (Junior Level)",
+      "Scale Capstone (Senior Level)",
+      "Platform Capstone (Staff/Principal Level)"
+    ],
+    "skillsGained": [
+      "Build complete SaaS applications with multi-tenancy",
+      "Implement enterprise-grade scalability and reliability features",
+      "Design platform architectures for organizational scale",
+      "Apply all learned concepts in integrated real-world projects",
+      "Demonstrate readiness for senior technical roles"
+    ]
+  }
+]
