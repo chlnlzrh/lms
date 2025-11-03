@@ -384,7 +384,7 @@ valid, result = validator.validate_json_output(bad_output)
 print(f"Invalid output: {valid}, error: {result}")
 
 # Check for dangerous content
-dangerous_output = "Here's your API key: sk_live_abc123xyz789<script>alert('xss')</script>"
+dangerous_output = "Here's your API key: sk_live_REDACTED_EXAMPLE<script>alert('xss')</script>"
 sanitized = validator.sanitize_for_display(dangerous_output)
 secrets = validator.check_for_leaked_secrets(dangerous_output)
 print(f"Sanitized: {sanitized}")
