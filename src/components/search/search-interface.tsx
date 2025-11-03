@@ -47,10 +47,12 @@ export function SearchInterface({
   const saveRecentSearch = useCallback((searchQuery: string) => {
     if (!searchQuery.trim()) return
     
-    const updated = [searchQuery, ...recentSearches.filter(s => s !== searchQuery)].slice(0, 10)
-    setRecentSearches(updated)
-    localStorage.setItem('recent-searches', JSON.stringify(updated))
-  }, [recentSearches])
+    setRecentSearches(current => {
+      const updated = [searchQuery, ...current.filter(s => s !== searchQuery)].slice(0, 10)
+      localStorage.setItem('recent-searches', JSON.stringify(updated))
+      return updated
+    })
+  }, [])
 
   // Perform search when query or filters change
   useEffect(() => {
@@ -58,6 +60,7 @@ export function SearchInterface({
       if (!debouncedQuery.trim()) {
         setResults([])
         setShowResults(false)
+        setAiInsights('')
         return
       }
 
@@ -65,36 +68,51 @@ export function SearchInterface({
       setShowResults(true)
 
       try {
-        // Basic search
-        const searchResults = await searchLessons(debouncedQuery, filters)
-        setResults(searchResults)
+        // Minimum loading time to prevent rapid flashing
+        const searchPromise = searchLessons(debouncedQuery, filters)
+        const minLoadTime = new Promise(resolve => setTimeout(resolve, 300))
+        
+        const [searchResults] = await Promise.all([searchPromise, minLoadTime])
+        
+        // Only update if we're still searching for the same query
+        if (debouncedQuery === query.trim()) {
+          setResults(searchResults)
 
-        // AI enhancement if enabled
-        if (aiEnabled) {
-          // This would call your AI API
-          const aiResponse = await fetch('/api/search/ai-enhance', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ query: debouncedQuery, results: searchResults.slice(0, 5) })
-          })
-          
-          if (aiResponse.ok) {
-            const data = await aiResponse.json()
-            setAiInsights(data.insights)
+          // AI enhancement if enabled
+          if (aiEnabled && searchResults.length > 0) {
+            try {
+              const aiResponse = await fetch('/api/search/ai-enhance', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ query: debouncedQuery, results: searchResults.slice(0, 5) })
+              })
+              
+              if (aiResponse.ok) {
+                const data = await aiResponse.json()
+                setAiInsights(data.insights || '')
+              }
+            } catch (aiError) {
+              console.warn('AI enhancement failed:', aiError)
+              setAiInsights('')
+            }
+          } else {
+            setAiInsights('')
           }
-        }
 
-        // Save to recent searches
-        saveRecentSearch(debouncedQuery)
+          // Save to recent searches
+          saveRecentSearch(debouncedQuery)
+        }
       } catch (error) {
         console.error('Search error:', error)
+        setResults([])
+        setAiInsights('')
       } finally {
         setIsLoading(false)
       }
     }
 
     performSearch()
-  }, [debouncedQuery, filters, aiEnabled, saveRecentSearch])
+  }, [debouncedQuery, filters, aiEnabled, saveRecentSearch, query])
 
   const handleQueryChange = (newQuery: string) => {
     setQuery(newQuery)
@@ -204,14 +222,16 @@ export function SearchInterface({
               </div>
             </div>
           ) : (
-            // Search Results
-            <SearchResults 
-              results={results}
-              query={query}
-              isLoading={isLoading}
-              aiInsights={aiInsights}
-              aiEnabled={aiEnabled}
-            />
+            // Search Results Container - Stable height to prevent layout shifts
+            <div className="min-h-screen">
+              <SearchResults 
+                results={results}
+                query={query}
+                isLoading={isLoading}
+                aiInsights={aiInsights}
+                aiEnabled={aiEnabled}
+              />
+            </div>
           )}
         </div>
       </div>
