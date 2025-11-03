@@ -1,0 +1,239 @@
+{
+  "pageInfo": {
+    "title": "Book of Knowledge",
+    "description": "Master foundational technologies and cutting-edge tools",
+    "subtitle": "Comprehensive technical knowledge across key technology domains",
+    "category": "foundation",
+    "lastUpdated": "November 02, 2025"
+  },
+  "overview": {
+    "totals": {
+      "tracks": 6,
+      "modules": 76,
+      "lessons": 2487,
+      "estimatedHours": 2283.4,
+      "readingHours": 504.3,
+      "handsOnLessons": 1968,
+      "labs": 622
+    },
+    "averages": {
+      "lessonsPerTrack": 414.5,
+      "hoursPerTrack": 380.6,
+      "practicalRatio": 80.7,
+      "lessonDuration": 53.5
+    },
+    "distributions": {
+      "lessonTypes": {
+        "Hands-on": 1968,
+        "Assessment": 505,
+        "Theory": 3,
+        "Practical": 10,
+        "Overview": 1
+      },
+      "technologies": [
+        "Analytics",
+        "Api",
+        "Architecture",
+        "Authentication",
+        "Authorization",
+        "Automation",
+        "Best Practices",
+        "Cloud",
+        "Compliance",
+        "Database",
+        "Debugging",
+        "Deployment",
+        "Design Patterns",
+        "Governance",
+        "Integration"
+      ]
+    }
+  },
+  "tracks": [
+    {
+      "id": "ai",
+      "title": "Artificial Intelligence",
+      "description": "Master machine learning, automation, and intelligent systems",
+      "icon": "Bot",
+      "color": "violet",
+      "href": "/book-of-knowledge/ai",
+      "difficulty": "Intermediate",
+      "stats": {
+        "modules": 6,
+        "lessons": 236,
+        "duration": "6 weeks",
+        "estimatedHours": 119.1,
+        "practicalRatio": 85.2,
+        "handsOnLessons": 201
+      },
+      "keyTopics": [
+        "Analytics",
+        "Api",
+        "Architecture",
+        "Automation"
+      ],
+      "focus": "machine learning, automation, and intelligent systems",
+      "status": "active"
+    },
+    {
+      "id": "de",
+      "title": "Data Engineering",
+      "description": "Master data pipelines, processing, and infrastructure",
+      "icon": "Database",
+      "color": "slate",
+      "href": "/book-of-knowledge/de",
+      "difficulty": "Advanced",
+      "stats": {
+        "modules": 6,
+        "lessons": 541,
+        "duration": "6 weeks",
+        "estimatedHours": 541.0,
+        "practicalRatio": 100.0,
+        "handsOnLessons": 541
+      },
+      "keyTopics": [
+        "Analytics",
+        "Api",
+        "Architecture",
+        "Authentication"
+      ],
+      "focus": "data pipelines, processing, and infrastructure",
+      "status": "active"
+    },
+    {
+      "id": "saas",
+      "title": "SaaS Development",
+      "description": "Master cloud applications, scalability, and service delivery",
+      "icon": "Cloud",
+      "color": "purple",
+      "href": "/book-of-knowledge/saas",
+      "difficulty": "Intermediate",
+      "stats": {
+        "modules": 19,
+        "lessons": 632,
+        "duration": "19 weeks",
+        "estimatedHours": 565.3,
+        "practicalRatio": 55.7,
+        "handsOnLessons": 352
+      },
+      "keyTopics": [
+        "Analytics",
+        "Api",
+        "Architecture",
+        "Authentication"
+      ],
+      "focus": "cloud applications, scalability, and service delivery",
+      "status": "active"
+    },
+    {
+      "id": "sfdc",
+      "title": "Salesforce",
+      "description": "Master CRM, platform development, and customization",
+      "icon": "Zap",
+      "color": "blue",
+      "href": "/book-of-knowledge/sfdc",
+      "difficulty": "Beginner",
+      "stats": {
+        "modules": 15,
+        "lessons": 359,
+        "duration": "15 weeks",
+        "estimatedHours": 349.5,
+        "practicalRatio": 70.2,
+        "handsOnLessons": 252
+      },
+      "keyTopics": [
+        "Analytics",
+        "Api",
+        "Architecture",
+        "Authentication"
+      ],
+      "focus": "CRM, platform development, and customization",
+      "status": "active"
+    },
+    {
+      "id": "snowflake_tune",
+      "title": "Snowflake Tuning",
+      "description": "Master performance optimization, tuning, and scaling",
+      "icon": "Snowflake",
+      "color": "cyan",
+      "href": "/book-of-knowledge/snowflake_tune",
+      "difficulty": "Advanced",
+      "stats": {
+        "modules": 15,
+        "lessons": 360,
+        "duration": "15 weeks",
+        "estimatedHours": 358.6,
+        "practicalRatio": 87.8,
+        "handsOnLessons": 316
+      },
+      "keyTopics": [
+        "Analytics",
+        "Api",
+        "Cloud",
+        "Database"
+      ],
+      "focus": "performance optimization, tuning, and scaling",
+      "status": "active"
+    },
+    {
+      "id": "workato",
+      "title": "Workato",
+      "description": "Master API integration, workflows, and connectivity",
+      "icon": "Link",
+      "color": "teal",
+      "href": "/book-of-knowledge/workato",
+      "difficulty": "Intermediate",
+      "stats": {
+        "modules": 15,
+        "lessons": 359,
+        "duration": "15 weeks",
+        "estimatedHours": 349.9,
+        "practicalRatio": 85.2,
+        "handsOnLessons": 306
+      },
+      "keyTopics": [
+        "Api",
+        "Architecture",
+        "Authentication",
+        "Automation"
+      ],
+      "focus": "API integration, workflows, and connectivity",
+      "status": "active"
+    }
+  ],
+  "featuredContent": {
+    "mostPopular": "ai",
+    "newest": "saas",
+    "quickStart": "sfdc",
+    "advanced": "de"
+  },
+  "filters": {
+    "byDifficulty": [
+      "Advanced",
+      "Beginner",
+      "Intermediate"
+    ],
+    "byDuration": [
+      "100+ hours"
+    ],
+    "byTechnology": [
+      "Analytics",
+      "Api",
+      "Architecture",
+      "Authentication",
+      "Authorization",
+      "Automation",
+      "Best Practices",
+      "Cloud",
+      "Compliance",
+      "Database",
+      "Debugging",
+      "Deployment"
+    ]
+  },
+  "metadata": {
+    "totalTracks": 6,
+    "dataSource": "aggregated from module.json files",
+    "generatedAt": "2025-11-02T16:07:42.214709"
+  }
+}

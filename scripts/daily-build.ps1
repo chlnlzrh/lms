@@ -27,6 +27,15 @@ try {
     & $pythonPath "scripts/build_module_descriptions.py" "all"
     $exitCode = $LASTEXITCODE
     
+    if ($exitCode -ne 0) {
+        throw "Module description builder failed with exit code: $exitCode"
+    }
+    
+    # Generate landing page data
+    Write-Host "`nGenerating landing page data..." -ForegroundColor Yellow
+    & $pythonPath "scripts/build_landing_pages.py"
+    $exitCode = $LASTEXITCODE
+    
     if ($exitCode -eq 0) {
         Write-Host "`n======================================================================" -ForegroundColor Green
         Write-Host "SUCCESS: Daily module description build completed successfully!" -ForegroundColor Green

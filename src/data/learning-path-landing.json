@@ -1,0 +1,927 @@
+{
+  "pageInfo": {
+    "title": "Learning Paths",
+    "description": "Role-specific career development and skill building",
+    "subtitle": "Structured learning journeys for professional growth",
+    "category": "role-specific",
+    "lastUpdated": "November 02, 2025"
+  },
+  "overview": {
+    "totals": {
+      "tracks": 16,
+      "modules": 369,
+      "lessons": 3654,
+      "estimatedHours": 3523.0,
+      "readingHours": 1063.6,
+      "handsOnLessons": 2221,
+      "labs": 914
+    },
+    "averages": {
+      "lessonsPerTrack": 228.4,
+      "hoursPerTrack": 220.2,
+      "practicalRatio": 64.4,
+      "lessonDuration": 58.0
+    },
+    "distributions": {
+      "lessonTypes": {
+        "Hands-on": 2221,
+        "Assessment": 1431,
+        "Practical": 1,
+        "Overview": 1
+      },
+      "technologies": [
+        "Analytics",
+        "Api",
+        "Architecture",
+        "Authentication",
+        "Authorization",
+        "Automation",
+        "Best Practices",
+        "Cloud",
+        "Compliance",
+        "Database",
+        "Debugging",
+        "Deployment",
+        "Design Patterns",
+        "Governance",
+        "Integration"
+      ]
+    }
+  },
+  "tracks": [
+    {
+      "id": "ba",
+      "title": "Business Analyst",
+      "description": "Master business analysis skills and requirements gathering expertise",
+      "icon": "BarChart3",
+      "color": "orange",
+      "href": "/learning-path/ba",
+      "difficulty": "Beginner",
+      "stats": {
+        "modules": 21,
+        "lessons": 168,
+        "duration": "21 weeks",
+        "estimatedHours": 165.8,
+        "practicalRatio": 64.9,
+        "handsOnLessons": 109
+      },
+      "keyTopics": [
+        "Analytics",
+        "Api",
+        "Automation",
+        "Cloud"
+      ],
+      "focus": "business analysis skills and requirements gathering expertise",
+      "status": "active",
+      "careerLevel": "mid"
+    },
+    {
+      "id": "data_engineer",
+      "title": "Data Engineer",
+      "description": "Master data engineering principles, pipelines, and infrastructure",
+      "icon": "Database",
+      "color": "green",
+      "href": "/learning-path/data_engineer",
+      "difficulty": "Advanced",
+      "stats": {
+        "modules": 22,
+        "lessons": 176,
+        "duration": "22 weeks",
+        "estimatedHours": 172.9,
+        "practicalRatio": 84.1,
+        "handsOnLessons": 148
+      },
+      "keyTopics": [
+        "Analytics",
+        "Api",
+        "Compliance",
+        "Database"
+      ],
+      "focus": "data engineering principles, pipelines, and infrastructure",
+      "status": "active",
+      "careerLevel": "senior"
+    },
+    {
+      "id": "data_gov",
+      "title": "Data Governance",
+      "description": "Master data governance frameworks and data quality compliance",
+      "icon": "Shield",
+      "color": "emerald",
+      "href": "/learning-path/data_gov",
+      "difficulty": "Intermediate",
+      "stats": {
+        "modules": 15,
+        "lessons": 360,
+        "duration": "15 weeks",
+        "estimatedHours": 333.7,
+        "practicalRatio": 24.2,
+        "handsOnLessons": 87
+      },
+      "keyTopics": [
+        "Analytics",
+        "Api",
+        "Architecture",
+        "Automation"
+      ],
+      "focus": "data governance frameworks and data quality compliance",
+      "status": "active",
+      "careerLevel": "mid"
+    },
+    {
+      "id": "devops_engineer",
+      "title": "DevOps Engineer",
+      "description": "Master DevOps practices, CI/CD, and infrastructure automation",
+      "icon": "Settings",
+      "color": "slate",
+      "href": "/learning-path/devops_engineer",
+      "difficulty": "Advanced",
+      "stats": {
+        "modules": 25,
+        "lessons": 200,
+        "duration": "25 weeks",
+        "estimatedHours": 196.0,
+        "practicalRatio": 84.0,
+        "handsOnLessons": 168
+      },
+      "keyTopics": [
+        "Api",
+        "Architecture",
+        "Authentication",
+        "Authorization"
+      ],
+      "focus": "DevOps practices, CI/CD, and infrastructure automation",
+      "status": "active",
+      "careerLevel": "senior"
+    },
+    {
+      "id": "finance",
+      "title": "Finance",
+      "description": "Master technology solutions for financial processes and systems",
+      "icon": "DollarSign",
+      "color": "green",
+      "href": "/learning-path/finance",
+      "difficulty": "Beginner",
+      "stats": {
+        "modules": 45,
+        "lessons": 359,
+        "duration": "45 weeks",
+        "estimatedHours": 345.9,
+        "practicalRatio": 61.8,
+        "handsOnLessons": 222
+      },
+      "keyTopics": [
+        "Analytics",
+        "Api",
+        "Architecture",
+        "Automation"
+      ],
+      "focus": "technology solutions for financial processes and systems",
+      "status": "active",
+      "careerLevel": "entry"
+    },
+    {
+      "id": "hr",
+      "title": "Human Resources",
+      "description": "Master technology for human resources management and operations",
+      "icon": "Users",
+      "color": "pink",
+      "href": "/learning-path/hr",
+      "difficulty": "Beginner",
+      "stats": {
+        "modules": 25,
+        "lessons": 200,
+        "duration": "25 weeks",
+        "estimatedHours": 192.5,
+        "practicalRatio": 63.0,
+        "handsOnLessons": 126
+      },
+      "keyTopics": [
+        "Analytics",
+        "Api",
+        "Architecture",
+        "Automation"
+      ],
+      "focus": "technology for human resources management and operations",
+      "status": "active",
+      "careerLevel": "entry"
+    },
+    {
+      "id": "marketing",
+      "title": "Marketing",
+      "description": "Master technical skills and best practices",
+      "icon": "Megaphone",
+      "color": "red",
+      "href": "/learning-path/marketing",
+      "difficulty": "Beginner",
+      "stats": {
+        "modules": 25,
+        "lessons": 200,
+        "duration": "25 weeks",
+        "estimatedHours": 195.9,
+        "practicalRatio": 80.5,
+        "handsOnLessons": 161
+      },
+      "keyTopics": [
+        "Analytics",
+        "Api",
+        "Authentication",
+        "Automation"
+      ],
+      "focus": "marketing technology and digital marketing strategies",
+      "status": "active",
+      "careerLevel": "entry"
+    },
+    {
+      "id": "mdm",
+      "title": "Master Data Management",
+      "description": "Master data management strategies, governance, and quality assurance",
+      "icon": "Archive",
+      "color": "indigo",
+      "href": "/learning-path/mdm",
+      "difficulty": "Advanced",
+      "stats": {
+        "modules": 15,
+        "lessons": 344,
+        "duration": "15 weeks",
+        "estimatedHours": 323.4,
+        "practicalRatio": 29.9,
+        "handsOnLessons": 103
+      },
+      "keyTopics": [
+        "Analytics",
+        "Api",
+        "Architecture",
+        "Authentication"
+      ],
+      "focus": "data management strategies, governance, and quality assurance",
+      "status": "active",
+      "careerLevel": "senior"
+    },
+    {
+      "id": "pm",
+      "title": "Project Manager",
+      "description": "Master project management skills with modern methodologies and tools",
+      "icon": "Briefcase",
+      "color": "yellow",
+      "href": "/learning-path/pm",
+      "difficulty": "Intermediate",
+      "stats": {
+        "modules": 20,
+        "lessons": 160,
+        "duration": "20 weeks",
+        "estimatedHours": 153.0,
+        "practicalRatio": 61.9,
+        "handsOnLessons": 99
+      },
+      "keyTopics": [
+        "Analytics",
+        "Api",
+        "Automation",
+        "Cloud"
+      ],
+      "focus": "project management skills with modern methodologies and tools",
+      "status": "active",
+      "careerLevel": "mid"
+    },
+    {
+      "id": "qa",
+      "title": "Quality Assurance",
+      "description": "Master quality assurance practices, testing frameworks, and automation",
+      "icon": "CheckCircle",
+      "color": "green",
+      "href": "/learning-path/qa",
+      "difficulty": "Intermediate",
+      "stats": {
+        "modules": 21,
+        "lessons": 168,
+        "duration": "21 weeks",
+        "estimatedHours": 163.8,
+        "practicalRatio": 80.4,
+        "handsOnLessons": 135
+      },
+      "keyTopics": [
+        "Analytics",
+        "Api",
+        "Cloud",
+        "Compliance"
+      ],
+      "focus": "quality assurance practices, testing frameworks, and automation",
+      "status": "active",
+      "careerLevel": "mid"
+    },
+    {
+      "id": "rpa",
+      "title": "Robotic Process Automation",
+      "description": "Master robotic process automation solutions for business efficiency",
+      "icon": "Bot",
+      "color": "orange",
+      "href": "/learning-path/rpa",
+      "difficulty": "Intermediate",
+      "stats": {
+        "modules": 15,
+        "lessons": 360,
+        "duration": "15 weeks",
+        "estimatedHours": 352.1,
+        "practicalRatio": 62.2,
+        "handsOnLessons": 224
+      },
+      "keyTopics": [
+        "Api",
+        "Architecture",
+        "Automation",
+        "Cloud"
+      ],
+      "focus": "robotic process automation solutions for business efficiency",
+      "status": "active",
+      "careerLevel": "mid"
+    },
+    {
+      "id": "sales",
+      "title": "Sales",
+      "description": "Master technology and analytics for sales processes and customer management",
+      "icon": "TrendingUp",
+      "color": "red",
+      "href": "/learning-path/sales",
+      "difficulty": "Beginner",
+      "stats": {
+        "modules": 23,
+        "lessons": 184,
+        "duration": "23 weeks",
+        "estimatedHours": 175.1,
+        "practicalRatio": 50.0,
+        "handsOnLessons": 92
+      },
+      "keyTopics": [
+        "Api",
+        "Architecture",
+        "Compliance",
+        "Governance"
+      ],
+      "focus": "technology and analytics for sales processes and customer management",
+      "status": "active",
+      "careerLevel": "entry"
+    },
+    {
+      "id": "sfdc_engineer",
+      "title": "Salesforce Engineer",
+      "description": "Master advanced Salesforce solutions and platform integrations",
+      "icon": "Zap",
+      "color": "blue",
+      "href": "/learning-path/sfdc_engineer",
+      "difficulty": "Advanced",
+      "stats": {
+        "modules": 25,
+        "lessons": 200,
+        "duration": "25 weeks",
+        "estimatedHours": 195.6,
+        "practicalRatio": 75.0,
+        "handsOnLessons": 150
+      },
+      "keyTopics": [
+        "Analytics",
+        "Api",
+        "Best Practices",
+        "Cloud"
+      ],
+      "focus": "advanced Salesforce solutions and platform integrations",
+      "status": "active",
+      "careerLevel": "senior"
+    },
+    {
+      "id": "ta",
+      "title": "Talent Acquisition",
+      "description": "Master talent acquisition strategies, recruitment technologies, and candidate assessment",
+      "icon": "FileSearch",
+      "color": "gray",
+      "href": "/learning-path/ta",
+      "difficulty": "Beginner",
+      "stats": {
+        "modules": 25,
+        "lessons": 200,
+        "duration": "25 weeks",
+        "estimatedHours": 190.9,
+        "practicalRatio": 44.0,
+        "handsOnLessons": 88
+      },
+      "keyTopics": [
+        "Api",
+        "Authorization",
+        "Automation",
+        "Compliance"
+      ],
+      "focus": "talent acquisition strategies, recruitment technologies, and candidate assessment",
+      "status": "active",
+      "careerLevel": "entry"
+    },
+    {
+      "id": "viz_engineer",
+      "title": "Visualization Engineer",
+      "description": "Master compelling data visualizations and business intelligence solutions",
+      "icon": "PieChart",
+      "color": "purple",
+      "href": "/learning-path/viz_engineer",
+      "difficulty": "Advanced",
+      "stats": {
+        "modules": 25,
+        "lessons": 200,
+        "duration": "25 weeks",
+        "estimatedHours": 195.2,
+        "practicalRatio": 83.0,
+        "handsOnLessons": 166
+      },
+      "keyTopics": [
+        "Analytics",
+        "Api",
+        "Automation",
+        "Deployment"
+      ],
+      "focus": "compelling data visualizations and business intelligence solutions",
+      "status": "active",
+      "careerLevel": "senior"
+    },
+    {
+      "id": "workato_engineer",
+      "title": "Workato Engineer",
+      "description": "Master complex integration solutions using Workato platform",
+      "icon": "Link",
+      "color": "teal",
+      "href": "/learning-path/workato_engineer",
+      "difficulty": "Advanced",
+      "stats": {
+        "modules": 22,
+        "lessons": 175,
+        "duration": "22 weeks",
+        "estimatedHours": 171.2,
+        "practicalRatio": 81.7,
+        "handsOnLessons": 143
+      },
+      "keyTopics": [
+        "Analytics",
+        "Api",
+        "Authentication",
+        "Authorization"
+      ],
+      "focus": "complex integration solutions using Workato platform",
+      "status": "active",
+      "careerLevel": "senior"
+    }
+  ],
+  "careerGroups": {
+    "mid": [
+      {
+        "id": "ba",
+        "title": "Business Analyst",
+        "description": "Master business analysis skills and requirements gathering expertise",
+        "icon": "BarChart3",
+        "color": "orange",
+        "href": "/learning-path/ba",
+        "difficulty": "Beginner",
+        "stats": {
+          "modules": 21,
+          "lessons": 168,
+          "duration": "21 weeks",
+          "estimatedHours": 165.8,
+          "practicalRatio": 64.9,
+          "handsOnLessons": 109
+        },
+        "keyTopics": [
+          "Analytics",
+          "Api",
+          "Automation",
+          "Cloud"
+        ],
+        "focus": "business analysis skills and requirements gathering expertise",
+        "status": "active",
+        "careerLevel": "mid"
+      },
+      {
+        "id": "data_gov",
+        "title": "Data Governance",
+        "description": "Master data governance frameworks and data quality compliance",
+        "icon": "Shield",
+        "color": "emerald",
+        "href": "/learning-path/data_gov",
+        "difficulty": "Intermediate",
+        "stats": {
+          "modules": 15,
+          "lessons": 360,
+          "duration": "15 weeks",
+          "estimatedHours": 333.7,
+          "practicalRatio": 24.2,
+          "handsOnLessons": 87
+        },
+        "keyTopics": [
+          "Analytics",
+          "Api",
+          "Architecture",
+          "Automation"
+        ],
+        "focus": "data governance frameworks and data quality compliance",
+        "status": "active",
+        "careerLevel": "mid"
+      },
+      {
+        "id": "pm",
+        "title": "Project Manager",
+        "description": "Master project management skills with modern methodologies and tools",
+        "icon": "Briefcase",
+        "color": "yellow",
+        "href": "/learning-path/pm",
+        "difficulty": "Intermediate",
+        "stats": {
+          "modules": 20,
+          "lessons": 160,
+          "duration": "20 weeks",
+          "estimatedHours": 153.0,
+          "practicalRatio": 61.9,
+          "handsOnLessons": 99
+        },
+        "keyTopics": [
+          "Analytics",
+          "Api",
+          "Automation",
+          "Cloud"
+        ],
+        "focus": "project management skills with modern methodologies and tools",
+        "status": "active",
+        "careerLevel": "mid"
+      },
+      {
+        "id": "qa",
+        "title": "Quality Assurance",
+        "description": "Master quality assurance practices, testing frameworks, and automation",
+        "icon": "CheckCircle",
+        "color": "green",
+        "href": "/learning-path/qa",
+        "difficulty": "Intermediate",
+        "stats": {
+          "modules": 21,
+          "lessons": 168,
+          "duration": "21 weeks",
+          "estimatedHours": 163.8,
+          "practicalRatio": 80.4,
+          "handsOnLessons": 135
+        },
+        "keyTopics": [
+          "Analytics",
+          "Api",
+          "Cloud",
+          "Compliance"
+        ],
+        "focus": "quality assurance practices, testing frameworks, and automation",
+        "status": "active",
+        "careerLevel": "mid"
+      },
+      {
+        "id": "rpa",
+        "title": "Robotic Process Automation",
+        "description": "Master robotic process automation solutions for business efficiency",
+        "icon": "Bot",
+        "color": "orange",
+        "href": "/learning-path/rpa",
+        "difficulty": "Intermediate",
+        "stats": {
+          "modules": 15,
+          "lessons": 360,
+          "duration": "15 weeks",
+          "estimatedHours": 352.1,
+          "practicalRatio": 62.2,
+          "handsOnLessons": 224
+        },
+        "keyTopics": [
+          "Api",
+          "Architecture",
+          "Automation",
+          "Cloud"
+        ],
+        "focus": "robotic process automation solutions for business efficiency",
+        "status": "active",
+        "careerLevel": "mid"
+      }
+    ],
+    "senior": [
+      {
+        "id": "data_engineer",
+        "title": "Data Engineer",
+        "description": "Master data engineering principles, pipelines, and infrastructure",
+        "icon": "Database",
+        "color": "green",
+        "href": "/learning-path/data_engineer",
+        "difficulty": "Advanced",
+        "stats": {
+          "modules": 22,
+          "lessons": 176,
+          "duration": "22 weeks",
+          "estimatedHours": 172.9,
+          "practicalRatio": 84.1,
+          "handsOnLessons": 148
+        },
+        "keyTopics": [
+          "Analytics",
+          "Api",
+          "Compliance",
+          "Database"
+        ],
+        "focus": "data engineering principles, pipelines, and infrastructure",
+        "status": "active",
+        "careerLevel": "senior"
+      },
+      {
+        "id": "devops_engineer",
+        "title": "DevOps Engineer",
+        "description": "Master DevOps practices, CI/CD, and infrastructure automation",
+        "icon": "Settings",
+        "color": "slate",
+        "href": "/learning-path/devops_engineer",
+        "difficulty": "Advanced",
+        "stats": {
+          "modules": 25,
+          "lessons": 200,
+          "duration": "25 weeks",
+          "estimatedHours": 196.0,
+          "practicalRatio": 84.0,
+          "handsOnLessons": 168
+        },
+        "keyTopics": [
+          "Api",
+          "Architecture",
+          "Authentication",
+          "Authorization"
+        ],
+        "focus": "DevOps practices, CI/CD, and infrastructure automation",
+        "status": "active",
+        "careerLevel": "senior"
+      },
+      {
+        "id": "mdm",
+        "title": "Master Data Management",
+        "description": "Master data management strategies, governance, and quality assurance",
+        "icon": "Archive",
+        "color": "indigo",
+        "href": "/learning-path/mdm",
+        "difficulty": "Advanced",
+        "stats": {
+          "modules": 15,
+          "lessons": 344,
+          "duration": "15 weeks",
+          "estimatedHours": 323.4,
+          "practicalRatio": 29.9,
+          "handsOnLessons": 103
+        },
+        "keyTopics": [
+          "Analytics",
+          "Api",
+          "Architecture",
+          "Authentication"
+        ],
+        "focus": "data management strategies, governance, and quality assurance",
+        "status": "active",
+        "careerLevel": "senior"
+      },
+      {
+        "id": "sfdc_engineer",
+        "title": "Salesforce Engineer",
+        "description": "Master advanced Salesforce solutions and platform integrations",
+        "icon": "Zap",
+        "color": "blue",
+        "href": "/learning-path/sfdc_engineer",
+        "difficulty": "Advanced",
+        "stats": {
+          "modules": 25,
+          "lessons": 200,
+          "duration": "25 weeks",
+          "estimatedHours": 195.6,
+          "practicalRatio": 75.0,
+          "handsOnLessons": 150
+        },
+        "keyTopics": [
+          "Analytics",
+          "Api",
+          "Best Practices",
+          "Cloud"
+        ],
+        "focus": "advanced Salesforce solutions and platform integrations",
+        "status": "active",
+        "careerLevel": "senior"
+      },
+      {
+        "id": "viz_engineer",
+        "title": "Visualization Engineer",
+        "description": "Master compelling data visualizations and business intelligence solutions",
+        "icon": "PieChart",
+        "color": "purple",
+        "href": "/learning-path/viz_engineer",
+        "difficulty": "Advanced",
+        "stats": {
+          "modules": 25,
+          "lessons": 200,
+          "duration": "25 weeks",
+          "estimatedHours": 195.2,
+          "practicalRatio": 83.0,
+          "handsOnLessons": 166
+        },
+        "keyTopics": [
+          "Analytics",
+          "Api",
+          "Automation",
+          "Deployment"
+        ],
+        "focus": "compelling data visualizations and business intelligence solutions",
+        "status": "active",
+        "careerLevel": "senior"
+      },
+      {
+        "id": "workato_engineer",
+        "title": "Workato Engineer",
+        "description": "Master complex integration solutions using Workato platform",
+        "icon": "Link",
+        "color": "teal",
+        "href": "/learning-path/workato_engineer",
+        "difficulty": "Advanced",
+        "stats": {
+          "modules": 22,
+          "lessons": 175,
+          "duration": "22 weeks",
+          "estimatedHours": 171.2,
+          "practicalRatio": 81.7,
+          "handsOnLessons": 143
+        },
+        "keyTopics": [
+          "Analytics",
+          "Api",
+          "Authentication",
+          "Authorization"
+        ],
+        "focus": "complex integration solutions using Workato platform",
+        "status": "active",
+        "careerLevel": "senior"
+      }
+    ],
+    "entry": [
+      {
+        "id": "finance",
+        "title": "Finance",
+        "description": "Master technology solutions for financial processes and systems",
+        "icon": "DollarSign",
+        "color": "green",
+        "href": "/learning-path/finance",
+        "difficulty": "Beginner",
+        "stats": {
+          "modules": 45,
+          "lessons": 359,
+          "duration": "45 weeks",
+          "estimatedHours": 345.9,
+          "practicalRatio": 61.8,
+          "handsOnLessons": 222
+        },
+        "keyTopics": [
+          "Analytics",
+          "Api",
+          "Architecture",
+          "Automation"
+        ],
+        "focus": "technology solutions for financial processes and systems",
+        "status": "active",
+        "careerLevel": "entry"
+      },
+      {
+        "id": "hr",
+        "title": "Human Resources",
+        "description": "Master technology for human resources management and operations",
+        "icon": "Users",
+        "color": "pink",
+        "href": "/learning-path/hr",
+        "difficulty": "Beginner",
+        "stats": {
+          "modules": 25,
+          "lessons": 200,
+          "duration": "25 weeks",
+          "estimatedHours": 192.5,
+          "practicalRatio": 63.0,
+          "handsOnLessons": 126
+        },
+        "keyTopics": [
+          "Analytics",
+          "Api",
+          "Architecture",
+          "Automation"
+        ],
+        "focus": "technology for human resources management and operations",
+        "status": "active",
+        "careerLevel": "entry"
+      },
+      {
+        "id": "marketing",
+        "title": "Marketing",
+        "description": "Master technical skills and best practices",
+        "icon": "Megaphone",
+        "color": "red",
+        "href": "/learning-path/marketing",
+        "difficulty": "Beginner",
+        "stats": {
+          "modules": 25,
+          "lessons": 200,
+          "duration": "25 weeks",
+          "estimatedHours": 195.9,
+          "practicalRatio": 80.5,
+          "handsOnLessons": 161
+        },
+        "keyTopics": [
+          "Analytics",
+          "Api",
+          "Authentication",
+          "Automation"
+        ],
+        "focus": "marketing technology and digital marketing strategies",
+        "status": "active",
+        "careerLevel": "entry"
+      },
+      {
+        "id": "sales",
+        "title": "Sales",
+        "description": "Master technology and analytics for sales processes and customer management",
+        "icon": "TrendingUp",
+        "color": "red",
+        "href": "/learning-path/sales",
+        "difficulty": "Beginner",
+        "stats": {
+          "modules": 23,
+          "lessons": 184,
+          "duration": "23 weeks",
+          "estimatedHours": 175.1,
+          "practicalRatio": 50.0,
+          "handsOnLessons": 92
+        },
+        "keyTopics": [
+          "Api",
+          "Architecture",
+          "Compliance",
+          "Governance"
+        ],
+        "focus": "technology and analytics for sales processes and customer management",
+        "status": "active",
+        "careerLevel": "entry"
+      },
+      {
+        "id": "ta",
+        "title": "Talent Acquisition",
+        "description": "Master talent acquisition strategies, recruitment technologies, and candidate assessment",
+        "icon": "FileSearch",
+        "color": "gray",
+        "href": "/learning-path/ta",
+        "difficulty": "Beginner",
+        "stats": {
+          "modules": 25,
+          "lessons": 200,
+          "duration": "25 weeks",
+          "estimatedHours": 190.9,
+          "practicalRatio": 44.0,
+          "handsOnLessons": 88
+        },
+        "keyTopics": [
+          "Api",
+          "Authorization",
+          "Automation",
+          "Compliance"
+        ],
+        "focus": "talent acquisition strategies, recruitment technologies, and candidate assessment",
+        "status": "active",
+        "careerLevel": "entry"
+      }
+    ]
+  },
+  "filters": {
+    "byDifficulty": [
+      "Advanced",
+      "Beginner",
+      "Intermediate"
+    ],
+    "byDuration": [
+      "100+ hours"
+    ],
+    "byTechnology": [
+      "Analytics",
+      "Api",
+      "Architecture",
+      "Authentication",
+      "Authorization",
+      "Automation",
+      "Best Practices",
+      "Cloud",
+      "Compliance",
+      "Database",
+      "Debugging",
+      "Deployment"
+    ],
+    "byCareerLevel": [
+      "entry",
+      "mid",
+      "senior"
+    ]
+  },
+  "metadata": {
+    "totalTracks": 16,
+    "dataSource": "aggregated from module.json files",
+    "generatedAt": "2025-11-02T16:07:42.334493"
+  }
+}
