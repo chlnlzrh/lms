@@ -8,6 +8,8 @@ import { progressTracker } from '@/lib/progress-tracker'
 import { ModuleDetailsSection } from '@/components/module/module-details-section'
 import { Suspense } from 'react'
 import Link from 'next/link'
+import fs from 'fs'
+import path from 'path'
 
 interface ModulePageProps {
   params: Promise<{
@@ -20,25 +22,30 @@ async function ModulePageContent({ params }: ModulePageProps) {
   const resolvedParams = await params
   const { track, module } = resolvedParams
   
-  // Get track info
-  const trackInfo = await contentParser.getTrackInfo(track)
-  if (!trackInfo) {
-    notFound()
-  }
-
-  const modules = trackInfo.modules
   // Extract module number from module parameter (e.g., "module-1" -> 1)
   const moduleNumber = parseInt(module.replace('module-', ''))
   
+  // Read module data directly from JSON for instant performance
+  const jsonPath = path.join(process.cwd(), 'src', 'data', track, 'modules-descriptions', 'module.json')
+  if (!fs.existsSync(jsonPath)) {
+    notFound()
+  }
+  
+  const jsonData = JSON.parse(fs.readFileSync(jsonPath, 'utf-8'))
+  const trackInfo = jsonData.track || {}
+  const modules = jsonData.modules || []
+  
   // Find the specific module
-  const selectedModule = modules.find(m => m.moduleNumber === moduleNumber)
+  const selectedModule = modules.find((m: any) => m.moduleNumber === moduleNumber)
   if (!selectedModule) {
     notFound()
   }
-
-  // Get all lessons for this track and filter by module
-  const allLessons = await contentParser.getAllLessons(track)
-  const moduleLessons = allLessons.filter(lesson => lesson.moduleNumber === moduleNumber)
+  
+  // Get lessons directly from the module JSON (instant performance)
+  const moduleLessons = selectedModule.lessonsData || []
+  
+  console.log('Fast loading - Module:', selectedModule.title)
+  console.log('Fast loading - Lessons count:', moduleLessons.length)
 
   // Get user progress
   const userProgress = progressTracker.getUserProgress()
@@ -132,7 +139,7 @@ async function ModulePageContent({ params }: ModulePageProps) {
   const breadcrumbItems = [
     { label: 'Dashboard', href: '/' },
     { label: 'Learning Content', href: '/learning-content' },
-    { label: trackInfo.title, href: `/learning-path/${track}` },
+    { label: trackInfo.title || track, href: `/learning-path/${track}` },
     { label: selectedModule.title }
   ]
 
@@ -265,7 +272,7 @@ async function ModulePageContent({ params }: ModulePageProps) {
                       <div className="flex-shrink-0">
                         <div className={`w-8 h-8 rounded-full ${colors.bg} flex items-center justify-center`}>
                           <span className={`text-xs font-bold ${colors.text}`}>
-                            {index + 1}
+                            {lesson.number || index + 1}
                           </span>
                         </div>
                       </div>
@@ -273,7 +280,7 @@ async function ModulePageContent({ params }: ModulePageProps) {
                       <div className="flex-1 min-w-0">
                         <div className="flex items-center space-x-2 mb-1">
                           <h3 className="text-xs font-normal text-gray-900 dark:text-white truncate">
-                            {lesson.frontmatter.title}
+                            {lesson.title}
                           </h3>
                           
                           <div className="flex items-center space-x-1">
@@ -289,7 +296,7 @@ async function ModulePageContent({ params }: ModulePageProps) {
                         <div className="flex items-center space-x-4 text-xs text-gray-500 dark:text-gray-400">
                           <span className="flex items-center space-x-1">
                             <Icons.Clock className="w-3 h-3" />
-                            <span>{lesson.estimatedReadTime} min read</span>
+                            <span>{lesson.estimatedReadTime || lesson.readingTime || '5'} min read</span>
                           </span>
                           
                           {timeSpent > 0 && (
@@ -299,10 +306,10 @@ async function ModulePageContent({ params }: ModulePageProps) {
                             </span>
                           )}
                           
-                          {lesson.frontmatter.complexity && (
+                          {lesson.complexity && (
                             <span className="px-2 py-0.5 rounded bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300">
-                              {lesson.frontmatter.complexity === 'F' ? 'Foundation' : 
-                               lesson.frontmatter.complexity === 'I' ? 'Intermediate' : 'Advanced'}
+                              {lesson.complexity === 'F' ? 'Foundation' : 
+                               lesson.complexity === 'I' ? 'Intermediate' : 'Advanced'}
                             </span>
                           )}
                         </div>
