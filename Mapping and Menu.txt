@@ -1,0 +1,68 @@
+The mapping    
+   Book of Knowledge
+  	   src/data/ai                Artificial Intelligence      
+	   src/data/de                Data Engineering            
+	   src/data/saas              Saas      
+	   src/data/sfdc              Salesforce                 
+	   src/data/snowflake_tune    Snowflake Tuning           
+	   src/data/workato           Workato                    
+	Learning Path
+   	   src/data/ba                Business Analyst           
+	   src/data/data_engineer     Data Engineer              
+	   src/data/data_gov          Data Governance            
+	   src/data/devops_engineer   DevOps Engineer            
+	   src/data/finance           Finance                    
+	   src/data/hr                Human Resources            
+	   src/data/marketing         Marketing                  
+	   src/data/mdm               Master Data Management     
+	   src/data/pm                Project Manager            
+	   src/data/qa                Quality Assurance          
+	   src/data/rpa               Robotic Process Automation 
+	   src/data/sales             Sales                      
+	   src/data/sfdc_engineer     Salesforce Engineer        
+	   src/data/ta                Technical Analyst          
+	   src/data/viz_engineer      Visualization Engineer     
+	   src/data/workato_engineer  Workato Engineer   
+
+
+  
+  
+Final Menu
+  - Dashboard
+	Book of Knowledge
+		Artificial Intelligence      
+		Data Engineering            
+		Saas      
+		Salesforce                 
+		Snowflake Tuning           
+		Workato                       
+   Learning Path
+	   Business Analyst           
+	   Data Engineer              
+	   Data Governance            
+	   DevOps Engineer            
+	   Finance                    
+	   Human Resources            
+	   Marketing                  
+	   Master Data Management     
+	   Project Manager            
+	   Quality Assurance          
+	   Robotic Process Automation 
+	   Sales                      
+	   Salesforce Engineer        
+	   Technical Analyst          
+	   Visualization Engineer     
+	   Workato Engineer   
+  - Compliance Training (coming soon)
+  - Employee Onboarding (coming soon) 
+  - Customer Education (coming soon)
+  - Calendar/Events (coming soon)
+  - Learning Catalog
+  - Search
+  - Profile/My Account
+  - Support/Help
+  - Administration (coming soon)
+  
+  
+  When the Book of Knnowledge or Learning Path is clicked the information from modules-descriptions should be displayed in a modern and classy manner 
+   

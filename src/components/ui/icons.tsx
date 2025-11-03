@@ -28,7 +28,19 @@ import {
   Flame,
   Trophy,
   AlertCircle,
-  Send
+  Send,
+  Zap,
+  Snowflake,
+  BarChart3,
+  Archive,
+  CheckCircle,
+  DollarSign,
+  Users,
+  TrendingUp,
+  FileSearch,
+  PieChart,
+  Loader2,
+  Megaphone
 } from 'lucide-react'
 
 export const Icons = {
@@ -61,7 +73,19 @@ export const Icons = {
   Flame,
   Trophy,
   AlertCircle,
-  Send
+  Send,
+  Zap,
+  Snowflake,
+  BarChart3,
+  Archive,
+  CheckCircle,
+  DollarSign,
+  Users,
+  TrendingUp,
+  FileSearch,
+  PieChart,
+  Loader2,
+  Megaphone
 } as const
 
 export type IconName = keyof typeof Icons

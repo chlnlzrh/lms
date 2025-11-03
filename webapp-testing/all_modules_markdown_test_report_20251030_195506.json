@@ -1,0 +1,782 @@
+{
+  "module-1": {
+    "module_id": "module-1",
+    "timestamp": "2025-10-30T19:54:55.273134",
+    "tests": {
+      "title_from_markdown": {
+        "passed": true,
+        "expected": "Module 1: Data & Database Fundamentals",
+        "actual": "Module 1: Data & Database Fundamentals"
+      },
+      "duration_from_markdown": {
+        "passed": false,
+        "expected": 30,
+        "actual": 23
+      },
+      "lessons_from_markdown": {
+        "passed": false,
+        "expected": 38,
+        "actual": 23
+      },
+      "learning_objectives_present": {
+        "passed": true,
+        "count": 5
+      },
+      "topics_from_categories": {
+        "passed": true,
+        "count": 15
+      },
+      "prerequisites_structure": {
+        "passed": true,
+        "count": 0
+      },
+      "page_loads": {
+        "passed": true,
+        "page_title": "Learning Path | Data Engineering Platform"
+      }
+    },
+    "success": false,
+    "pass_rate": 71.42857142857143
+  },
+  "module-2": {
+    "module_id": "module-2",
+    "timestamp": "2025-10-30T19:54:55.273134",
+    "tests": {
+      "title_from_markdown": {
+        "passed": true,
+        "expected": "Module 2: SQL & ELT Concepts",
+        "actual": "Module 2: SQL & ELT Concepts"
+      },
+      "duration_from_markdown": {
+        "passed": false,
+        "expected": 32,
+        "actual": 53
+      },
+      "lessons_from_markdown": {
+        "passed": false,
+        "expected": 41,
+        "actual": 53
+      },
+      "learning_objectives_present": {
+        "passed": true,
+        "count": 5
+      },
+      "topics_from_categories": {
+        "passed": true,
+        "count": 15
+      },
+      "prerequisites_structure": {
+        "passed": true,
+        "count": 1
+      },
+      "page_loads": {
+        "passed": true,
+        "page_title": "Learning Path | Data Engineering Platform"
+      }
+    },
+    "success": false,
+    "pass_rate": 71.42857142857143
+  },
+  "module-3": {
+    "module_id": "module-3",
+    "timestamp": "2025-10-30T19:54:55.273134",
+    "tests": {
+      "title_from_markdown": {
+        "passed": true,
+        "expected": "Module 3: Data Warehousing Principles",
+        "actual": "Module 3: Data Warehousing Principles"
+      },
+      "duration_from_markdown": {
+        "passed": true,
+        "expected": 19,
+        "actual": 19
+      },
+      "lessons_from_markdown": {
+        "passed": false,
+        "expected": 25,
+        "actual": 19
+      },
+      "learning_objectives_present": {
+        "passed": true,
+        "count": 5
+      },
+      "topics_from_categories": {
+        "passed": true,
+        "count": 15
+      },
+      "prerequisites_structure": {
+        "passed": true,
+        "count": 2
+      },
+      "page_loads": {
+        "passed": true,
+        "page_title": "Learning Path | Data Engineering Platform"
+      }
+    },
+    "success": true,
+    "pass_rate": 85.71428571428571
+  },
+  "module-4": {
+    "module_id": "module-4",
+    "timestamp": "2025-10-30T19:54:55.273134",
+    "tests": {
+      "title_from_markdown": {
+        "passed": true,
+        "expected": "Module 4: Data Modeling",
+        "actual": "Module 4: Data Modeling"
+      },
+      "duration_from_markdown": {
+        "passed": false,
+        "expected": 31,
+        "actual": 33
+      },
+      "lessons_from_markdown": {
+        "passed": false,
+        "expected": 38,
+        "actual": 33
+      },
+      "learning_objectives_present": {
+        "passed": true,
+        "count": 5
+      },
+      "topics_from_categories": {
+        "passed": true,
+        "count": 15
+      },
+      "prerequisites_structure": {
+        "passed": true,
+        "count": 1
+      },
+      "page_loads": {
+        "passed": true,
+        "page_title": "Learning Path | Data Engineering Platform"
+      }
+    },
+    "success": false,
+    "pass_rate": 71.42857142857143
+  },
+  "module-5": {
+    "module_id": "module-5",
+    "timestamp": "2025-10-30T19:54:55.273134",
+    "tests": {
+      "title_from_markdown": {
+        "passed": false,
+        "expected": "Module 5: Snowflake Specific Knowledge",
+        "actual": "Module 5: Snowflake-Specific Knowledge"
+      },
+      "duration_from_markdown": {
+        "passed": false,
+        "expected": 43,
+        "actual": 55
+      },
+      "lessons_from_markdown": {
+        "passed": true,
+        "expected": 55,
+        "actual": 55
+      },
+      "learning_objectives_present": {
+        "passed": true,
+        "count": 5
+      },
+      "topics_from_categories": {
+        "passed": true,
+        "count": 15
+      },
+      "prerequisites_structure": {
+        "passed": true,
+        "count": 1
+      },
+      "page_loads": {
+        "passed": true,
+        "page_title": "Learning Path | Data Engineering Platform"
+      }
+    },
+    "success": false,
+    "pass_rate": 71.42857142857143
+  },
+  "module-6": {
+    "module_id": "module-6",
+    "timestamp": "2025-10-30T19:54:55.273134",
+    "tests": {
+      "title_from_markdown": {
+        "passed": true,
+        "expected": "Module 6: ETL/ELT Design & Best Practices",
+        "actual": "Module 6: ETL/ELT Design & Best Practices"
+      },
+      "duration_from_markdown": {
+        "passed": false,
+        "expected": 24,
+        "actual": 28
+      },
+      "lessons_from_markdown": {
+        "passed": false,
+        "expected": 30,
+        "actual": 28
+      },
+      "learning_objectives_present": {
+        "passed": true,
+        "count": 5
+      },
+      "topics_from_categories": {
+        "passed": true,
+        "count": 15
+      },
+      "prerequisites_structure": {
+        "passed": true,
+        "count": 1
+      },
+      "page_loads": {
+        "passed": true,
+        "page_title": "Learning Path | Data Engineering Platform"
+      }
+    },
+    "success": false,
+    "pass_rate": 71.42857142857143
+  },
+  "module-7": {
+    "module_id": "module-7",
+    "timestamp": "2025-10-30T19:54:55.273134",
+    "tests": {
+      "title_from_markdown": {
+        "passed": true,
+        "expected": "Module 7: Data Governance, Quality & Metadata",
+        "actual": "Module 7: Data Governance, Quality & Metadata"
+      },
+      "duration_from_markdown": {
+        "passed": true,
+        "expected": 32,
+        "actual": 32
+      },
+      "lessons_from_markdown": {
+        "passed": true,
+        "expected": 32,
+        "actual": 32
+      },
+      "learning_objectives_present": {
+        "passed": true,
+        "count": 5
+      },
+      "topics_from_categories": {
+        "passed": true,
+        "count": 15
+      },
+      "prerequisites_structure": {
+        "passed": true,
+        "count": 1
+      },
+      "page_loads": {
+        "passed": true,
+        "page_title": "Learning Path | Data Engineering Platform"
+      }
+    },
+    "success": true,
+    "pass_rate": 100.0
+  },
+  "module-8": {
+    "module_id": "module-8",
+    "timestamp": "2025-10-30T19:54:55.273134",
+    "tests": {
+      "title_from_markdown": {
+        "passed": true,
+        "expected": "Module 8: Snowflake Security & Access Control",
+        "actual": "Module 8: Snowflake Security & Access Control"
+      },
+      "duration_from_markdown": {
+        "passed": false,
+        "expected": 15,
+        "actual": 20
+      },
+      "lessons_from_markdown": {
+        "passed": false,
+        "expected": 19,
+        "actual": 20
+      },
+      "learning_objectives_present": {
+        "passed": true,
+        "count": 5
+      },
+      "topics_from_categories": {
+        "passed": true,
+        "count": 15
+      },
+      "prerequisites_structure": {
+        "passed": true,
+        "count": 1
+      },
+      "page_loads": {
+        "passed": true,
+        "page_title": "Learning Path | Data Engineering Platform"
+      }
+    },
+    "success": false,
+    "pass_rate": 71.42857142857143
+  },
+  "module-9": {
+    "module_id": "module-9",
+    "timestamp": "2025-10-30T19:54:55.273134",
+    "tests": {
+      "title_from_markdown": {
+        "passed": true,
+        "expected": "Module 9: Reporting & BI Concepts",
+        "actual": "Module 9: Reporting & BI Concepts"
+      },
+      "duration_from_markdown": {
+        "passed": false,
+        "expected": 18,
+        "actual": 39
+      },
+      "lessons_from_markdown": {
+        "passed": false,
+        "expected": 23,
+        "actual": 39
+      },
+      "learning_objectives_present": {
+        "passed": true,
+        "count": 5
+      },
+      "topics_from_categories": {
+        "passed": true,
+        "count": 15
+      },
+      "prerequisites_structure": {
+        "passed": true,
+        "count": 1
+      },
+      "page_loads": {
+        "passed": true,
+        "page_title": "Learning Path | Data Engineering Platform"
+      }
+    },
+    "success": false,
+    "pass_rate": 71.42857142857143
+  },
+  "module-10": {
+    "module_id": "module-10",
+    "timestamp": "2025-10-30T19:54:55.273134",
+    "tests": {
+      "title_from_markdown": {
+        "passed": true,
+        "expected": "Module 10: Unix/Linux & File Handling",
+        "actual": "Module 10: Unix/Linux & File Handling"
+      },
+      "duration_from_markdown": {
+        "passed": false,
+        "expected": 24,
+        "actual": 25
+      },
+      "lessons_from_markdown": {
+        "passed": false,
+        "expected": 30,
+        "actual": 25
+      },
+      "learning_objectives_present": {
+        "passed": true,
+        "count": 5
+      },
+      "topics_from_categories": {
+        "passed": true,
+        "count": 15
+      },
+      "prerequisites_structure": {
+        "passed": true,
+        "count": 1
+      },
+      "page_loads": {
+        "passed": true,
+        "page_title": "Learning Path | Data Engineering Platform"
+      }
+    },
+    "success": false,
+    "pass_rate": 71.42857142857143
+  },
+  "module-11": {
+    "module_id": "module-11",
+    "timestamp": "2025-10-30T19:55:01.675052",
+    "tests": {
+      "title_from_markdown": {
+        "passed": true,
+        "expected": "Module 11: Version Control & Team Collaboration",
+        "actual": "Module 11: Version Control & Team Collaboration"
+      },
+      "duration_from_markdown": {
+        "passed": false,
+        "expected": 20,
+        "actual": 22
+      },
+      "lessons_from_markdown": {
+        "passed": false,
+        "expected": 25,
+        "actual": 22
+      },
+      "learning_objectives_present": {
+        "passed": true,
+        "count": 5
+      },
+      "topics_from_categories": {
+        "passed": true,
+        "count": 15
+      },
+      "prerequisites_structure": {
+        "passed": true,
+        "count": 1
+      },
+      "page_loads": {
+        "passed": true,
+        "page_title": "Learning Path | Data Engineering Platform"
+      }
+    },
+    "success": false,
+    "pass_rate": 71.42857142857143
+  },
+  "module-12": {
+    "module_id": "module-12",
+    "timestamp": "2025-10-30T19:55:01.696799",
+    "tests": {
+      "title_from_markdown": {
+        "passed": true,
+        "expected": "Module 12: Performance Optimization & Troubleshooting",
+        "actual": "Module 12: Performance Optimization & Troubleshooting"
+      },
+      "duration_from_markdown": {
+        "passed": false,
+        "expected": 16,
+        "actual": 41
+      },
+      "lessons_from_markdown": {
+        "passed": false,
+        "expected": 20,
+        "actual": 41
+      },
+      "learning_objectives_present": {
+        "passed": true,
+        "count": 5
+      },
+      "topics_from_categories": {
+        "passed": true,
+        "count": 15
+      },
+      "prerequisites_structure": {
+        "passed": true,
+        "count": 1
+      },
+      "page_loads": {
+        "passed": true,
+        "page_title": "Learning Path | Data Engineering Platform"
+      }
+    },
+    "success": false,
+    "pass_rate": 71.42857142857143
+  },
+  "module-13": {
+    "module_id": "module-13",
+    "timestamp": "2025-10-30T19:55:01.766654",
+    "tests": {
+      "title_from_markdown": {
+        "passed": true,
+        "expected": "Module 13: CI/CD & Deployment Practices",
+        "actual": "Module 13: CI/CD & Deployment Practices"
+      },
+      "duration_from_markdown": {
+        "passed": false,
+        "expected": 20,
+        "actual": 15
+      },
+      "lessons_from_markdown": {
+        "passed": false,
+        "expected": 25,
+        "actual": 15
+      },
+      "learning_objectives_present": {
+        "passed": true,
+        "count": 5
+      },
+      "topics_from_categories": {
+        "passed": true,
+        "count": 15
+      },
+      "prerequisites_structure": {
+        "passed": true,
+        "count": 1
+      },
+      "page_loads": {
+        "passed": true,
+        "page_title": "Learning Path | Data Engineering Platform"
+      }
+    },
+    "success": false,
+    "pass_rate": 71.42857142857143
+  },
+  "module-14": {
+    "module_id": "module-14",
+    "timestamp": "2025-10-30T19:55:01.801009",
+    "tests": {
+      "title_from_markdown": {
+        "passed": true,
+        "expected": "Module 14: Monitoring & Observability",
+        "actual": "Module 14: Monitoring & Observability"
+      },
+      "duration_from_markdown": {
+        "passed": false,
+        "expected": 22,
+        "actual": 16
+      },
+      "lessons_from_markdown": {
+        "passed": false,
+        "expected": 28,
+        "actual": 16
+      },
+      "learning_objectives_present": {
+        "passed": true,
+        "count": 5
+      },
+      "topics_from_categories": {
+        "passed": true,
+        "count": 15
+      },
+      "prerequisites_structure": {
+        "passed": true,
+        "count": 1
+      },
+      "page_loads": {
+        "passed": true,
+        "page_title": "Learning Path | Data Engineering Platform"
+      }
+    },
+    "success": false,
+    "pass_rate": 71.42857142857143
+  },
+  "module-15": {
+    "module_id": "module-15",
+    "timestamp": "2025-10-30T19:55:01.827284",
+    "tests": {
+      "title_from_markdown": {
+        "passed": true,
+        "expected": "Module 15: Orchestration & Scheduling Tools",
+        "actual": "Module 15: Orchestration & Scheduling Tools"
+      },
+      "duration_from_markdown": {
+        "passed": false,
+        "expected": 32,
+        "actual": 15
+      },
+      "lessons_from_markdown": {
+        "passed": false,
+        "expected": 40,
+        "actual": 15
+      },
+      "learning_objectives_present": {
+        "passed": true,
+        "count": 5
+      },
+      "topics_from_categories": {
+        "passed": true,
+        "count": 15
+      },
+      "prerequisites_structure": {
+        "passed": true,
+        "count": 1
+      },
+      "page_loads": {
+        "passed": true,
+        "page_title": "Learning Path | Data Engineering Platform"
+      }
+    },
+    "success": false,
+    "pass_rate": 71.42857142857143
+  },
+  "module-16": {
+    "module_id": "module-16",
+    "timestamp": "2025-10-30T19:55:01.907582",
+    "tests": {
+      "title_from_markdown": {
+        "passed": true,
+        "expected": "Module 16: Data Transformation with dbt",
+        "actual": "Module 16: Data Transformation with dbt"
+      },
+      "duration_from_markdown": {
+        "passed": false,
+        "expected": 40,
+        "actual": 15
+      },
+      "lessons_from_markdown": {
+        "passed": false,
+        "expected": 50,
+        "actual": 15
+      },
+      "learning_objectives_present": {
+        "passed": true,
+        "count": 5
+      },
+      "topics_from_categories": {
+        "passed": true,
+        "count": 15
+      },
+      "prerequisites_structure": {
+        "passed": true,
+        "count": 1
+      },
+      "page_loads": {
+        "passed": true,
+        "page_title": "Learning Path | Data Engineering Platform"
+      }
+    },
+    "success": false,
+    "pass_rate": 71.42857142857143
+  },
+  "module-17": {
+    "module_id": "module-17",
+    "timestamp": "2025-10-30T19:55:01.918428",
+    "tests": {
+      "title_from_markdown": {
+        "passed": true,
+        "expected": "Module 17: Soft Skills & Professional Practices",
+        "actual": "Module 17: Soft Skills & Professional Practices"
+      },
+      "duration_from_markdown": {
+        "passed": false,
+        "expected": 16,
+        "actual": 30
+      },
+      "lessons_from_markdown": {
+        "passed": false,
+        "expected": 20,
+        "actual": 30
+      },
+      "learning_objectives_present": {
+        "passed": true,
+        "count": 5
+      },
+      "topics_from_categories": {
+        "passed": true,
+        "count": 15
+      },
+      "prerequisites_structure": {
+        "passed": true,
+        "count": 1
+      },
+      "page_loads": {
+        "passed": true,
+        "page_title": "Learning Path | Data Engineering Platform"
+      }
+    },
+    "success": false,
+    "pass_rate": 71.42857142857143
+  },
+  "module-18": {
+    "module_id": "module-18",
+    "timestamp": "2025-10-30T19:55:01.966078",
+    "tests": {
+      "title_from_markdown": {
+        "passed": true,
+        "expected": "Module 18: Business & Domain Knowledge",
+        "actual": "Module 18: Business & Domain Knowledge"
+      },
+      "duration_from_markdown": {
+        "passed": false,
+        "expected": 20,
+        "actual": 14
+      },
+      "lessons_from_markdown": {
+        "passed": false,
+        "expected": 25,
+        "actual": 14
+      },
+      "learning_objectives_present": {
+        "passed": true,
+        "count": 5
+      },
+      "topics_from_categories": {
+        "passed": true,
+        "count": 15
+      },
+      "prerequisites_structure": {
+        "passed": true,
+        "count": 1
+      },
+      "page_loads": {
+        "passed": true,
+        "page_title": "Learning Path | Data Engineering Platform"
+      }
+    },
+    "success": false,
+    "pass_rate": 71.42857142857143
+  },
+  "module-19": {
+    "module_id": "module-19",
+    "timestamp": "2025-10-30T19:55:02.001196",
+    "tests": {
+      "title_from_markdown": {
+        "passed": true,
+        "expected": "Module 19: Additional Technical Skills",
+        "actual": "Module 19: Additional Technical Skills"
+      },
+      "duration_from_markdown": {
+        "passed": false,
+        "expected": 32,
+        "actual": 22
+      },
+      "lessons_from_markdown": {
+        "passed": false,
+        "expected": 40,
+        "actual": 22
+      },
+      "learning_objectives_present": {
+        "passed": true,
+        "count": 5
+      },
+      "topics_from_categories": {
+        "passed": true,
+        "count": 15
+      },
+      "prerequisites_structure": {
+        "passed": true,
+        "count": 1
+      },
+      "page_loads": {
+        "passed": true,
+        "page_title": "Learning Path | Data Engineering Platform"
+      }
+    },
+    "success": false,
+    "pass_rate": 71.42857142857143
+  },
+  "module-20": {
+    "module_id": "module-20",
+    "timestamp": "2025-10-30T19:55:02.044024",
+    "tests": {
+      "title_from_markdown": {
+        "passed": true,
+        "expected": "Module 20: Emerging Topics & Advanced Concepts",
+        "actual": "Module 20: Emerging Topics & Advanced Concepts"
+      },
+      "duration_from_markdown": {
+        "passed": false,
+        "expected": 24,
+        "actual": 23
+      },
+      "lessons_from_markdown": {
+        "passed": false,
+        "expected": 30,
+        "actual": 23
+      },
+      "learning_objectives_present": {
+        "passed": true,
+        "count": 5
+      },
+      "topics_from_categories": {
+        "passed": true,
+        "count": 15
+      },
+      "prerequisites_structure": {
+        "passed": true,
+        "count": 1
+      },
+      "page_loads": {
+        "passed": true,
+        "page_title": "Learning Path | Data Engineering Platform"
+      }
+    },
+    "success": false,
+    "pass_rate": 71.42857142857143
+  }
+}

@@ -1,0 +1,905 @@
+{
+  "summary": {
+    "total_modules": 20,
+    "successful_modules": 20,
+    "success_rate": 100.0,
+    "avg_load_time": 2.4370000000000003,
+    "total_verification_time": 11.685139656066895
+  },
+  "test_categories": {
+    "enhanced_progress_cards": {
+      "passed": 20,
+      "total": 20
+    },
+    "tabbed_interface": {
+      "passed": 20,
+      "total": 20
+    },
+    "interactive_elements": {
+      "passed": 20,
+      "total": 20
+    },
+    "enhanced_styling": {
+      "passed": 20,
+      "total": 20
+    },
+    "progress_tracking": {
+      "passed": 0,
+      "total": 20
+    },
+    "visual_elements": {
+      "passed": 20,
+      "total": 20
+    },
+    "enhanced_content": {
+      "passed": 20,
+      "total": 20
+    },
+    "performance": {
+      "passed": 20,
+      "total": 20
+    }
+  },
+  "detailed_results": {
+    "module-1": {
+      "module_id": "module-1",
+      "timestamp": "2025-10-30T20:22:34.434749",
+      "tests": {
+        "enhanced_progress_cards": {
+          "passed": true,
+          "gradient_cards": 4,
+          "progress_cards": 0
+        },
+        "tabbed_interface": {
+          "passed": true,
+          "tab_elements": 8
+        },
+        "interactive_elements": {
+          "passed": true,
+          "buttons": 56,
+          "links": 1
+        },
+        "enhanced_styling": {
+          "passed": true,
+          "styled_elements": 166
+        },
+        "progress_tracking": {
+          "passed": false,
+          "progress_bars": 0
+        },
+        "visual_elements": {
+          "passed": true,
+          "icons": 137
+        },
+        "enhanced_content": {
+          "passed": true,
+          "has_learning_data": true
+        },
+        "performance": {
+          "passed": true,
+          "load_time": 2.781512498855591
+        }
+      },
+      "success": true,
+      "load_time": 2.782,
+      "pass_rate": 87.5
+    },
+    "module-2": {
+      "module_id": "module-2",
+      "timestamp": "2025-10-30T20:22:34.434749",
+      "tests": {
+        "enhanced_progress_cards": {
+          "passed": true,
+          "gradient_cards": 4,
+          "progress_cards": 0
+        },
+        "tabbed_interface": {
+          "passed": true,
+          "tab_elements": 8
+        },
+        "interactive_elements": {
+          "passed": true,
+          "buttons": 110,
+          "links": 1
+        },
+        "enhanced_styling": {
+          "passed": true,
+          "styled_elements": 303
+        },
+        "progress_tracking": {
+          "passed": false,
+          "progress_bars": 0
+        },
+        "visual_elements": {
+          "passed": true,
+          "icons": 246
+        },
+        "enhanced_content": {
+          "passed": true,
+          "has_learning_data": true
+        },
+        "performance": {
+          "passed": true,
+          "load_time": 2.70451283454895
+        }
+      },
+      "success": true,
+      "load_time": 2.705,
+      "pass_rate": 87.5
+    },
+    "module-3": {
+      "module_id": "module-3",
+      "timestamp": "2025-10-30T20:22:34.434749",
+      "tests": {
+        "enhanced_progress_cards": {
+          "passed": true,
+          "gradient_cards": 4,
+          "progress_cards": 0
+        },
+        "tabbed_interface": {
+          "passed": true,
+          "tab_elements": 8
+        },
+        "interactive_elements": {
+          "passed": true,
+          "buttons": 48,
+          "links": 1
+        },
+        "enhanced_styling": {
+          "passed": true,
+          "styled_elements": 149
+        },
+        "progress_tracking": {
+          "passed": false,
+          "progress_bars": 0
+        },
+        "visual_elements": {
+          "passed": true,
+          "icons": 123
+        },
+        "enhanced_content": {
+          "passed": true,
+          "has_learning_data": true
+        },
+        "performance": {
+          "passed": true,
+          "load_time": 2.249396562576294
+        }
+      },
+      "success": true,
+      "load_time": 2.249,
+      "pass_rate": 87.5
+    },
+    "module-4": {
+      "module_id": "module-4",
+      "timestamp": "2025-10-30T20:22:34.434749",
+      "tests": {
+        "enhanced_progress_cards": {
+          "passed": true,
+          "gradient_cards": 4,
+          "progress_cards": 0
+        },
+        "tabbed_interface": {
+          "passed": true,
+          "tab_elements": 8
+        },
+        "interactive_elements": {
+          "passed": true,
+          "buttons": 76,
+          "links": 1
+        },
+        "enhanced_styling": {
+          "passed": true,
+          "styled_elements": 218
+        },
+        "progress_tracking": {
+          "passed": false,
+          "progress_bars": 0
+        },
+        "visual_elements": {
+          "passed": true,
+          "icons": 178
+        },
+        "enhanced_content": {
+          "passed": true,
+          "has_learning_data": true
+        },
+        "performance": {
+          "passed": true,
+          "load_time": 2.394559621810913
+        }
+      },
+      "success": true,
+      "load_time": 2.395,
+      "pass_rate": 87.5
+    },
+    "module-5": {
+      "module_id": "module-5",
+      "timestamp": "2025-10-30T20:22:34.434749",
+      "tests": {
+        "enhanced_progress_cards": {
+          "passed": true,
+          "gradient_cards": 4,
+          "progress_cards": 0
+        },
+        "tabbed_interface": {
+          "passed": true,
+          "tab_elements": 8
+        },
+        "interactive_elements": {
+          "passed": true,
+          "buttons": 110,
+          "links": 1
+        },
+        "enhanced_styling": {
+          "passed": true,
+          "styled_elements": 303
+        },
+        "progress_tracking": {
+          "passed": false,
+          "progress_bars": 0
+        },
+        "visual_elements": {
+          "passed": true,
+          "icons": 246
+        },
+        "enhanced_content": {
+          "passed": true,
+          "has_learning_data": true
+        },
+        "performance": {
+          "passed": true,
+          "load_time": 2.4045445919036865
+        }
+      },
+      "success": true,
+      "load_time": 2.405,
+      "pass_rate": 87.5
+    },
+    "module-6": {
+      "module_id": "module-6",
+      "timestamp": "2025-10-30T20:22:34.434749",
+      "tests": {
+        "enhanced_progress_cards": {
+          "passed": true,
+          "gradient_cards": 4,
+          "progress_cards": 0
+        },
+        "tabbed_interface": {
+          "passed": true,
+          "tab_elements": 8
+        },
+        "interactive_elements": {
+          "passed": true,
+          "buttons": 66,
+          "links": 1
+        },
+        "enhanced_styling": {
+          "passed": true,
+          "styled_elements": 193
+        },
+        "progress_tracking": {
+          "passed": false,
+          "progress_bars": 0
+        },
+        "visual_elements": {
+          "passed": true,
+          "icons": 158
+        },
+        "enhanced_content": {
+          "passed": true,
+          "has_learning_data": true
+        },
+        "performance": {
+          "passed": true,
+          "load_time": 2.3285651206970215
+        }
+      },
+      "success": true,
+      "load_time": 2.329,
+      "pass_rate": 87.5
+    },
+    "module-7": {
+      "module_id": "module-7",
+      "timestamp": "2025-10-30T20:22:34.434749",
+      "tests": {
+        "enhanced_progress_cards": {
+          "passed": true,
+          "gradient_cards": 4,
+          "progress_cards": 0
+        },
+        "tabbed_interface": {
+          "passed": true,
+          "tab_elements": 8
+        },
+        "interactive_elements": {
+          "passed": true,
+          "buttons": 74,
+          "links": 1
+        },
+        "enhanced_styling": {
+          "passed": true,
+          "styled_elements": 213
+        },
+        "progress_tracking": {
+          "passed": false,
+          "progress_bars": 0
+        },
+        "visual_elements": {
+          "passed": true,
+          "icons": 174
+        },
+        "enhanced_content": {
+          "passed": true,
+          "has_learning_data": true
+        },
+        "performance": {
+          "passed": true,
+          "load_time": 2.8034045696258545
+        }
+      },
+      "success": true,
+      "load_time": 2.803,
+      "pass_rate": 87.5
+    },
+    "module-8": {
+      "module_id": "module-8",
+      "timestamp": "2025-10-30T20:22:34.434749",
+      "tests": {
+        "enhanced_progress_cards": {
+          "passed": true,
+          "gradient_cards": 4,
+          "progress_cards": 0
+        },
+        "tabbed_interface": {
+          "passed": true,
+          "tab_elements": 8
+        },
+        "interactive_elements": {
+          "passed": true,
+          "buttons": 50,
+          "links": 1
+        },
+        "enhanced_styling": {
+          "passed": true,
+          "styled_elements": 153
+        },
+        "progress_tracking": {
+          "passed": false,
+          "progress_bars": 0
+        },
+        "visual_elements": {
+          "passed": true,
+          "icons": 126
+        },
+        "enhanced_content": {
+          "passed": true,
+          "has_learning_data": true
+        },
+        "performance": {
+          "passed": true,
+          "load_time": 2.479329824447632
+        }
+      },
+      "success": true,
+      "load_time": 2.479,
+      "pass_rate": 87.5
+    },
+    "module-9": {
+      "module_id": "module-9",
+      "timestamp": "2025-10-30T20:22:34.434749",
+      "tests": {
+        "enhanced_progress_cards": {
+          "passed": true,
+          "gradient_cards": 4,
+          "progress_cards": 0
+        },
+        "tabbed_interface": {
+          "passed": true,
+          "tab_elements": 8
+        },
+        "interactive_elements": {
+          "passed": true,
+          "buttons": 88,
+          "links": 1
+        },
+        "enhanced_styling": {
+          "passed": true,
+          "styled_elements": 248
+        },
+        "progress_tracking": {
+          "passed": false,
+          "progress_bars": 0
+        },
+        "visual_elements": {
+          "passed": true,
+          "icons": 202
+        },
+        "enhanced_content": {
+          "passed": true,
+          "has_learning_data": true
+        },
+        "performance": {
+          "passed": true,
+          "load_time": 2.7995107173919678
+        }
+      },
+      "success": true,
+      "load_time": 2.8,
+      "pass_rate": 87.5
+    },
+    "module-10": {
+      "module_id": "module-10",
+      "timestamp": "2025-10-30T20:22:34.434749",
+      "tests": {
+        "enhanced_progress_cards": {
+          "passed": true,
+          "gradient_cards": 4,
+          "progress_cards": 0
+        },
+        "tabbed_interface": {
+          "passed": true,
+          "tab_elements": 8
+        },
+        "interactive_elements": {
+          "passed": true,
+          "buttons": 60,
+          "links": 1
+        },
+        "enhanced_styling": {
+          "passed": true,
+          "styled_elements": 178
+        },
+        "progress_tracking": {
+          "passed": false,
+          "progress_bars": 0
+        },
+        "visual_elements": {
+          "passed": true,
+          "icons": 146
+        },
+        "enhanced_content": {
+          "passed": true,
+          "has_learning_data": true
+        },
+        "performance": {
+          "passed": true,
+          "load_time": 2.4174442291259766
+        }
+      },
+      "success": true,
+      "load_time": 2.417,
+      "pass_rate": 87.5
+    },
+    "module-11": {
+      "module_id": "module-11",
+      "timestamp": "2025-10-30T20:22:39.580328",
+      "tests": {
+        "enhanced_progress_cards": {
+          "passed": true,
+          "gradient_cards": 4,
+          "progress_cards": 0
+        },
+        "tabbed_interface": {
+          "passed": true,
+          "tab_elements": 8
+        },
+        "interactive_elements": {
+          "passed": true,
+          "buttons": 54,
+          "links": 1
+        },
+        "enhanced_styling": {
+          "passed": true,
+          "styled_elements": 163
+        },
+        "progress_tracking": {
+          "passed": false,
+          "progress_bars": 0
+        },
+        "visual_elements": {
+          "passed": true,
+          "icons": 134
+        },
+        "enhanced_content": {
+          "passed": true,
+          "has_learning_data": true
+        },
+        "performance": {
+          "passed": true,
+          "load_time": 1.6814422607421875
+        }
+      },
+      "success": true,
+      "load_time": 1.681,
+      "pass_rate": 87.5
+    },
+    "module-12": {
+      "module_id": "module-12",
+      "timestamp": "2025-10-30T20:22:39.682979",
+      "tests": {
+        "enhanced_progress_cards": {
+          "passed": true,
+          "gradient_cards": 4,
+          "progress_cards": 0
+        },
+        "tabbed_interface": {
+          "passed": true,
+          "tab_elements": 8
+        },
+        "interactive_elements": {
+          "passed": true,
+          "buttons": 92,
+          "links": 1
+        },
+        "enhanced_styling": {
+          "passed": true,
+          "styled_elements": 258
+        },
+        "progress_tracking": {
+          "passed": false,
+          "progress_bars": 0
+        },
+        "visual_elements": {
+          "passed": true,
+          "icons": 210
+        },
+        "enhanced_content": {
+          "passed": true,
+          "has_learning_data": true
+        },
+        "performance": {
+          "passed": true,
+          "load_time": 2.239532470703125
+        }
+      },
+      "success": true,
+      "load_time": 2.24,
+      "pass_rate": 87.5
+    },
+    "module-13": {
+      "module_id": "module-13",
+      "timestamp": "2025-10-30T20:22:39.907895",
+      "tests": {
+        "enhanced_progress_cards": {
+          "passed": true,
+          "gradient_cards": 4,
+          "progress_cards": 0
+        },
+        "tabbed_interface": {
+          "passed": true,
+          "tab_elements": 8
+        },
+        "interactive_elements": {
+          "passed": true,
+          "buttons": 40,
+          "links": 1
+        },
+        "enhanced_styling": {
+          "passed": true,
+          "styled_elements": 128
+        },
+        "progress_tracking": {
+          "passed": false,
+          "progress_bars": 0
+        },
+        "visual_elements": {
+          "passed": true,
+          "icons": 106
+        },
+        "enhanced_content": {
+          "passed": true,
+          "has_learning_data": true
+        },
+        "performance": {
+          "passed": true,
+          "load_time": 2.3473639488220215
+        }
+      },
+      "success": true,
+      "load_time": 2.347,
+      "pass_rate": 87.5
+    },
+    "module-14": {
+      "module_id": "module-14",
+      "timestamp": "2025-10-30T20:22:39.967594",
+      "tests": {
+        "enhanced_progress_cards": {
+          "passed": true,
+          "gradient_cards": 4,
+          "progress_cards": 0
+        },
+        "tabbed_interface": {
+          "passed": true,
+          "tab_elements": 8
+        },
+        "interactive_elements": {
+          "passed": true,
+          "buttons": 42,
+          "links": 1
+        },
+        "enhanced_styling": {
+          "passed": true,
+          "styled_elements": 133
+        },
+        "progress_tracking": {
+          "passed": false,
+          "progress_bars": 0
+        },
+        "visual_elements": {
+          "passed": true,
+          "icons": 110
+        },
+        "enhanced_content": {
+          "passed": true,
+          "has_learning_data": true
+        },
+        "performance": {
+          "passed": true,
+          "load_time": 2.523998737335205
+        }
+      },
+      "success": true,
+      "load_time": 2.524,
+      "pass_rate": 87.5
+    },
+    "module-15": {
+      "module_id": "module-15",
+      "timestamp": "2025-10-30T20:22:40.005941",
+      "tests": {
+        "enhanced_progress_cards": {
+          "passed": true,
+          "gradient_cards": 4,
+          "progress_cards": 0
+        },
+        "tabbed_interface": {
+          "passed": true,
+          "tab_elements": 8
+        },
+        "interactive_elements": {
+          "passed": true,
+          "buttons": 40,
+          "links": 1
+        },
+        "enhanced_styling": {
+          "passed": true,
+          "styled_elements": 128
+        },
+        "progress_tracking": {
+          "passed": false,
+          "progress_bars": 0
+        },
+        "visual_elements": {
+          "passed": true,
+          "icons": 106
+        },
+        "enhanced_content": {
+          "passed": true,
+          "has_learning_data": true
+        },
+        "performance": {
+          "passed": true,
+          "load_time": 2.6035547256469727
+        }
+      },
+      "success": true,
+      "load_time": 2.604,
+      "pass_rate": 87.5
+    },
+    "module-16": {
+      "module_id": "module-16",
+      "timestamp": "2025-10-30T20:22:40.024384",
+      "tests": {
+        "enhanced_progress_cards": {
+          "passed": true,
+          "gradient_cards": 4,
+          "progress_cards": 0
+        },
+        "tabbed_interface": {
+          "passed": true,
+          "tab_elements": 8
+        },
+        "interactive_elements": {
+          "passed": true,
+          "buttons": 40,
+          "links": 1
+        },
+        "enhanced_styling": {
+          "passed": true,
+          "styled_elements": 128
+        },
+        "progress_tracking": {
+          "passed": false,
+          "progress_bars": 0
+        },
+        "visual_elements": {
+          "passed": true,
+          "icons": 106
+        },
+        "enhanced_content": {
+          "passed": true,
+          "has_learning_data": true
+        },
+        "performance": {
+          "passed": true,
+          "load_time": 2.5714375972747803
+        }
+      },
+      "success": true,
+      "load_time": 2.571,
+      "pass_rate": 87.5
+    },
+    "module-17": {
+      "module_id": "module-17",
+      "timestamp": "2025-10-30T20:22:40.565354",
+      "tests": {
+        "enhanced_progress_cards": {
+          "passed": true,
+          "gradient_cards": 4,
+          "progress_cards": 0
+        },
+        "tabbed_interface": {
+          "passed": true,
+          "tab_elements": 8
+        },
+        "interactive_elements": {
+          "passed": true,
+          "buttons": 70,
+          "links": 1
+        },
+        "enhanced_styling": {
+          "passed": true,
+          "styled_elements": 203
+        },
+        "progress_tracking": {
+          "passed": false,
+          "progress_bars": 0
+        },
+        "visual_elements": {
+          "passed": true,
+          "icons": 166
+        },
+        "enhanced_content": {
+          "passed": true,
+          "has_learning_data": true
+        },
+        "performance": {
+          "passed": true,
+          "load_time": 2.3949127197265625
+        }
+      },
+      "success": true,
+      "load_time": 2.395,
+      "pass_rate": 87.5
+    },
+    "module-18": {
+      "module_id": "module-18",
+      "timestamp": "2025-10-30T20:22:40.569015",
+      "tests": {
+        "enhanced_progress_cards": {
+          "passed": true,
+          "gradient_cards": 4,
+          "progress_cards": 0
+        },
+        "tabbed_interface": {
+          "passed": true,
+          "tab_elements": 8
+        },
+        "interactive_elements": {
+          "passed": true,
+          "buttons": 38,
+          "links": 1
+        },
+        "enhanced_styling": {
+          "passed": true,
+          "styled_elements": 123
+        },
+        "progress_tracking": {
+          "passed": false,
+          "progress_bars": 0
+        },
+        "visual_elements": {
+          "passed": true,
+          "icons": 102
+        },
+        "enhanced_content": {
+          "passed": true,
+          "has_learning_data": true
+        },
+        "performance": {
+          "passed": true,
+          "load_time": 2.3717241287231445
+        }
+      },
+      "success": true,
+      "load_time": 2.372,
+      "pass_rate": 87.5
+    },
+    "module-19": {
+      "module_id": "module-19",
+      "timestamp": "2025-10-30T20:22:40.611899",
+      "tests": {
+        "enhanced_progress_cards": {
+          "passed": true,
+          "gradient_cards": 4,
+          "progress_cards": 0
+        },
+        "tabbed_interface": {
+          "passed": true,
+          "tab_elements": 8
+        },
+        "interactive_elements": {
+          "passed": true,
+          "buttons": 54,
+          "links": 1
+        },
+        "enhanced_styling": {
+          "passed": true,
+          "styled_elements": 163
+        },
+        "progress_tracking": {
+          "passed": false,
+          "progress_bars": 0
+        },
+        "visual_elements": {
+          "passed": true,
+          "icons": 134
+        },
+        "enhanced_content": {
+          "passed": true,
+          "has_learning_data": true
+        },
+        "performance": {
+          "passed": true,
+          "load_time": 2.2667534351348877
+        }
+      },
+      "success": true,
+      "load_time": 2.267,
+      "pass_rate": 87.5
+    },
+    "module-20": {
+      "module_id": "module-20",
+      "timestamp": "2025-10-30T20:22:40.631782",
+      "tests": {
+        "enhanced_progress_cards": {
+          "passed": true,
+          "gradient_cards": 4,
+          "progress_cards": 0
+        },
+        "tabbed_interface": {
+          "passed": true,
+          "tab_elements": 8
+        },
+        "interactive_elements": {
+          "passed": true,
+          "buttons": 56,
+          "links": 1
+        },
+        "enhanced_styling": {
+          "passed": true,
+          "styled_elements": 168
+        },
+        "progress_tracking": {
+          "passed": false,
+          "progress_bars": 0
+        },
+        "visual_elements": {
+          "passed": true,
+          "icons": 138
+        },
+        "enhanced_content": {
+          "passed": true,
+          "has_learning_data": true
+        },
+        "performance": {
+          "passed": true,
+          "load_time": 2.3752477169036865
+        }
+      },
+      "success": true,
+      "load_time": 2.375,
+      "pass_rate": 87.5
+    }
+  }
+}

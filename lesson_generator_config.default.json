@@ -1,0 +1,24 @@
+{
+  "api_provider": "claude",
+  "model": "claude-haiku-4-5-20251001",
+  "max_tokens": 16384,
+  "start_from_lesson": null,
+  "test_mode": false,
+  "test_lesson_codes": [],
+  "overwrite_existing": false,
+  "metadata": {
+    "audience": "Technical professionals and developers",
+    "firm_type": "Organizations implementing solutions",
+    "industry": "Technology and digital transformation"
+  },
+  "prompt_replacements": {},
+  "api_keys": {
+    "openai": "openaiapikey.txt",
+    "claude": "claudeAPIkey.txt"
+  },
+  "paths": {
+    "prompt_template": "LESSON_GENERATION_PROMPT_GENERIC.md",
+    "batch_output_dir": "scripts/batch_api"
+  }
+}
+

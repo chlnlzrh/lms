@@ -1,0 +1,782 @@
+{
+  "module-1": {
+    "module_id": "module-1",
+    "timestamp": "2025-10-30T17:24:48.471991",
+    "success": true,
+    "tests": {
+      "page_load": {
+        "passed": true,
+        "load_time": 8.677
+      },
+      "module_cards": {
+        "passed": true,
+        "count": 21
+      },
+      "dynamic_content": {
+        "passed": true,
+        "indicators_found": 4,
+        "total_indicators": 5
+      },
+      "interactive_elements": {
+        "passed": true,
+        "buttons": 57,
+        "links": 5
+      },
+      "progress_ui": {
+        "passed": false,
+        "progress_elements": 0,
+        "badges": 0
+      },
+      "expandable_content": {
+        "passed": true,
+        "expand_buttons": 28
+      },
+      "responsive_design": {
+        "passed": true,
+        "mobile_card_count": 21
+      }
+    },
+    "pass_rate": 85.7
+  },
+  "module-2": {
+    "module_id": "module-2",
+    "timestamp": "2025-10-30T17:24:48.471991",
+    "success": true,
+    "tests": {
+      "page_load": {
+        "passed": true,
+        "load_time": 8.686
+      },
+      "module_cards": {
+        "passed": true,
+        "count": 21
+      },
+      "dynamic_content": {
+        "passed": true,
+        "indicators_found": 4,
+        "total_indicators": 5
+      },
+      "interactive_elements": {
+        "passed": true,
+        "buttons": 57,
+        "links": 5
+      },
+      "progress_ui": {
+        "passed": false,
+        "progress_elements": 0,
+        "badges": 0
+      },
+      "expandable_content": {
+        "passed": true,
+        "expand_buttons": 28
+      },
+      "responsive_design": {
+        "passed": true,
+        "mobile_card_count": 21
+      }
+    },
+    "pass_rate": 85.7
+  },
+  "module-3": {
+    "module_id": "module-3",
+    "timestamp": "2025-10-30T17:24:48.471991",
+    "success": true,
+    "tests": {
+      "page_load": {
+        "passed": true,
+        "load_time": 8.684
+      },
+      "module_cards": {
+        "passed": true,
+        "count": 21
+      },
+      "dynamic_content": {
+        "passed": true,
+        "indicators_found": 4,
+        "total_indicators": 5
+      },
+      "interactive_elements": {
+        "passed": true,
+        "buttons": 57,
+        "links": 5
+      },
+      "progress_ui": {
+        "passed": false,
+        "progress_elements": 0,
+        "badges": 0
+      },
+      "expandable_content": {
+        "passed": true,
+        "expand_buttons": 28
+      },
+      "responsive_design": {
+        "passed": true,
+        "mobile_card_count": 21
+      }
+    },
+    "pass_rate": 85.7
+  },
+  "module-4": {
+    "module_id": "module-4",
+    "timestamp": "2025-10-30T17:24:48.471991",
+    "success": true,
+    "tests": {
+      "page_load": {
+        "passed": true,
+        "load_time": 8.682
+      },
+      "module_cards": {
+        "passed": true,
+        "count": 21
+      },
+      "dynamic_content": {
+        "passed": true,
+        "indicators_found": 4,
+        "total_indicators": 5
+      },
+      "interactive_elements": {
+        "passed": true,
+        "buttons": 57,
+        "links": 5
+      },
+      "progress_ui": {
+        "passed": false,
+        "progress_elements": 0,
+        "badges": 0
+      },
+      "expandable_content": {
+        "passed": true,
+        "expand_buttons": 28
+      },
+      "responsive_design": {
+        "passed": true,
+        "mobile_card_count": 21
+      }
+    },
+    "pass_rate": 85.7
+  },
+  "module-5": {
+    "module_id": "module-5",
+    "timestamp": "2025-10-30T17:24:48.471991",
+    "success": true,
+    "tests": {
+      "page_load": {
+        "passed": true,
+        "load_time": 8.678
+      },
+      "module_cards": {
+        "passed": true,
+        "count": 21
+      },
+      "dynamic_content": {
+        "passed": true,
+        "indicators_found": 4,
+        "total_indicators": 5
+      },
+      "interactive_elements": {
+        "passed": true,
+        "buttons": 57,
+        "links": 5
+      },
+      "progress_ui": {
+        "passed": false,
+        "progress_elements": 0,
+        "badges": 0
+      },
+      "expandable_content": {
+        "passed": true,
+        "expand_buttons": 28
+      },
+      "responsive_design": {
+        "passed": true,
+        "mobile_card_count": 21
+      }
+    },
+    "pass_rate": 85.7
+  },
+  "module-6": {
+    "module_id": "module-6",
+    "timestamp": "2025-10-30T17:24:48.471991",
+    "success": true,
+    "tests": {
+      "page_load": {
+        "passed": true,
+        "load_time": 8.677
+      },
+      "module_cards": {
+        "passed": true,
+        "count": 21
+      },
+      "dynamic_content": {
+        "passed": true,
+        "indicators_found": 4,
+        "total_indicators": 5
+      },
+      "interactive_elements": {
+        "passed": true,
+        "buttons": 57,
+        "links": 5
+      },
+      "progress_ui": {
+        "passed": false,
+        "progress_elements": 0,
+        "badges": 0
+      },
+      "expandable_content": {
+        "passed": true,
+        "expand_buttons": 28
+      },
+      "responsive_design": {
+        "passed": true,
+        "mobile_card_count": 21
+      }
+    },
+    "pass_rate": 85.7
+  },
+  "module-7": {
+    "module_id": "module-7",
+    "timestamp": "2025-10-30T17:24:48.471991",
+    "success": true,
+    "tests": {
+      "page_load": {
+        "passed": true,
+        "load_time": 8.674
+      },
+      "module_cards": {
+        "passed": true,
+        "count": 21
+      },
+      "dynamic_content": {
+        "passed": true,
+        "indicators_found": 4,
+        "total_indicators": 5
+      },
+      "interactive_elements": {
+        "passed": true,
+        "buttons": 57,
+        "links": 5
+      },
+      "progress_ui": {
+        "passed": false,
+        "progress_elements": 0,
+        "badges": 0
+      },
+      "expandable_content": {
+        "passed": true,
+        "expand_buttons": 28
+      },
+      "responsive_design": {
+        "passed": true,
+        "mobile_card_count": 21
+      }
+    },
+    "pass_rate": 85.7
+  },
+  "module-8": {
+    "module_id": "module-8",
+    "timestamp": "2025-10-30T17:24:48.471991",
+    "success": true,
+    "tests": {
+      "page_load": {
+        "passed": true,
+        "load_time": 8.675
+      },
+      "module_cards": {
+        "passed": true,
+        "count": 21
+      },
+      "dynamic_content": {
+        "passed": true,
+        "indicators_found": 4,
+        "total_indicators": 5
+      },
+      "interactive_elements": {
+        "passed": true,
+        "buttons": 57,
+        "links": 5
+      },
+      "progress_ui": {
+        "passed": false,
+        "progress_elements": 0,
+        "badges": 0
+      },
+      "expandable_content": {
+        "passed": true,
+        "expand_buttons": 28
+      },
+      "responsive_design": {
+        "passed": true,
+        "mobile_card_count": 21
+      }
+    },
+    "pass_rate": 85.7
+  },
+  "module-9": {
+    "module_id": "module-9",
+    "timestamp": "2025-10-30T17:24:48.471991",
+    "success": true,
+    "tests": {
+      "page_load": {
+        "passed": true,
+        "load_time": 8.675
+      },
+      "module_cards": {
+        "passed": true,
+        "count": 21
+      },
+      "dynamic_content": {
+        "passed": true,
+        "indicators_found": 4,
+        "total_indicators": 5
+      },
+      "interactive_elements": {
+        "passed": true,
+        "buttons": 57,
+        "links": 5
+      },
+      "progress_ui": {
+        "passed": false,
+        "progress_elements": 0,
+        "badges": 0
+      },
+      "expandable_content": {
+        "passed": true,
+        "expand_buttons": 28
+      },
+      "responsive_design": {
+        "passed": true,
+        "mobile_card_count": 21
+      }
+    },
+    "pass_rate": 85.7
+  },
+  "module-10": {
+    "module_id": "module-10",
+    "timestamp": "2025-10-30T17:24:48.471991",
+    "success": true,
+    "tests": {
+      "page_load": {
+        "passed": true,
+        "load_time": 8.713
+      },
+      "module_cards": {
+        "passed": true,
+        "count": 21
+      },
+      "dynamic_content": {
+        "passed": true,
+        "indicators_found": 4,
+        "total_indicators": 5
+      },
+      "interactive_elements": {
+        "passed": true,
+        "buttons": 57,
+        "links": 5
+      },
+      "progress_ui": {
+        "passed": false,
+        "progress_elements": 0,
+        "badges": 0
+      },
+      "expandable_content": {
+        "passed": true,
+        "expand_buttons": 28
+      },
+      "responsive_design": {
+        "passed": true,
+        "mobile_card_count": 21
+      }
+    },
+    "pass_rate": 85.7
+  },
+  "module-11": {
+    "module_id": "module-11",
+    "timestamp": "2025-10-30T17:25:06.987028",
+    "success": true,
+    "tests": {
+      "page_load": {
+        "passed": true,
+        "load_time": 4.119
+      },
+      "module_cards": {
+        "passed": true,
+        "count": 21
+      },
+      "dynamic_content": {
+        "passed": true,
+        "indicators_found": 4,
+        "total_indicators": 5
+      },
+      "interactive_elements": {
+        "passed": true,
+        "buttons": 57,
+        "links": 5
+      },
+      "progress_ui": {
+        "passed": false,
+        "progress_elements": 0,
+        "badges": 0
+      },
+      "expandable_content": {
+        "passed": true,
+        "expand_buttons": 28
+      },
+      "responsive_design": {
+        "passed": true,
+        "mobile_card_count": 21
+      }
+    },
+    "pass_rate": 85.7
+  },
+  "module-12": {
+    "module_id": "module-12",
+    "timestamp": "2025-10-30T17:25:07.002306",
+    "success": true,
+    "tests": {
+      "page_load": {
+        "passed": true,
+        "load_time": 4.043
+      },
+      "module_cards": {
+        "passed": true,
+        "count": 21
+      },
+      "dynamic_content": {
+        "passed": true,
+        "indicators_found": 4,
+        "total_indicators": 5
+      },
+      "interactive_elements": {
+        "passed": true,
+        "buttons": 57,
+        "links": 5
+      },
+      "progress_ui": {
+        "passed": false,
+        "progress_elements": 0,
+        "badges": 0
+      },
+      "expandable_content": {
+        "passed": true,
+        "expand_buttons": 28
+      },
+      "responsive_design": {
+        "passed": true,
+        "mobile_card_count": 21
+      }
+    },
+    "pass_rate": 85.7
+  },
+  "module-13": {
+    "module_id": "module-13",
+    "timestamp": "2025-10-30T17:25:07.002306",
+    "success": true,
+    "tests": {
+      "page_load": {
+        "passed": true,
+        "load_time": 4.158
+      },
+      "module_cards": {
+        "passed": true,
+        "count": 21
+      },
+      "dynamic_content": {
+        "passed": true,
+        "indicators_found": 4,
+        "total_indicators": 5
+      },
+      "interactive_elements": {
+        "passed": true,
+        "buttons": 57,
+        "links": 5
+      },
+      "progress_ui": {
+        "passed": false,
+        "progress_elements": 0,
+        "badges": 0
+      },
+      "expandable_content": {
+        "passed": true,
+        "expand_buttons": 28
+      },
+      "responsive_design": {
+        "passed": true,
+        "mobile_card_count": 21
+      }
+    },
+    "pass_rate": 85.7
+  },
+  "module-14": {
+    "module_id": "module-14",
+    "timestamp": "2025-10-30T17:25:07.002306",
+    "success": true,
+    "tests": {
+      "page_load": {
+        "passed": true,
+        "load_time": 4.17
+      },
+      "module_cards": {
+        "passed": true,
+        "count": 21
+      },
+      "dynamic_content": {
+        "passed": true,
+        "indicators_found": 4,
+        "total_indicators": 5
+      },
+      "interactive_elements": {
+        "passed": true,
+        "buttons": 57,
+        "links": 5
+      },
+      "progress_ui": {
+        "passed": false,
+        "progress_elements": 0,
+        "badges": 0
+      },
+      "expandable_content": {
+        "passed": true,
+        "expand_buttons": 28
+      },
+      "responsive_design": {
+        "passed": true,
+        "mobile_card_count": 21
+      }
+    },
+    "pass_rate": 85.7
+  },
+  "module-15": {
+    "module_id": "module-15",
+    "timestamp": "2025-10-30T17:25:07.028919",
+    "success": true,
+    "tests": {
+      "page_load": {
+        "passed": true,
+        "load_time": 4.201
+      },
+      "module_cards": {
+        "passed": true,
+        "count": 21
+      },
+      "dynamic_content": {
+        "passed": true,
+        "indicators_found": 4,
+        "total_indicators": 5
+      },
+      "interactive_elements": {
+        "passed": true,
+        "buttons": 57,
+        "links": 5
+      },
+      "progress_ui": {
+        "passed": false,
+        "progress_elements": 0,
+        "badges": 0
+      },
+      "expandable_content": {
+        "passed": true,
+        "expand_buttons": 28
+      },
+      "responsive_design": {
+        "passed": true,
+        "mobile_card_count": 21
+      }
+    },
+    "pass_rate": 85.7
+  },
+  "module-16": {
+    "module_id": "module-16",
+    "timestamp": "2025-10-30T17:25:07.028919",
+    "success": true,
+    "tests": {
+      "page_load": {
+        "passed": true,
+        "load_time": 4.167
+      },
+      "module_cards": {
+        "passed": true,
+        "count": 21
+      },
+      "dynamic_content": {
+        "passed": true,
+        "indicators_found": 4,
+        "total_indicators": 5
+      },
+      "interactive_elements": {
+        "passed": true,
+        "buttons": 57,
+        "links": 5
+      },
+      "progress_ui": {
+        "passed": false,
+        "progress_elements": 0,
+        "badges": 0
+      },
+      "expandable_content": {
+        "passed": true,
+        "expand_buttons": 28
+      },
+      "responsive_design": {
+        "passed": true,
+        "mobile_card_count": 21
+      }
+    },
+    "pass_rate": 85.7
+  },
+  "module-17": {
+    "module_id": "module-17",
+    "timestamp": "2025-10-30T17:25:07.034114",
+    "success": true,
+    "tests": {
+      "page_load": {
+        "passed": true,
+        "load_time": 4.209
+      },
+      "module_cards": {
+        "passed": true,
+        "count": 21
+      },
+      "dynamic_content": {
+        "passed": true,
+        "indicators_found": 4,
+        "total_indicators": 5
+      },
+      "interactive_elements": {
+        "passed": true,
+        "buttons": 57,
+        "links": 5
+      },
+      "progress_ui": {
+        "passed": false,
+        "progress_elements": 0,
+        "badges": 0
+      },
+      "expandable_content": {
+        "passed": true,
+        "expand_buttons": 28
+      },
+      "responsive_design": {
+        "passed": true,
+        "mobile_card_count": 21
+      }
+    },
+    "pass_rate": 85.7
+  },
+  "module-18": {
+    "module_id": "module-18",
+    "timestamp": "2025-10-30T17:25:07.034114",
+    "success": true,
+    "tests": {
+      "page_load": {
+        "passed": true,
+        "load_time": 4.157
+      },
+      "module_cards": {
+        "passed": true,
+        "count": 21
+      },
+      "dynamic_content": {
+        "passed": true,
+        "indicators_found": 4,
+        "total_indicators": 5
+      },
+      "interactive_elements": {
+        "passed": true,
+        "buttons": 57,
+        "links": 5
+      },
+      "progress_ui": {
+        "passed": false,
+        "progress_elements": 0,
+        "badges": 0
+      },
+      "expandable_content": {
+        "passed": true,
+        "expand_buttons": 28
+      },
+      "responsive_design": {
+        "passed": true,
+        "mobile_card_count": 21
+      }
+    },
+    "pass_rate": 85.7
+  },
+  "module-19": {
+    "module_id": "module-19",
+    "timestamp": "2025-10-30T17:25:07.034114",
+    "success": true,
+    "tests": {
+      "page_load": {
+        "passed": true,
+        "load_time": 4.208
+      },
+      "module_cards": {
+        "passed": true,
+        "count": 21
+      },
+      "dynamic_content": {
+        "passed": true,
+        "indicators_found": 4,
+        "total_indicators": 5
+      },
+      "interactive_elements": {
+        "passed": true,
+        "buttons": 57,
+        "links": 5
+      },
+      "progress_ui": {
+        "passed": false,
+        "progress_elements": 0,
+        "badges": 0
+      },
+      "expandable_content": {
+        "passed": true,
+        "expand_buttons": 28
+      },
+      "responsive_design": {
+        "passed": true,
+        "mobile_card_count": 21
+      }
+    },
+    "pass_rate": 85.7
+  },
+  "module-20": {
+    "module_id": "module-20",
+    "timestamp": "2025-10-30T17:25:07.034114",
+    "success": true,
+    "tests": {
+      "page_load": {
+        "passed": true,
+        "load_time": 4.185
+      },
+      "module_cards": {
+        "passed": true,
+        "count": 21
+      },
+      "dynamic_content": {
+        "passed": true,
+        "indicators_found": 4,
+        "total_indicators": 5
+      },
+      "interactive_elements": {
+        "passed": true,
+        "buttons": 57,
+        "links": 5
+      },
+      "progress_ui": {
+        "passed": false,
+        "progress_elements": 0,
+        "badges": 0
+      },
+      "expandable_content": {
+        "passed": true,
+        "expand_buttons": 28
+      },
+      "responsive_design": {
+        "passed": true,
+        "mobile_card_count": 21
+      }
+    },
+    "pass_rate": 85.7
+  }
+}

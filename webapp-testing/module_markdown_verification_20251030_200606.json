@@ -1,0 +1,661 @@
+{
+  "module-1": {
+    "module_id": "module-1",
+    "success": true,
+    "tests": {
+      "title_format": {
+        "passed": true,
+        "title": "Module 1: Data & Database Fundamentals"
+      },
+      "duration_reasonable": {
+        "passed": true,
+        "hours": 23
+      },
+      "lessons_reasonable": {
+        "passed": true,
+        "lessons": 23
+      },
+      "has_learning_objectives": {
+        "passed": true,
+        "count": 5
+      },
+      "has_topics": {
+        "passed": true,
+        "count": 15
+      },
+      "prerequisites_valid": {
+        "passed": true,
+        "prerequisites": []
+      }
+    },
+    "pass_rate": 100.0
+  },
+  "module-2": {
+    "module_id": "module-2",
+    "success": true,
+    "tests": {
+      "title_format": {
+        "passed": true,
+        "title": "Module 2: SQL & ELT Concepts"
+      },
+      "duration_reasonable": {
+        "passed": true,
+        "hours": 53
+      },
+      "lessons_reasonable": {
+        "passed": true,
+        "lessons": 53
+      },
+      "has_learning_objectives": {
+        "passed": true,
+        "count": 5
+      },
+      "has_topics": {
+        "passed": true,
+        "count": 15
+      },
+      "prerequisites_valid": {
+        "passed": true,
+        "prerequisites": [
+          "Module 1: Data & Database Fundamentals"
+        ]
+      }
+    },
+    "pass_rate": 100.0
+  },
+  "module-3": {
+    "module_id": "module-3",
+    "success": true,
+    "tests": {
+      "title_format": {
+        "passed": true,
+        "title": "Module 3: Data Warehousing Principles"
+      },
+      "duration_reasonable": {
+        "passed": true,
+        "hours": 19
+      },
+      "lessons_reasonable": {
+        "passed": true,
+        "lessons": 19
+      },
+      "has_learning_objectives": {
+        "passed": true,
+        "count": 5
+      },
+      "has_topics": {
+        "passed": true,
+        "count": 15
+      },
+      "prerequisites_valid": {
+        "passed": true,
+        "prerequisites": [
+          "Module 1: Data & Database Fundamentals",
+          "Module 2: SQL & ELT Concepts"
+        ]
+      }
+    },
+    "pass_rate": 100.0
+  },
+  "module-4": {
+    "module_id": "module-4",
+    "success": true,
+    "tests": {
+      "title_format": {
+        "passed": true,
+        "title": "Module 4: Data Modeling"
+      },
+      "duration_reasonable": {
+        "passed": true,
+        "hours": 33
+      },
+      "lessons_reasonable": {
+        "passed": true,
+        "lessons": 33
+      },
+      "has_learning_objectives": {
+        "passed": true,
+        "count": 5
+      },
+      "has_topics": {
+        "passed": true,
+        "count": 15
+      },
+      "prerequisites_valid": {
+        "passed": true,
+        "prerequisites": [
+          "Module 3: Data Warehousing Principles"
+        ]
+      }
+    },
+    "pass_rate": 100.0
+  },
+  "module-5": {
+    "module_id": "module-5",
+    "success": true,
+    "tests": {
+      "title_format": {
+        "passed": true,
+        "title": "Module 5: Snowflake-Specific Knowledge"
+      },
+      "duration_reasonable": {
+        "passed": true,
+        "hours": 55
+      },
+      "lessons_reasonable": {
+        "passed": true,
+        "lessons": 55
+      },
+      "has_learning_objectives": {
+        "passed": true,
+        "count": 5
+      },
+      "has_topics": {
+        "passed": true,
+        "count": 15
+      },
+      "prerequisites_valid": {
+        "passed": true,
+        "prerequisites": [
+          "Module 4: Data Modeling"
+        ]
+      }
+    },
+    "pass_rate": 100.0
+  },
+  "module-6": {
+    "module_id": "module-6",
+    "success": true,
+    "tests": {
+      "title_format": {
+        "passed": true,
+        "title": "Module 6: ETL/ELT Design & Best Practices"
+      },
+      "duration_reasonable": {
+        "passed": true,
+        "hours": 28
+      },
+      "lessons_reasonable": {
+        "passed": true,
+        "lessons": 28
+      },
+      "has_learning_objectives": {
+        "passed": true,
+        "count": 5
+      },
+      "has_topics": {
+        "passed": true,
+        "count": 15
+      },
+      "prerequisites_valid": {
+        "passed": true,
+        "prerequisites": [
+          "Module 5: Snowflake-Specific Knowledge"
+        ]
+      }
+    },
+    "pass_rate": 100.0
+  },
+  "module-7": {
+    "module_id": "module-7",
+    "success": true,
+    "tests": {
+      "title_format": {
+        "passed": true,
+        "title": "Module 7: Data Governance, Quality & Metadata"
+      },
+      "duration_reasonable": {
+        "passed": true,
+        "hours": 32
+      },
+      "lessons_reasonable": {
+        "passed": true,
+        "lessons": 32
+      },
+      "has_learning_objectives": {
+        "passed": true,
+        "count": 5
+      },
+      "has_topics": {
+        "passed": true,
+        "count": 15
+      },
+      "prerequisites_valid": {
+        "passed": true,
+        "prerequisites": [
+          "Module 6: ETL/ELT Design & Best Practices"
+        ]
+      }
+    },
+    "pass_rate": 100.0
+  },
+  "module-8": {
+    "module_id": "module-8",
+    "success": true,
+    "tests": {
+      "title_format": {
+        "passed": true,
+        "title": "Module 8: Snowflake Security & Access Control"
+      },
+      "duration_reasonable": {
+        "passed": true,
+        "hours": 20
+      },
+      "lessons_reasonable": {
+        "passed": true,
+        "lessons": 20
+      },
+      "has_learning_objectives": {
+        "passed": true,
+        "count": 5
+      },
+      "has_topics": {
+        "passed": true,
+        "count": 15
+      },
+      "prerequisites_valid": {
+        "passed": true,
+        "prerequisites": [
+          "Module 7: Data Governance, Quality & Metadata"
+        ]
+      }
+    },
+    "pass_rate": 100.0
+  },
+  "module-9": {
+    "module_id": "module-9",
+    "success": true,
+    "tests": {
+      "title_format": {
+        "passed": true,
+        "title": "Module 9: Reporting & BI Concepts"
+      },
+      "duration_reasonable": {
+        "passed": true,
+        "hours": 39
+      },
+      "lessons_reasonable": {
+        "passed": true,
+        "lessons": 39
+      },
+      "has_learning_objectives": {
+        "passed": true,
+        "count": 5
+      },
+      "has_topics": {
+        "passed": true,
+        "count": 15
+      },
+      "prerequisites_valid": {
+        "passed": true,
+        "prerequisites": [
+          "Module 8: Snowflake Security & Access Control"
+        ]
+      }
+    },
+    "pass_rate": 100.0
+  },
+  "module-10": {
+    "module_id": "module-10",
+    "success": true,
+    "tests": {
+      "title_format": {
+        "passed": true,
+        "title": "Module 10: Unix/Linux & File Handling"
+      },
+      "duration_reasonable": {
+        "passed": true,
+        "hours": 25
+      },
+      "lessons_reasonable": {
+        "passed": true,
+        "lessons": 25
+      },
+      "has_learning_objectives": {
+        "passed": true,
+        "count": 5
+      },
+      "has_topics": {
+        "passed": true,
+        "count": 15
+      },
+      "prerequisites_valid": {
+        "passed": true,
+        "prerequisites": [
+          "Module 9: Reporting & BI Concepts"
+        ]
+      }
+    },
+    "pass_rate": 100.0
+  },
+  "module-11": {
+    "module_id": "module-11",
+    "success": true,
+    "tests": {
+      "title_format": {
+        "passed": true,
+        "title": "Module 11: Version Control & Team Collaboration"
+      },
+      "duration_reasonable": {
+        "passed": true,
+        "hours": 22
+      },
+      "lessons_reasonable": {
+        "passed": true,
+        "lessons": 22
+      },
+      "has_learning_objectives": {
+        "passed": true,
+        "count": 5
+      },
+      "has_topics": {
+        "passed": true,
+        "count": 15
+      },
+      "prerequisites_valid": {
+        "passed": true,
+        "prerequisites": [
+          "Module 10: Unix/Linux & File Handling"
+        ]
+      }
+    },
+    "pass_rate": 100.0
+  },
+  "module-12": {
+    "module_id": "module-12",
+    "success": true,
+    "tests": {
+      "title_format": {
+        "passed": true,
+        "title": "Module 12: Performance Optimization & Troubleshooting"
+      },
+      "duration_reasonable": {
+        "passed": true,
+        "hours": 41
+      },
+      "lessons_reasonable": {
+        "passed": true,
+        "lessons": 41
+      },
+      "has_learning_objectives": {
+        "passed": true,
+        "count": 5
+      },
+      "has_topics": {
+        "passed": true,
+        "count": 15
+      },
+      "prerequisites_valid": {
+        "passed": true,
+        "prerequisites": [
+          "Module 11: Version Control & Team Collaboration"
+        ]
+      }
+    },
+    "pass_rate": 100.0
+  },
+  "module-13": {
+    "module_id": "module-13",
+    "success": true,
+    "tests": {
+      "title_format": {
+        "passed": true,
+        "title": "Module 13: CI/CD & Deployment Practices"
+      },
+      "duration_reasonable": {
+        "passed": true,
+        "hours": 15
+      },
+      "lessons_reasonable": {
+        "passed": true,
+        "lessons": 15
+      },
+      "has_learning_objectives": {
+        "passed": true,
+        "count": 5
+      },
+      "has_topics": {
+        "passed": true,
+        "count": 15
+      },
+      "prerequisites_valid": {
+        "passed": true,
+        "prerequisites": [
+          "Module 12: Performance Optimization & Troubleshooting"
+        ]
+      }
+    },
+    "pass_rate": 100.0
+  },
+  "module-14": {
+    "module_id": "module-14",
+    "success": true,
+    "tests": {
+      "title_format": {
+        "passed": true,
+        "title": "Module 14: Monitoring & Observability"
+      },
+      "duration_reasonable": {
+        "passed": true,
+        "hours": 16
+      },
+      "lessons_reasonable": {
+        "passed": true,
+        "lessons": 16
+      },
+      "has_learning_objectives": {
+        "passed": true,
+        "count": 5
+      },
+      "has_topics": {
+        "passed": true,
+        "count": 15
+      },
+      "prerequisites_valid": {
+        "passed": true,
+        "prerequisites": [
+          "Module 13: CI/CD & Deployment Practices"
+        ]
+      }
+    },
+    "pass_rate": 100.0
+  },
+  "module-15": {
+    "module_id": "module-15",
+    "success": true,
+    "tests": {
+      "title_format": {
+        "passed": true,
+        "title": "Module 15: Orchestration & Scheduling Tools"
+      },
+      "duration_reasonable": {
+        "passed": true,
+        "hours": 15
+      },
+      "lessons_reasonable": {
+        "passed": true,
+        "lessons": 15
+      },
+      "has_learning_objectives": {
+        "passed": true,
+        "count": 5
+      },
+      "has_topics": {
+        "passed": true,
+        "count": 15
+      },
+      "prerequisites_valid": {
+        "passed": true,
+        "prerequisites": [
+          "Module 14: Monitoring & Observability"
+        ]
+      }
+    },
+    "pass_rate": 100.0
+  },
+  "module-16": {
+    "module_id": "module-16",
+    "success": true,
+    "tests": {
+      "title_format": {
+        "passed": true,
+        "title": "Module 16: Data Transformation with dbt"
+      },
+      "duration_reasonable": {
+        "passed": true,
+        "hours": 15
+      },
+      "lessons_reasonable": {
+        "passed": true,
+        "lessons": 15
+      },
+      "has_learning_objectives": {
+        "passed": true,
+        "count": 5
+      },
+      "has_topics": {
+        "passed": true,
+        "count": 15
+      },
+      "prerequisites_valid": {
+        "passed": true,
+        "prerequisites": [
+          "Module 15: Orchestration & Scheduling Tools"
+        ]
+      }
+    },
+    "pass_rate": 100.0
+  },
+  "module-17": {
+    "module_id": "module-17",
+    "success": true,
+    "tests": {
+      "title_format": {
+        "passed": true,
+        "title": "Module 17: Soft Skills & Professional Practices"
+      },
+      "duration_reasonable": {
+        "passed": true,
+        "hours": 30
+      },
+      "lessons_reasonable": {
+        "passed": true,
+        "lessons": 30
+      },
+      "has_learning_objectives": {
+        "passed": true,
+        "count": 5
+      },
+      "has_topics": {
+        "passed": true,
+        "count": 15
+      },
+      "prerequisites_valid": {
+        "passed": true,
+        "prerequisites": [
+          "Module 16: Data Transformation with dbt"
+        ]
+      }
+    },
+    "pass_rate": 100.0
+  },
+  "module-18": {
+    "module_id": "module-18",
+    "success": true,
+    "tests": {
+      "title_format": {
+        "passed": true,
+        "title": "Module 18: Business & Domain Knowledge"
+      },
+      "duration_reasonable": {
+        "passed": true,
+        "hours": 14
+      },
+      "lessons_reasonable": {
+        "passed": false,
+        "lessons": 14
+      },
+      "has_learning_objectives": {
+        "passed": true,
+        "count": 5
+      },
+      "has_topics": {
+        "passed": true,
+        "count": 15
+      },
+      "prerequisites_valid": {
+        "passed": true,
+        "prerequisites": [
+          "Module 17: Soft Skills & Professional Practices"
+        ]
+      }
+    },
+    "pass_rate": 83.33333333333334
+  },
+  "module-19": {
+    "module_id": "module-19",
+    "success": true,
+    "tests": {
+      "title_format": {
+        "passed": true,
+        "title": "Module 19: Additional Technical Skills"
+      },
+      "duration_reasonable": {
+        "passed": true,
+        "hours": 22
+      },
+      "lessons_reasonable": {
+        "passed": true,
+        "lessons": 22
+      },
+      "has_learning_objectives": {
+        "passed": true,
+        "count": 5
+      },
+      "has_topics": {
+        "passed": true,
+        "count": 15
+      },
+      "prerequisites_valid": {
+        "passed": true,
+        "prerequisites": [
+          "Module 18: Business & Domain Knowledge"
+        ]
+      }
+    },
+    "pass_rate": 100.0
+  },
+  "module-20": {
+    "module_id": "module-20",
+    "success": true,
+    "tests": {
+      "title_format": {
+        "passed": true,
+        "title": "Module 20: Emerging Topics & Advanced Concepts"
+      },
+      "duration_reasonable": {
+        "passed": true,
+        "hours": 23
+      },
+      "lessons_reasonable": {
+        "passed": true,
+        "lessons": 23
+      },
+      "has_learning_objectives": {
+        "passed": true,
+        "count": 5
+      },
+      "has_topics": {
+        "passed": true,
+        "count": 15
+      },
+      "prerequisites_valid": {
+        "passed": true,
+        "prerequisites": [
+          "Module 19: Additional Technical Skills"
+        ]
+      }
+    },
+    "pass_rate": 100.0
+  }
+}

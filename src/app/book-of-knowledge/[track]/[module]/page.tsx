@@ -48,14 +48,14 @@ async function ModulePageContent({ params }: ModulePageProps) {
   const userProgress = progressTracker.getUserProgress()
   
   // Calculate module progress
-  const completedLessons = moduleLessons.filter(lesson => 
+  const completedLessons = moduleLessons.filter((lesson: any) => 
     userProgress.lessons[lesson.id]?.isCompleted
   ).length
   const totalLessons = moduleLessons.length
   const progressPercentage = totalLessons > 0 ? Math.round((completedLessons / totalLessons) * 100) : 0
 
   // Calculate total time spent in this module
-  const totalTimeSpent = moduleLessons.reduce((total, lesson) => {
+  const totalTimeSpent = moduleLessons.reduce((total: number, lesson: any) => {
     const lessonProgress = userProgress.lessons[lesson.id]
     return total + (lessonProgress?.timeSpent || 0)
   }, 0)
@@ -235,7 +235,7 @@ async function ModulePageContent({ params }: ModulePageProps) {
             </h2>
             
             <ul className="space-y-2">
-              {selectedModule.learningObjectives.map((objective, index) => (
+              {selectedModule.learningObjectives.map((objective: string, index: number) => (
                 <li key={index} className="flex items-start space-x-2 text-xs">
                   <span className={`${colors.text} mt-0.5`}>•</span>
                   <span className="text-gray-600 dark:text-gray-300">{objective}</span>
@@ -253,7 +253,7 @@ async function ModulePageContent({ params }: ModulePageProps) {
           
           {moduleLessons.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {moduleLessons.map((lesson, index) => {
+              {moduleLessons.map((lesson: any, index: number) => {
                 const lessonProgress = userProgress.lessons[lesson.id]
                 const isCompleted = lessonProgress?.isCompleted || false
                 const isBookmarked = lessonProgress?.bookmarked || false
