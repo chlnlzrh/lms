@@ -1,0 +1,113 @@
+import { MainLayout } from '@/components/layout/main-layout'
+import { Breadcrumbs } from '@/components/ui/breadcrumbs'
+import { TrackOverview } from '@/components/content/track-overview'
+import { fastContentParser } from '@/lib/fast-content-parser'
+import { getTracksByCategory, getCategoryInfo, getTracksMetadata, getTrackStyleInfo } from '@/lib/tracks-metadata'
+import { Suspense } from 'react'
+
+
+async function LearningPathContent() {
+  // Use pre-built landing page data for maximum performance
+  const landingData = await fastContentParser.getAllLearningPathTracks()
+  
+  if (!landingData) {
+    return <div>Error loading Learning Path data</div>
+  }
+
+  const tracks = landingData.tracks
+
+  const breadcrumbItems = [
+    { label: 'Dashboard', href: '/' },
+    { label: 'Learning Path' }
+  ]
+
+  return (
+    <MainLayout>
+      <div className="space-y-6">
+        {/* Breadcrumbs */}
+        <Breadcrumbs items={breadcrumbItems} />
+
+        {/* Page Header */}
+        <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6">
+          <h1 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+            {categoryInfo.title}
+          </h1>
+          <p className="text-xs text-gray-600 dark:text-gray-300">
+            {categoryInfo.description}
+          </p>
+        </div>
+
+        {/* Track Overview Stats */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6 text-center">
+            <div className="text-2xl font-bold text-blue-600 mb-1">
+              {tracks.reduce((total, track) => total + track.totalLessons, 0)}
+            </div>
+            <div className="text-xs text-gray-600 dark:text-gray-300">Total Lessons</div>
+          </div>
+          
+          <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6 text-center">
+            <div className="text-2xl font-bold text-green-600 mb-1">
+              {tracks.reduce((total, track) => total + track.totalModules, 0)}
+            </div>
+            <div className="text-xs text-gray-600 dark:text-gray-300">Total Modules</div>
+          </div>
+          
+          <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6 text-center">
+            <div className="text-2xl font-bold text-purple-600 mb-1">{tracks.length}</div>
+            <div className="text-xs text-gray-600 dark:text-gray-300">Career Paths</div>
+            <div className="text-xs text-green-600 mt-1">All Active</div>
+          </div>
+        </div>
+
+        {/* Career Paths */}
+        <div>
+          <h2 className="text-xs font-bold text-gray-900 dark:text-white mb-4">
+            Available Career Paths
+          </h2>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
+            {tracks.map((track) => {
+              const { icon, color } = getTrackStyleInfo(track.id)
+              return (
+                <TrackOverview
+                  key={track.id}
+                  track={track}
+                  trackIcon={icon}
+                  trackColor={color}
+                  basePath="learning-path"
+                />
+              )
+            })}
+          </div>
+        </div>
+      </div>
+    </MainLayout>
+  )
+}
+
+function LoadingFallback() {
+  return (
+    <MainLayout>
+      <div className="space-y-6">
+        <div className="animate-pulse">
+          <div className="h-4 bg-gray-200 rounded w-1/4 mb-6"></div>
+          <div className="h-32 bg-gray-200 rounded mb-6"></div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
+            {Array.from({ length: 15 }).map((_, i) => (
+              <div key={i} className="h-96 bg-gray-200 rounded"></div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </MainLayout>
+  )
+}
+
+export default function LearningPathPage() {
+  return (
+    <Suspense fallback={<LoadingFallback />}>
+      <LearningPathContent />
+    </Suspense>
+  )
+}
