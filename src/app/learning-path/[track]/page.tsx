@@ -13,12 +13,11 @@ interface TrackPageProps {
   }>
 }
 
-
 async function TrackPageContent({ params }: TrackPageProps) {
   const resolvedParams = await params
   const trackId = resolvedParams.track
   
-  // Validate track exists by trying to get track info (using fast parser)
+  // Validate track exists by trying to get track info
   let trackInfo
   try {
     trackInfo = await fastContentParser.getTrackInfo(trackId)
@@ -83,15 +82,9 @@ async function TrackPageContent({ params }: TrackPageProps) {
   const IconComponent = trackIcons[trackId] || Icons.BookOpen
   const color = trackColors[trackId] || 'blue'
 
-  // Use pre-computed statistics from fast parser
-  const totalCompletedLessons = 0 // TODO: Get from user progress
-  const overallProgress = 0 // TODO: Calculate from user progress
-  const estimatedHours = trackInfo.stats?.estimatedHours || 0
-  const practicalRatio = trackInfo.stats?.practicalRatio || 0
-
   const breadcrumbItems = [
     { label: 'Dashboard', href: '/' },
-    { label: 'Talent Development', href: '/talent-development' },
+    { label: 'Learning Path', href: '/learning-path' },
     { label: trackInfo.title }
   ]
 
@@ -132,14 +125,14 @@ async function TrackPageContent({ params }: TrackPageProps) {
                 
                 <div className="text-center">
                   <div className={`text-2xl font-bold text-${color}-600 mb-1`}>
-                    {Math.round(estimatedHours)}h
+                    {trackInfo.estimatedDuration}
                   </div>
-                  <div className="text-xs text-gray-600 dark:text-gray-300">Est. Hours</div>
+                  <div className="text-xs text-gray-600 dark:text-gray-300">Duration</div>
                 </div>
                 
                 <div className="text-center">
                   <div className={`text-2xl font-bold text-${color}-600 mb-1`}>
-                    {Math.round(practicalRatio)}%
+                    {Math.round(trackInfo.stats?.practicalRatio || 0)}%
                   </div>
                   <div className="text-xs text-gray-600 dark:text-gray-300">Hands-on</div>
                 </div>
@@ -147,7 +140,6 @@ async function TrackPageContent({ params }: TrackPageProps) {
             </div>
           </div>
         </div>
-
 
         {/* Getting Started */}
         <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6">
@@ -167,16 +159,16 @@ async function TrackPageContent({ params }: TrackPageProps) {
                 </p>
                 <div className="flex items-center space-x-3">
                   <Link
-                    href={`/talent-development/${trackId}/module-${modules.length > 0 ? modules[0].moduleNumber || 1 : 1}`}
+                    href={`/learning-path/${trackId}/module-${modules.length > 0 ? modules[0].moduleNumber || 1 : 1}`}
                     className={`bg-${color}-600 text-white px-4 py-2 rounded text-xs font-normal hover:bg-${color}-700 transition-colors`}
                   >
                     Start Learning
                   </Link>
                   <Link
-                    href="/talent-development"
+                    href="/learning-path"
                     className="text-xs text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
                   >
-                    ← Back to All Tracks
+                    ← Back to Learning Path
                   </Link>
                 </div>
               </div>
@@ -245,7 +237,7 @@ async function TrackPageContent({ params }: TrackPageProps) {
                 </div>
                 <div className="text-center">
                   <div className={`text-2xl font-bold text-${color}-600 mb-1`}>
-                    {Math.round(practicalRatio)}%
+                    {Math.round(trackInfo.stats?.practicalRatio || 0)}%
                   </div>
                   <div className="text-xs text-gray-600 dark:text-gray-300">Hands-on</div>
                 </div>
@@ -269,7 +261,7 @@ async function TrackPageContent({ params }: TrackPageProps) {
             {modules.map((module, index) => (
               <Link
                 key={module.id}
-                href={`/talent-development/${trackId}/module-${module.moduleNumber}`}
+                href={`/learning-path/${trackId}/module-${module.moduleNumber}`}
                 className="block bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6 hover:border-gray-300 dark:hover:border-gray-600 transition-all duration-200 hover:shadow-md"
               >
                 <div className="flex items-start space-x-4">
