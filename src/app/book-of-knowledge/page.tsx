@@ -38,7 +38,7 @@ async function BookOfKnowledgeContent() {
         </div>
 
         {/* Track Overview Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6 text-center">
             <div className="text-2xl font-bold text-blue-600 mb-1">
               {landingData.overview.totals.lessons}
@@ -58,12 +58,6 @@ async function BookOfKnowledgeContent() {
               {Math.round(landingData.overview.averages.practicalRatio)}%
             </div>
             <div className="text-xs text-gray-600 dark:text-gray-300">Hands-on Content</div>
-          </div>
-          
-          <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6 text-center">
-            <div className="text-2xl font-bold text-indigo-600 mb-1">{tracks.length}</div>
-            <div className="text-xs text-gray-600 dark:text-gray-300">Knowledge Areas</div>
-            <div className="text-xs text-green-600 mt-1">All Active</div>
           </div>
         </div>
 
