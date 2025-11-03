@@ -3,29 +3,80 @@ import path from 'path'
 
 interface ModuleData {
   id: string
+  moduleNumber: number
   title: string
   subtitle: string
+  description: string
   duration: string
+  estimatedDuration: number
+  readingTime: number
   lessons: number
+  handsOnLessons: number
   labs: number
   prerequisites: string[]
   keyTopics: string[]
   skillsGained: string[]
+  lessonsData?: any[]
+  progress?: {
+    completed: number
+    total: number
+    percentage: number
+  }
 }
 
 interface ModuleDetailsSectionProps {
   moduleNumber: number
   color: string
+  track?: string
 }
 
-export function ModuleDetailsSection({ moduleNumber, color }: ModuleDetailsSectionProps) {
+export function ModuleDetailsSection({ moduleNumber, color, track = 'de' }: ModuleDetailsSectionProps) {
   try {
+    // Map track names to directory names
+    const trackDirectoryMap: { [key: string]: string } = {
+      'ai': 'ai',
+      'data-engineering': 'de',
+      'de': 'de',
+      'saas': 'saas',
+      'sfdc': 'sfdc',
+      'snowflake_tune': 'snowflake_tune',
+      'workato': 'workato',
+      'ba': 'ba',
+      'data_engineer': 'data_engineer',
+      'data_gov': 'data_gov',
+      'devops_engineer': 'devops_engineer',
+      'finance': 'finance',
+      'hr': 'hr',
+      'mdm': 'mdm',
+      'pm': 'pm',
+      'qa': 'qa',
+      'rpa': 'rpa',
+      'sales': 'sales',
+      'sfdc_engineer': 'sfdc_engineer',
+      'ta': 'ta',
+      'viz_engineer': 'viz_engineer',
+      'workato_engineer': 'workato_engineer'
+    }
+
+    const trackDir = trackDirectoryMap[track] || track
+    
     // Read the module JSON data
-    const modulesPath = path.join(process.cwd(), 'src', 'data', 'de', 'modules-descriptions', 'module.json')
-    const modulesData: ModuleData[] = JSON.parse(fs.readFileSync(modulesPath, 'utf-8'))
+    const modulesPath = path.join(process.cwd(), 'src', 'data', trackDir, 'modules-descriptions', 'module.json')
+    const jsonData = JSON.parse(fs.readFileSync(modulesPath, 'utf-8'))
+    
+    // Handle different JSON structures
+    let modulesData: ModuleData[]
+    if (Array.isArray(jsonData)) {
+      modulesData = jsonData
+    } else if (jsonData.modules && Array.isArray(jsonData.modules)) {
+      modulesData = jsonData.modules
+    } else {
+      console.error('Invalid modules data structure:', typeof jsonData, Object.keys(jsonData))
+      return null
+    }
     
     // Find the module data by number
-    const moduleData = modulesData.find(m => m.id === `module-${moduleNumber}`)
+    const moduleData = modulesData.find(m => m.id === `${track}-module-${moduleNumber}` || m.id === `module-${moduleNumber}`)
     
     if (!moduleData) {
       return null

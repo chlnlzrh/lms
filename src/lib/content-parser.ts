@@ -11,13 +11,32 @@ const CONTENT_BASE_PATH = path.join(process.cwd(), 'src', 'data')
 class ContentParser {
   private processor = remark().use(remarkGfm).use(remarkHtml)
 
-  private getTrackDirectory(track: 'ai' | 'data-engineering' | 'saas'): string {
-    const trackDirectoryMap = {
+  private getTrackDirectory(track: string): string {
+    const trackDirectoryMap: { [key: string]: string } = {
       'ai': 'ai',
       'data-engineering': 'de',
-      'saas': 'saas'
+      'de': 'de',
+      'saas': 'saas',
+      'sfdc': 'sfdc',
+      'snowflake_tune': 'snowflake_tune',
+      'workato': 'workato',
+      'ba': 'ba',
+      'data_engineer': 'data_engineer',
+      'data_gov': 'data_gov',
+      'devops_engineer': 'devops_engineer',
+      'finance': 'finance',
+      'hr': 'hr',
+      'mdm': 'mdm',
+      'pm': 'pm',
+      'qa': 'qa',
+      'rpa': 'rpa',
+      'sales': 'sales',
+      'sfdc_engineer': 'sfdc_engineer',
+      'ta': 'ta',
+      'viz_engineer': 'viz_engineer',
+      'workato_engineer': 'workato_engineer'
     }
-    return trackDirectoryMap[track]
+    return trackDirectoryMap[track] || track
   }
 
   async parseMarkdownToHtml(markdown: string): Promise<string> {
@@ -31,42 +50,42 @@ class ContentParser {
     return Math.ceil(wordCount / wordsPerMinute)
   }
 
-  extractLessonMetadata(filename: string): {
-    track: 'ai' | 'data-engineering' | 'saas'
+  extractLessonMetadata(filename: string, trackFromPath?: string | null): {
+    track: string
     moduleNumber?: number
     lessonNumber?: number
     slug: string
   } {
-    // SaaS lessons: M00-L001-topic-name--date.md (check first - most specific)
-    const saasMatch = filename.match(/^M(\d+)-L(\d+)-(.+?)--\d{4}-\d{2}-\d{2}\.md$/)
-    if (saasMatch) {
+    // Pattern 1: M00-L001-topic-name--date.md (for DE/SaaS tracks with dates)
+    const dateMatch = filename.match(/^M(\d+)-L(\d+)-(.+?)--\d{4}-\d{2}-\d{2}\.md$/)
+    if (dateMatch) {
       return {
-        track: 'saas',
-        moduleNumber: parseInt(saasMatch[1]),
-        lessonNumber: parseInt(saasMatch[2]),
-        slug: saasMatch[3]
+        track: trackFromPath || 'data-engineering',
+        moduleNumber: parseInt(dateMatch[1]),
+        lessonNumber: parseInt(dateMatch[2]),
+        slug: dateMatch[3]
       }
     }
 
-    // DE lessons: M01-L001-topic-name--date.md (check second - more specific)
-    const deMatch = filename.match(/^M(\d+)-L(\d+)-(.+?)--\d{4}-\d{2}-\d{2}\.md$/)
-    if (deMatch) {
+    // Pattern 2: M01-L001-topic-name.md (for AI and other tracks)
+    const simpleMatch = filename.match(/^M(\d+)-L(\d+)-(.+)\.md$/)
+    if (simpleMatch) {
       return {
-        track: 'data-engineering',
-        moduleNumber: parseInt(deMatch[1]),
-        lessonNumber: parseInt(deMatch[2]),
-        slug: deMatch[3]
+        track: trackFromPath || 'ai',
+        moduleNumber: parseInt(simpleMatch[1]),
+        lessonNumber: parseInt(simpleMatch[2]),
+        slug: simpleMatch[3]
       }
     }
 
-    // AI lessons: M01-L001-topic-name.md (check third - more general)
-    const aiMatch = filename.match(/^M(\d+)-L(\d+)-(.+)\.md$/)
-    if (aiMatch) {
+    // Pattern 3: M6-L001.md (simple module-lesson format)
+    const basicMatch = filename.match(/^M(\d+)-L(\d+)\.md$/)
+    if (basicMatch) {
       return {
-        track: 'ai',
-        moduleNumber: parseInt(aiMatch[1]),
-        lessonNumber: parseInt(aiMatch[2]),
-        slug: aiMatch[3]
+        track: trackFromPath || 'unknown',
+        moduleNumber: parseInt(basicMatch[1]),
+        lessonNumber: parseInt(basicMatch[2]),
+        slug: `M${basicMatch[1]}-L${basicMatch[2]}`
       }
     }
 
@@ -92,7 +111,12 @@ class ContentParser {
       const fileContent = fs.readFileSync(filePath, 'utf-8')
       const { data: frontmatter, content } = matter(fileContent)
       
-      const metadata = this.extractLessonMetadata(filename)
+      // Extract track from file path
+      const pathParts = filePath.split(path.sep)
+      const dataIndex = pathParts.findIndex(part => part === 'data')
+      const trackFromPath = dataIndex !== -1 && dataIndex < pathParts.length - 2 ? pathParts[dataIndex + 1] : null
+      
+      const metadata = this.extractLessonMetadata(filename, trackFromPath)
       const htmlContent = await this.parseMarkdownToHtml(content)
       const estimatedReadTime = this.calculateReadTime(content)
       
@@ -170,7 +194,7 @@ class ContentParser {
     }
   }
 
-  async getAllLessons(track: 'ai' | 'data-engineering' | 'saas'): Promise<ParsedLesson[]> {
+  async getAllLessons(track: string): Promise<ParsedLesson[]> {
     const trackDir = this.getTrackDirectory(track)
     const lessonsPath = path.join(CONTENT_BASE_PATH, trackDir, 'lessons')
     
@@ -206,34 +230,37 @@ class ContentParser {
     })
   }
 
-  async getAllModules(track: 'ai' | 'data-engineering' | 'saas'): Promise<ModuleDescription[]> {
+  async getAllModules(track: string): Promise<ModuleDescription[]> {
     const trackDir = this.getTrackDirectory(track)
     
-    // For SaaS track, try to load from modules-descriptions JSON file first
-    if (track === 'saas') {
-      const moduleDescJsonPath = path.join(CONTENT_BASE_PATH, trackDir, 'modules-descriptions', 'module.json')
-      if (fs.existsSync(moduleDescJsonPath)) {
-        try {
-          const jsonContent = fs.readFileSync(moduleDescJsonPath, 'utf-8')
-          const modules = JSON.parse(jsonContent)
-          
-          return modules.map((module: any) => ({
-            id: `saas-module-${module.id.split('-')[1]}`,
-            title: module.title,
-            description: module.subtitle,
-            duration: module.duration,
-            lessonCount: module.lessons,
-            labCount: module.labs || 0,
-            prerequisites: module.prerequisites || [],
-            learningObjectives: module.skillsGained || [],
-            topics: module.keyTopics || [],
-            track: 'saas' as const,
-            moduleNumber: parseInt(module.id.split('-')[1])
-          }))
-        } catch (error) {
-          console.error(`Error loading SaaS modules from modules-descriptions JSON:`, error)
-        }
+    // Try to load from modules-descriptions JSON file first for all tracks
+    const moduleDescJsonPath = path.join(CONTENT_BASE_PATH, trackDir, 'modules-descriptions', 'module.json')
+    if (fs.existsSync(moduleDescJsonPath)) {
+      try {
+        const jsonContent = fs.readFileSync(moduleDescJsonPath, 'utf-8')
+        const data = JSON.parse(jsonContent)
+        const modules = data.modules || data
+        
+        return modules.map((module: any, index: number) => ({
+          id: module.id || `${track}-module-${index}`,
+          title: module.title,
+          description: module.subtitle || module.description,
+          duration: module.duration,
+          lessonCount: module.lessons || module.lessonCount,
+          labCount: module.labs || module.labCount || 0,
+          prerequisites: module.prerequisites || [],
+          learningObjectives: module.skillsGained || module.learningObjectives || [],
+          topics: module.keyTopics || module.topics || [],
+          track: track,
+          moduleNumber: module.id ? parseInt(module.id.split('-').pop() || '0') : index
+        }))
+      } catch (error) {
+        console.error(`Error loading ${track} modules from modules-descriptions JSON:`, error)
       }
+    }
+
+    // For SaaS track, also try the old path
+    if (track === 'saas') {
       
       // Fallback to the other JSON file
       const jsonPath = path.join(CONTENT_BASE_PATH, trackDir, 'module.json')
@@ -286,7 +313,7 @@ class ContentParser {
     return this.generateModulesFromLessons(track)
   }
 
-  async generateModulesFromLessons(track: 'ai' | 'data-engineering' | 'saas'): Promise<ModuleDescription[]> {
+  async generateModulesFromLessons(track: string): Promise<ModuleDescription[]> {
     const lessons = await this.getAllLessons(track)
     
     // Group lessons by module number
@@ -352,36 +379,92 @@ class ContentParser {
     return modules
   }
 
-  async getTrackInfo(track: 'ai' | 'data-engineering' | 'saas'): Promise<TrackInfo> {
+  async getTrackInfo(track: string): Promise<TrackInfo> {
+    const trackDir = this.getTrackDirectory(track)
     const [lessons, modules] = await Promise.all([
       this.getAllLessons(track),
       this.getAllModules(track)
     ])
 
-    const totalDuration = modules.reduce((total, module) => {
-      const hours = parseInt(module.duration.match(/(\d+)/)?.[1] || '0')
-      return total + hours
-    }, 0)
-
-    const trackTitles = {
-      ai: 'AI Training Track',
-      'data-engineering': 'Data Engineering Track',
-      'saas': 'SaaS Development Track'
+    // Try to get track metadata from module.json file
+    const moduleDescJsonPath = path.join(CONTENT_BASE_PATH, trackDir, 'modules-descriptions', 'module.json')
+    let trackMetadata: any = null
+    
+    if (fs.existsSync(moduleDescJsonPath)) {
+      try {
+        const jsonContent = fs.readFileSync(moduleDescJsonPath, 'utf-8')
+        const data = JSON.parse(jsonContent)
+        trackMetadata = data.track
+      } catch (error) {
+        console.error(`Error loading track metadata for ${track}:`, error)
+      }
     }
 
-    const trackDescriptions = {
+    // Fallback track titles and descriptions
+    const trackTitles: { [key: string]: string } = {
+      ai: 'Artificial Intelligence',
+      'data-engineering': 'Data Engineering',
+      de: 'Data Engineering',
+      saas: 'SaaS Development',
+      sfdc: 'Salesforce',
+      snowflake_tune: 'Snowflake Tuning',
+      workato: 'Workato',
+      ba: 'Business Analyst',
+      data_engineer: 'Data Engineer',
+      data_gov: 'Data Governance',
+      devops_engineer: 'DevOps Engineer',
+      finance: 'Finance',
+      hr: 'Human Resources',
+      mdm: 'Master Data Management',
+      pm: 'Project Manager',
+      qa: 'Quality Assurance',
+      rpa: 'Robotic Process Automation',
+      sales: 'Sales',
+      sfdc_engineer: 'Salesforce Engineer',
+      ta: 'Talent Acquisition',
+      viz_engineer: 'Visualization Engineer',
+      workato_engineer: 'Workato Engineer'
+    }
+
+    const trackDescriptions: { [key: string]: string } = {
       ai: 'Master AI tools, prompt engineering, and modern AI development workflows',
       'data-engineering': 'Learn data warehousing, SQL, ETL/ELT, and modern data engineering practices',
-      'saas': 'Build scalable SaaS applications with modern architecture patterns and best practices'
+      de: 'Learn data warehousing, SQL, ETL/ELT, and modern data engineering practices',
+      saas: 'Build scalable SaaS applications with modern architecture patterns and best practices',
+      sfdc: 'Master Salesforce development, administration, and platform customization',
+      snowflake_tune: 'Optimize Snowflake performance with advanced tuning and best practices',
+      workato: 'Build powerful integrations and automation workflows with Workato platform',
+      ba: 'Develop business analysis skills and requirements gathering expertise',
+      data_engineer: 'Master data engineering principles, pipelines, and infrastructure',
+      data_gov: 'Implement data governance frameworks and ensure data quality compliance',
+      devops_engineer: 'Learn DevOps practices, CI/CD, and infrastructure automation',
+      finance: 'Apply technology solutions to financial processes and systems',
+      hr: 'Leverage technology for human resources management and operations',
+      mdm: 'Master data management strategies, governance, and quality assurance',
+      pm: 'Develop project management skills with modern methodologies and tools',
+      qa: 'Master quality assurance practices, testing frameworks, and automation',
+      rpa: 'Build robotic process automation solutions for business efficiency',
+      sales: 'Apply technology and analytics to sales processes and customer management',
+      sfdc_engineer: 'Engineer advanced Salesforce solutions and platform integrations',
+      ta: 'Master talent acquisition strategies, recruitment technologies, and candidate assessment',
+      viz_engineer: 'Create compelling data visualizations and business intelligence solutions',
+      workato_engineer: 'Engineer complex integration solutions using Workato platform'
     }
+
+    // Use metadata from JSON file if available, otherwise fallback to hardcoded values
+    const title = trackMetadata?.title || trackTitles[track] || track.charAt(0).toUpperCase() + track.slice(1)
+    const description = trackMetadata?.description || trackDescriptions[track] || `Learn ${track} concepts and best practices`
+    const totalLessons = trackMetadata?.lessons || lessons.length
+    const totalModules = trackMetadata?.modules || modules.length
+    const estimatedDuration = trackMetadata?.duration || `${totalModules} weeks`
 
     return {
       id: track,
-      title: trackTitles[track],
-      description: trackDescriptions[track],
-      totalLessons: lessons.length,
-      totalModules: modules.length,
-      estimatedDuration: `${totalDuration} hours`,
+      title,
+      description,
+      totalLessons,
+      totalModules,
+      estimatedDuration,
       modules
     }
   }
