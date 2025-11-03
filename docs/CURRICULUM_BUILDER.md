@@ -45,7 +45,7 @@ Ensure `ANTHROPIC_API_KEY` is set in your environment or `.env.local`:
 
 ```bash
 # .env.local
-ANTHROPIC_API_KEY=sk-ant-api03-...
+ANTHROPIC_API_KEY=your_api_key_here
 ```
 
 Or the API will read from `claudeAPIkey.txt` if present (though using env vars is recommended).

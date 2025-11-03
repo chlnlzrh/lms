@@ -7,7 +7,7 @@ from anthropic import Anthropic
 # Initialize client
 api_key = os.getenv("ANTHROPIC_API_KEY")
 if not api_key:
-    api_key = "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"
+    raise ValueError("ANTHROPIC_API_KEY environment variable is required")
 
 client = Anthropic(api_key=api_key)
 
