@@ -198,13 +198,6 @@ export const navigationData: MenuItem[] = [
     status: 'coming-soon'
   },
   {
-    id: 'learning-catalog',
-    label: 'Learning Catalog',
-    icon: 'Book',
-    href: '/catalog',
-    status: 'active'
-  },
-  {
     id: 'search',
     label: 'Search',
     icon: 'Search',
