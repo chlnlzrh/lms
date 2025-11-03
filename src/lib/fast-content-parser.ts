@@ -99,6 +99,7 @@ class FastContentParser {
     const cacheKey = type.toLowerCase().replace(' ', '-')
     
     if (this.landingPageCache[cacheKey]) {
+      console.log(`[FastContentParser] Using cached data for ${type}`)
       return this.landingPageCache[cacheKey]
     }
 
@@ -108,19 +109,21 @@ class FastContentParser {
         : 'learning-path-landing.json'
       
       const filePath = path.join(CONTENT_BASE_PATH, filename)
+      console.log(`[FastContentParser] Loading ${type} from: ${filePath}`)
       
       if (!fs.existsSync(filePath)) {
-        console.warn(`Landing page data not found: ${filePath}`)
+        console.warn(`[FastContentParser] Landing page data not found: ${filePath}`)
         return null
       }
 
       const jsonContent = fs.readFileSync(filePath, 'utf-8')
       const data = JSON.parse(jsonContent)
+      console.log(`[FastContentParser] Successfully loaded ${type} with ${data.tracks?.length || 0} tracks`)
       
       this.landingPageCache[cacheKey] = data
       return data
     } catch (error) {
-      console.error(`Error loading landing page data for ${type}:`, error)
+      console.error(`[FastContentParser] Error loading landing page data for ${type}:`, error)
       return null
     }
   }

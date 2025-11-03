@@ -30,31 +30,38 @@ async function LearningPathContent() {
         {/* Page Header */}
         <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6">
           <h1 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
-            {categoryInfo.title}
+            {landingData.pageInfo.title}
           </h1>
           <p className="text-xs text-gray-600 dark:text-gray-300">
-            {categoryInfo.description}
+            {landingData.pageInfo.description}
           </p>
         </div>
 
         {/* Track Overview Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6 text-center">
             <div className="text-2xl font-bold text-blue-600 mb-1">
-              {tracks.reduce((total, track) => total + track.totalLessons, 0)}
+              {landingData.overview.totals.lessons}
             </div>
             <div className="text-xs text-gray-600 dark:text-gray-300">Total Lessons</div>
           </div>
           
           <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6 text-center">
             <div className="text-2xl font-bold text-green-600 mb-1">
-              {tracks.reduce((total, track) => total + track.totalModules, 0)}
+              {Math.round(landingData.overview.totals.estimatedHours)}h
             </div>
-            <div className="text-xs text-gray-600 dark:text-gray-300">Total Modules</div>
+            <div className="text-xs text-gray-600 dark:text-gray-300">Total Hours</div>
           </div>
           
           <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6 text-center">
-            <div className="text-2xl font-bold text-purple-600 mb-1">{tracks.length}</div>
+            <div className="text-2xl font-bold text-purple-600 mb-1">
+              {Math.round(landingData.overview.averages.practicalRatio)}%
+            </div>
+            <div className="text-xs text-gray-600 dark:text-gray-300">Hands-on Content</div>
+          </div>
+          
+          <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6 text-center">
+            <div className="text-2xl font-bold text-indigo-600 mb-1">{tracks.length}</div>
             <div className="text-xs text-gray-600 dark:text-gray-300">Career Paths</div>
             <div className="text-xs text-green-600 mt-1">All Active</div>
           </div>
@@ -68,13 +75,23 @@ async function LearningPathContent() {
           
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
             {tracks.map((track) => {
-              const { icon, color } = getTrackStyleInfo(track.id)
+              // Convert landing page track data to TrackOverview format
+              const trackOverviewData = {
+                id: track.id,
+                title: track.title,
+                description: track.description,
+                totalLessons: track.stats.lessons,
+                totalModules: track.stats.modules,
+                estimatedDuration: track.stats.duration,
+                modules: [] // Not needed for overview
+              }
+              
               return (
                 <TrackOverview
                   key={track.id}
-                  track={track}
-                  trackIcon={icon}
-                  trackColor={color}
+                  track={trackOverviewData}
+                  trackIcon={track.icon}
+                  trackColor={track.color}
                   basePath="learning-path"
                 />
               )
