@@ -42,7 +42,9 @@
       "Bash(dir:*)",
       "Bash(git rev-list:*)",
       "Bash(git reset:*)",
-      "Bash(rg:*)"
+      "Bash(rg:*)",
+      "Bash(git rm:*)",
+      "Bash(git filter-branch:*)"
     ],
     "deny": [],
     "ask": []
