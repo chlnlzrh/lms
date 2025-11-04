@@ -1,0 +1,353 @@
+Here is the complete JSON structure for the learning paths, as requested.
+
+```json
+{
+  "learningPaths": [
+    {
+      "pathName": "Phase 1: The Core Foundation (Everyone)",
+      "description": "This foundational phase is mandatory for everyone. Its goal is to build muscle memory and trust in Cursor's core AI features, replacing your old IDE habits with more efficient, AI-driven workflows.",
+      "modules": [
+        {
+          "moduleName": "Module 1.1: Environment and Foundational AI",
+          "objective": "Get set up, understand the UI, and master the basic AI 'Ask' chat for questions, explanations, and simple code generation.",
+          "lessons": [
+            {
+              "lessonName": "Comprehensive Environment Setup: Installing Cursor, Configuring Your Workspace, and Initializing Your First Project",
+              "keyCursorFeatures": ["Installation", "Workspace UI", "File/Folder Navigation"],
+              "sourceLessonIds": ["1A-1", "1A-2", "1A-3"]
+            },
+            {
+              "lessonName": "Mastering Foundational AI Assistance: Using 'Ask Mode' for Interactive Questioning, Real-Time Explanations, and Basic Code Generation",
+              "keyCursorFeatures": ["Ask Mode", "AI Chat", "Code Explanations"],
+              "sourceLessonIds": ["1C-1", "1C-4"]
+            },
+            {
+              "lessonName": "Integrating Version Control: Linking Cursor to GitHub, Understanding the Git Panel, and Performing Basic Commit/Push Operations",
+              "keyCursorFeatures": ["Git Integration", "Diff View", "Commit/Push"],
+              "sourceLessonIds": ["1B-1", "1B-2", "1B-3"]
+            }
+          ]
+        },
+        {
+          "moduleName": "Module 1.2: Core AI-Driven Development",
+          "objective": "Move from 'asking' the AI to 'directing' it. Learn to use AI to actively write, edit, and fix code in-place using the most powerful features.",
+          "lessons": [
+            {
+              "lessonName": "Harnessing Agent Mode: Understanding and Applying Autonomous, Multi-Step Code Modifications for Complex Tasks",
+              "keyCursorFeatures": ["Agent Mode", "AI-driven Edits", "Edit in Chat (Cmd/Ctrl+K)"],
+              "sourceLessonIds": ["2A-1"]
+            },
+            {
+              "lessonName": "Effective Context Management: Mastering the Art of Providing Code Context and File References (@-mentions) for Precise AI Results",
+              "keyCursorFeatures": ["Context Management", "@-file", "@-symbol", "@-folder"],
+              "sourceLessonIds": ["2A-5"]
+            },
+            {
+              "lessonName": "Orchestrating Multi-File Changes: Using the 'Composer' to Plan and Execute Complex Edits Across Multiple Files Simultaneously",
+              "keyCursorFeatures": ["Composer", "Multi-file Edits"],
+              "sourceLessonIds": ["2A-2"]
+            }
+          ]
+        },
+        {
+          "moduleName": "Module 1.3: Quality, Debugging, and Refactoring",
+          "objective": "Build a robust workflow for improving existing code, finding bugs, and generating tests—all initiated from within Cursor.",
+          "lessons": [
+            {
+              "lessonName": "AI-Powered Bug Identification and Diagnosis: Using Cursor to Read Error Messages, Trace Root Causes, and Understand Stack Traces",
+              "keyCursorFeatures": ["Ask Mode (for errors)", "Debugging", "Error Analysis"],
+              "sourceLessonIds": ["2B-1"]
+            },
+            {
+              "lessonName": "Automated Test Generation: Prompting Cursor to Create Comprehensive Unit Tests and Integration Test Suites for Your Codebase",
+              "keyCursorFeatures": ["Test Generation", "Agent Mode", "Edit in Chat"],
+              "sourceLessonIds": ["2B-2"]
+            },
+            {
+              "lessonName": "Intelligent Code Refactoring: Applying AI to Simplify Complex Logic, Improve Readability, and Modernize Outdated Code Patterns",
+              "keyCursorFeatures": ["Edit in Chat", "Agent Mode", "Refactoring"],
+              "sourceLessonIds": ["2C-1", "2C-3", "2C-5"]
+            }
+          ]
+        },
+        {
+          "moduleName": "Module 1.4: Codebase Understanding and Documentation",
+          "objective": "Use Cursor to navigate and understand unfamiliar, large codebases and generate essential documentation on the fly.",
+          "lessons": [
+            {
+              "lessonName": "Project-Wide Search and Discovery: Using Semantic Search and AI to Find Code, Functions, and Dependencies Across Large Projects",
+              "keyCursorFeatures": ["Global Search", "Semantic Search", "Go to Definition"],
+              "sourceLessonIds": ["2D-1"]
+            },
+            {
+              "lessonName": "Generating Project Summaries and Architecture Overviews: Asking Cursor to Create High-Level Overviews of a Codebase's Purpose and Structure",
+              "keyCursorFeatures": ["Ask Mode", "Codebase Analysis", "@-folder"],
+              "sourceLessonIds": ["2D-3", "2D-2"]
+            },
+            {
+              "lessonName": "Comprehensive Documentation Generation: Using Cursor to Create Clear READMEs, API Documentation, and Inline Comments",
+              "keyCursorFeatures": ["Generate Docs", "Agent Mode", "Ask Mode"],
+              "sourceLessonIds": ["2E-1", "2E-2", "2E-3"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pathName": "Path A: The Frontend Specialist",
+      "description": "Learn to build, debug, and deploy modern web applications using Cursor as your primary development environment.",
+      "modules": [
+        {
+          "moduleName": "Module 2.1: Modern Web Foundations with Cursor",
+          "objective": "Rapidly build and iterate on UI components, manage state, and handle client-server interactions using Cursor's AI.",
+          "lessons": [
+            {
+              "lessonName": "Building React Components with AI Assistance: Using Cursor to Generate, Refactor, and Debug React Components, Hooks, and State Management",
+              "keyCursorFeatures": ["Agent Mode", "Edit in Chat", "Test Generation"],
+              "sourceLessonIds": ["3A-1"]
+            },
+            {
+              "lessonName": "Full-Stack Development with Next.js: Leveraging Cursor to Create API Routes, Implement Server-Side Rendering, and Manage Client/Server Code",
+              "keyCursorFeatures": ["Agent Mode", "Multi-file Edits", "Context Management"],
+              "sourceLessonIds": ["3A-2"]
+            },
+            {
+              "lessonName": "Rapid UI Development with Tailwind CSS: Prompting Cursor to Apply Utility-First Classes, Create Responsive Designs, and Style Components",
+              "keyCursorFeatures": ["Edit in Chat", "Code Generation", "Ask Mode"],
+              "sourceLessonIds": ["3A-4"]
+            },
+            {
+              "lessonName": "Mastering TypeScript Development: Using Cursor's AI to Enforce Type Safety, Generate Complex Type Definitions, and Refactor JavaScript to TypeScript",
+              "keyCursorFeatures": ["Agent Mode", "Error Analysis", "Code Generation"],
+              "sourceLessonIds": ["3A-3"]
+            }
+          ]
+        },
+        {
+          "moduleName": "Module 2.2: Deployment and CI/CD with Cursor",
+          "objective": "Configure and automate the deployment of your frontend applications directly from the Cursor IDE.",
+          "lessons": [
+            {
+              "lessonName": "Streamlined Deployment to Vercel: Using Cursor to Configure Project Settings, Manage Environment Variables, and Deploy Projects to Vercel",
+              "keyCursorFeatures": ["Terminal Integration", "File Editing", "Ask Mode"],
+              "sourceLessonIds": ["3B-1"]
+            },
+            {
+              "lessonName": "Automating Workflows with CI/CD: Using Cursor to Create and Debug GitHub Actions for Automated Testing and Deployment Pipelines",
+              "keyCursorFeatures": ["Agent Mode", "File Editing (YAML)", "Terminal Integration"],
+              "sourceLessonIds": ["3B-4"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pathName": "Path B: The Backend & Cloud/DevOps Specialist",
+      "description": "Learn to build robust APIs, manage cloud infrastructure, and create CI/CD pipelines using Cursor and AWS.",
+      "modules": [
+        {
+          "moduleName": "Module 3.1: API, Data, and Containerization with Cursor",
+          "objective": "Build and containerize a backend application, focusing on API logic, database interaction, and Docker.",
+          "lessons": [
+            {
+              "lessonName": "Building RESTful APIs and Integrating Services: Using Cursor to Create Endpoints, Handle Requests, and Integrate Third-Party APIs (e.g., in Python/Node.js)",
+              "keyCursorFeatures": ["Agent Mode", "Code Generation", "Test Generation"],
+              "sourceLessonIds": ["3A-9"]
+            },
+            {
+              "lessonName": "Database Interaction and Schema Design: Leveraging Cursor to Write SQL Queries, Design Schemas, and Handle Database Migrations",
+              "keyCursorFeatures": ["Ask Mode", "Code Generation", "Edit in Chat"],
+              "sourceLessonIds": ["3A-10"]
+            },
+            {
+              "lessonName": "Docker and Containerization Workflows: Prompting Cursor to Generate Dockerfiles, Build Images, and Configure Docker Compose for Local Development",
+              "keyCursorFeatures": ["Agent Mode", "File Generation", "Terminal Integration"],
+              "sourceLessonIds": ["3B-6"]
+            }
+          ]
+        },
+        {
+          "moduleName": "Module 3.2: AWS Core Services with Cursor",
+          "objective": "Develop and deploy serverless applications on AWS, interacting with core services from the Cursor terminal and editor.",
+          "lessons": [
+            {
+              "lessonName": "Configuring AWS CLI and SDKs in Cursor: Using the Integrated Terminal and Environment Settings to Securely Manage AWS Credentials and SDKs",
+              "keyCursorFeatures": ["Terminal Integration", "File Editing (.env)", "Ask Mode"],
+              "sourceLessonIds": ["3G-2", "3G-3", "3G-4"]
+            },
+            {
+              "lessonName": "Serverless Development with AWS Lambda: Writing, Debugging, and Testing AWS Lambda Functions Directly within the Cursor IDE",
+              "keyCursorFeatures": ["Code Generation", "Agent Mode", "Terminal Integration (SAM CLI)"],
+              "sourceLessonIds": ["3G-5", "3G-6"]
+            },
+            {
+              "lessonName": "Integrating API Gateway with Lambda: Using Cursor to Configure API Gateway Endpoints, Map Requests, and Build Serverless REST APIs",
+              "keyCursorFeatures": ["Agent Mode", "Ask Mode", "Code Generation"],
+              "sourceLessonIds": ["3G-7"]
+            },
+            {
+              "lessonName": "Event-Driven Architecture: Using Cursor to Develop Lambda Functions Triggered by S3, SQS, and SNS Events and Handle Their Payloads",
+              "keyCursorFeatures": ["Code Generation", "Ask Mode (for payloads)", "Agent Mode"],
+              "sourceLessonIds": ["3G-8", "3G-18", "3G-19"]
+            },
+            {
+              "lessonName": "DynamoDB Development: Applying Cursor's AI to Design DynamoDB Tables, Write Query Operations, and Optimize Indexing",
+              "keyCursorFeatures": ["Ask Mode", "Code Generation", "Test Generation"],
+              "sourceLessonIds": ["3G-13"]
+            }
+          ]
+        },
+        {
+          "moduleName": "Module 3.3: Infrastructure as Code (IaC) with Cursor",
+          "objective": "Define, deploy, and manage your entire AWS infrastructure as code, authored and debugged within Cursor.",
+          "lessons": [
+            {
+              "lessonName": "Infrastructure as Code with AWS CloudFormation: Using Cursor to Author, Debug, and Deploy CloudFormation YAML/JSON Templates",
+              "keyCursorFeatures": ["File Generation", "Ask Mode (for syntax)", "Terminal Integration"],
+              "sourceLessonIds": ["3G-22"]
+            },
+            {
+              "lessonName": "Serverless Applications with AWS SAM: Leveraging Cursor to Build, Locally Test, and Deploy SAM-based Serverless Applications",
+              "keyCursorFeatures": ["File Generation", "Agent Mode", "Terminal Integration (sam build/deploy)"],
+              "sourceLessonIds": ["3G-23"]
+            },
+            {
+              "lessonName": "Monitoring and Debugging with CloudWatch: Using Cursor's Terminal and AI to Query CloudWatch Logs and Analyze Application Failures",
+              "keyCursorFeatures": ["Terminal Integration (AWS CLI)", "Ask Mode (for log analysis)"],
+              "sourceLessonIds": ["3G-28"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pathName": "Path C: The Data & AI Specialist",
+      "description": "Learn to perform data analysis and build advanced AI applications by integrating AWS Bedrock models into your Cursor workflow.",
+      "modules": [
+        {
+          "moduleName": "Module 4.1: Data Analysis and Automation with Cursor",
+          "objective": "Use Cursor for interactive data analysis, scripting, and visualization within Jupyter Notebooks and Python scripts.",
+          "lessons": [
+            {
+              "lessonName": "Python for Automation and Data Processing: Using Cursor to Write and Debug Python Scripts with Libraries like Pandas and NumPy",
+              "keyCursorFeatures": ["Agent Mode", "Edit in Chat", "Code Generation"],
+              "sourceLessonIds": ["3A-6"]
+            },
+            {
+              "lessonName": "Interactive Development in Jupyter Notebooks: Leveraging Cursor's Notebook Workflow for Data Analysis, Visualization, and Iterative Development",
+              "keyCursorFeatures": ["Jupyter Notebooks", "Code Generation (in cells)"],
+              "sourceLessonIds": ["3A-7"]
+            },
+            {
+              "lessonName": "AI-Driven Data Analysis and Insights: Prompting Cursor to Analyze Data, Generate Statistical Summaries, and Create Visualization Code",
+              "keyCursorFeatures": ["Ask Mode", "Code Generation (Matplotlib/Seaborn)"],
+              "sourceLessonIds": ["3A-8"]
+            }
+          ]
+        },
+        {
+          "moduleName": "Module 4.2: AWS Bedrock Foundations with Cursor",
+          "objective": "Connect Cursor to AWS Bedrock and learn to use various foundation models for tasks beyond Cursor's native capabilities.",
+          "lessons": [
+            {
+              "lessonName": "Integrating AWS Bedrock: Configuring AWS SDK Bedrock Clients in Python/Node.js and Authenticating from the Cursor Environment",
+              "keyCursorFeatures": ["Terminal Integration", "File Editing", "Code Generation"],
+              "sourceLessonIds": ["3H-1", "3H-3", "3H-4"]
+            },
+            {
+              "lessonName": "Hybrid Model Strategy: Comparing Cursor's Native Models vs. Bedrock Models (Claude, Llama) for Specific Tasks and Switching Between Them",
+              "keyCursorFeatures": ["Model Selection", "Ask Mode", "Settings Configuration"],
+              "sourceLessonIds": ["3H-5", "3H-6", "3H-7"]
+            },
+            {
+              "lessonName": "Advanced Text Generation and Embeddings: Using Cursor to Write Code that Calls Bedrock APIs for Text Generation and Creates Vector Embeddings",
+              "keyCursorFeatures": ["Code Generation", "Agent Mode", "Ask Mode (for API docs)"],
+              "sourceLessonIds": ["3H-9", "3H-11"]
+            }
+          ]
+        },
+        {
+          "moduleName": "Module 4.3: Retrieval-Augmented Generation (RAG) with Cursor",
+          "objective": "Build a complete RAG application from scratch, using Cursor to write the code for each component of the pipeline.",
+          "lessons": [
+            {
+              "lessonName": "Building Bedrock Knowledge Bases: Using Cursor to Manage the Document Ingestion and Processing Pipeline for a Knowledge Base",
+              "keyCursorFeatures": ["Agent Mode", "Code Generation", "Terminal Integration"],
+              "sourceLessonIds": ["3H-13", "3H-15"]
+            },
+            {
+              "lessonName": "Building RAG Systems: Using Cursor to Develop a Retrieval-Augmented Generation Pipeline for Accurate, Context-Aware Responses",
+              "keyCursorFeatures": ["Agent Mode", "Context Management", "Code Generation"],
+              "sourceLessonIds": ["3H-14"]
+            },
+            {
+              "lessonName": "Integrating Vector Databases: Using Cursor to Write Code that Connects Bedrock Embeddings to Vector DBs like Pinecone or Weaviate",
+              "keyCursorFeatures": ["Code Generation", "Ask Mode (for SDKs)", "Agent Mode"],
+              "sourceLessonIds": ["3H-12"]
+            }
+          ]
+        },
+        {
+          "moduleName": "Module 4.4: Autonomous Workflows with Bedrock Agents",
+          "objective": "Define, build, and debug autonomous agents that can interact with AWS services, all developed within Cursor.",
+          "lessons": [
+            {
+              "lessonName": "Developing Bedrock Agents: Using Cursor to Define Autonomous Agents, Action Schemas, and Tool Integrations with AWS Services",
+              "keyCursorFeatures": ["File Generation (JSON/YAML)", "Code Generation", "Ask Mode"],
+              "sourceLessonIds": ["3H-17", "3H-18"]
+            },
+            {
+              "lessonName": "Monitoring and Debugging Agents: Using Cursor to Trace Agent Execution, Analyze Logs, and Optimize Agent Performance",
+              "keyCursorFeatures": ["Terminal Integration", "Ask Mode (for log analysis)"],
+              "sourceLessonIds": ["3H-20"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pathName": "Phase 3: The Expert & Leader (Reference Library)",
+      "description": "This is not a linear course, but an 'on-demand' library for seasoned experts. Tackle these modules as you face complex enterprise challenges or need to enable your team.",
+      "modules": [
+        {
+          "moduleName": "Module 5.1: Enterprise Architecture and Governance",
+          "objective": "Solve complex, large-scale architectural and governance problems using Cursor as your control plane.",
+          "lessons": [
+            {
+              "lessonName": "Advanced AWS Architecture: Using Cursor to Design and Manage Multi-Region, Multi-Account, and Microservice-Based AWS Applications",
+              "keyCursorFeatures": ["Agent Mode", "IaC Generation", "Ask Mode (for architecture)"],
+              "sourceLessonIds": ["4G-1", "4G-4", "4G-7"]
+            },
+            {
+              "lessonName": "Enterprise Governance and Compliance: Implementing AWS Control Tower, Guardrails, and Auditing for Compliance (HIPAA, PCI) within your IaC",
+              "keyCursorFeatures": ["File Generation", "Ask Mode (for compliance)", "Agent Mode"],
+              "sourceLessonIds": ["4G-8", "4G-9"]
+            },
+            {
+              "lessonName": "Advanced Bedrock Orchestration: Designing and Building Coordinated Multi-Agent 'Swarms' for Complex Problem-Solving",
+              "keyCursorFeatures": ["Code Generation", "Ask Mode", "Agent Mode"],
+              "sourceLessonIds": ["4G-12"]
+            }
+          ]
+        },
+        {
+          "moduleName": "Module 5.2: Leadership and Team Enablement",
+          "objective": "Scale your expertise by embedding best practices directly into your team's workflow using Cursor's features.",
+          "lessons": [
+            {
+              "lessonName": "Enforcing Code Standards: Creating and Implementing Repository-Specific `.cursor/rules` to Enforce Patterns and Standards Across a Team",
+              "keyCursorFeatures": [".cursor/rules", "File Editing", "Ask Mode"],
+              "sourceLessonIds": ["3D-1"]
+            },
+            {
+              "lessonName": "Establishing Best Practices and Mentoring: Using Cursor to Document Team Workflows, Create Learning Paths, and Mentor Junior Developers",
+              "keyCursorFeatures": ["Ask Mode", "Generate Docs", "Agent Mode"],
+              "sourceLessonIds": ["4E-1", "4E-2"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+```

@@ -1,0 +1,310 @@
+{
+  "learningPaths": [
+    {
+      "pathName": "Phase 1: The Core Foundation (Everyone)",
+      "description": "This mandatory phase builds the foundational skills for using Claude effectively. It focuses on mastering the art of communication, prompt engineering, and understanding the tool's core capabilities, including file handling.",
+      "modules": [
+        {
+          "moduleName": "Module 1.1: Fundamentals & Foundational Communication",
+          "objective": "Understand Claude's models, learn to navigate the interface, and master the art of crafting clear, effective prompts.",
+          "lessons": [
+            {
+              "lessonName": "Getting Started: Understanding Claude's Models (Haiku, Sonnet, Opus) and Navigating the Web Interface",
+              "keyClaudeFeatures": ["Model Comparison", "Web Interface", "Account Setup"],
+              "sourceLessonIds": ["1A-1", "1A-2", "1A-3", "1A-4"]
+            },
+            {
+              "lessonName": "Crafting Effective Prompts: Writing Clear, Specific Requests, Providing Context, and Asking Effective Questions",
+              "keyClaudeFeatures": ["Prompt Structure", "Context Provision", "Iterative Refinement"],
+              "sourceLessonIds": ["1B-6", "1B-7"]
+            },
+            {
+              "lessonName": "Mastering Multi-Turn Conversations: Building Context, Maintaining Thread Continuity, and Asking Follow-up Questions",
+              "keyClaudeFeatures": ["Conversation Flow", "Context Management", "Conversation History"],
+              "sourceLessonIds": ["1B-10"]
+            },
+            {
+              "lessonName": "Core Capabilities: Using Claude for Explanation, Summarization, and Basic Code/Writing Tasks",
+              "keyClaudeFeatures": ["Text Generation", "Summarization", "Code Explanation", "Learning"],
+              "sourceLessonIds": ["1C-9", "1C-11", "1C-12", "1C-13"]
+            }
+          ]
+        },
+        {
+          "moduleName": "Module 1.2: Applied Prompt Engineering & File Handling",
+          "objective": "Move from basic prompts to advanced techniques, including file uploads, few-shot examples, and structured reasoning.",
+          "lessons": [
+            {
+              "lessonName": "Advanced Prompt Structure: Providing Few-Shot Examples, Setting Constraints, and Defining Desired Output Formats",
+              "keyClaudeFeatures": ["Few-Shot Prompting", "Constraints", "Format Definition"],
+              "sourceLessonIds": ["2A-17", "2A-18"]
+            },
+            {
+              "lessonName": "Mastering File Uploads: Analyzing Single and Multiple Documents, Code Files, and Images",
+              "keyClaudeFeatures": ["File Upload", "Document Analysis", "Code Analysis", "Image Analysis"],
+              "sourceLessonIds": ["2F-41", "2F-42", "2F-43", "2F-44", "2F-45"]
+            },
+            {
+              "lessonName": "Chain-of-Thought Prompting: Guiding Claude Through Complex, Step-by-Step Reasoning for Better Problem-Solving",
+              "keyClaudeFeatures": ["Chain-of-Thought", "Structured Reasoning", "Task Decomposition"],
+              "sourceLessonIds": ["3F-72"]
+            },
+            {
+              "lessonName": "Ethical and Responsible Use: Understanding Limitations, Verifying Information, and Protecting Sensitive Data",
+              "keyClaudeFeatures": ["Hallucination Awareness", "Fact-Checking", "Data Privacy"],
+              "sourceLessonIds": ["1B-8", "C1-111", "C1-112", "C1-114"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pathName": "Path A: The Technical Professional (Developer, DevOps, Architect)",
+      "description": "A specialized path for technical users focused on using Claude for coding, debugging, system design, and integrating with AWS and Bedrock.",
+      "modules": [
+        {
+          "moduleName": "Module 2.1: AI-Driven Development & Debugging",
+          "objective": "Use Claude to accelerate the entire development lifecycle, from writing code and tests to debugging and refactoring.",
+          "lessons": [
+            {
+              "lessonName": "Code Generation and Refactoring: Using Claude to Generate Functions, Modernize Patterns, and Simplify Complex Code",
+              "keyClaudeFeatures": ["Code Generation", "Refactoring", "Pattern Modernization"],
+              "sourceLessonIds": ["2B-21", "2B-25"]
+            },
+            {
+              "lessonName": "Code Review and Debugging: Uploading Code Files to Find Bugs, Analyze Stack Traces, and Suggest Improvements",
+              "keyClaudeFeatures": ["Code Review", "Bug Identification", "Error Analysis"],
+              "sourceLessonIds": ["2B-22", "2F-43"]
+            },
+            {
+              "lessonName": "Testing Strategy and Test Case Generation: Prompting Claude to Develop Testing Strategies and Create Comprehensive Unit/Integration Tests",
+              "keyClaudeFeatures": ["Test Planning", "Test Case Generation", "Edge Case Identification"],
+              "sourceLessonIds": ["3A-47"]
+            }
+          ]
+        },
+        {
+          "moduleName": "Module 2.2: System & API Design",
+          "objective": "Leverage Claude as a design partner to plan complex systems, APIs, and identify technical debt.",
+          "lessons": [
+            {
+              "lessonName": "Architecture Design and Planning: Using Claude to Brainstorm System Architectures, Select Components, and Plan Large Projects",
+              "keyClaudeFeatures": ["System Design", "Architecture Patterns", "Scalability Planning"],
+              "sourceLessonIds": ["3A-46"]
+            },
+            {
+              "lessonName": "API Design and Documentation: Prompting Claude to Design RESTful API Endpoints and Generate Clear API Documentation",
+              "keyClaudeFeatures": ["API Design", "Endpoint Planning", "Documentation Generation"],
+              "sourceLessonIds": ["2B-24"]
+            },
+            {
+              "lessonName": "Technical Debt, Security, and Performance Analysis: Using Claude to Identify Vulnerabilities, Bottlenecks, and Tech Debt",
+              "keyClaudeFeatures": ["Security Analysis", "Performance Optimization", "Tech Debt Identification"],
+              "sourceLessonIds": ["3A-48", "3A-49", "3A-50"]
+            }
+          ]
+        },
+        {
+          "moduleName": "Module 2.3: AWS Architecture & Planning with Claude",
+          "objective": "Use Claude as an expert assistant for designing, optimizing, and troubleshooting AWS infrastructure.",
+          "lessons": [
+            {
+              "lessonName": "AWS Architecture Design: Using Claude to Design Scalable AWS Architectures and Select the Right Services (e.g., Lambda, S3, DynamoDB)",
+              "keyClaudeFeatures": ["Architecture Design", "Service Selection", "Best Practices"],
+              "sourceLessonIds": ["3H-121", "3H-123", "3H-125", "3H-127"]
+            },
+            {
+              "lessonName": "Infrastructure as Code Assistance: Generating and Optimizing CloudFormation and Terraform Code with Claude",
+              "keyClaudeFeatures": ["IaC Generation", "CloudFormation", "Terraform"],
+              "sourceLessonIds": ["3H-122"]
+            },
+            {
+              "lessonName": "AWS Troubleshooting and Optimization: Diagnosing AWS Errors and Planning Cost/Performance Optimization Strategies",
+              "keyClaudeFeatures": ["Error Diagnosis", "Cost Optimization", "Performance Tuning"],
+              "sourceLessonIds": ["3H-130", "3H-131", "3H-132"]
+            }
+          ]
+        },
+        {
+          "moduleName": "Module 2.4: AWS Bedrock Integration Design",
+          "objective": "Use Claude to plan and architect applications that integrate with AWS Bedrock, including RAG and Agent-based systems.",
+          "lessons": [
+            {
+              "lessonName": "Bedrock Architecture Design: Using Claude to Design Bedrock-Based Applications, Select Models, and Plan Workflows",
+              "keyClaudeFeatures": ["Bedrock Architecture", "Model Selection", "Integration Design"],
+              "sourceLessonIds": ["3I-135", "3I-136"]
+            },
+            {
+              "lessonName": "RAG System Design: Prompting Claude to Design a Complete Retrieval-Augmented Generation (RAG) System Architecture",
+              "keyClaudeFeatures": ["RAG Architecture", "Retrieval Optimization", "Prompt Engineering (RAG)"],
+              "sourceLessonIds": ["3I-137"]
+            },
+            {
+              "lessonName": "Bedrock Agent and Knowledge Base Design: Using Claude to Plan Bedrock Agents and Document Processing for Knowledge Bases",
+              "keyClaudeFeatures": ["Agent Design", "Knowledge Base Planning", "Tool Definition"],
+              "sourceLessonIds": ["3I-138", "3I-141"]
+            },
+            {
+              "lessonName": "Optimizing Bedrock Applications: Using Claude to Brainstorm Cost and Performance Optimization Strategies for Bedrock",
+              "keyClaudeFeatures": ["Cost Optimization", "Performance Optimization", "Token Optimization"],
+              "sourceLessonIds": ["3I-142", "3I-143"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pathName": "Path B: The Business & Research Professional (Analyst, Strategist, Writer)",
+      "description": "A specialized path for non-technical or business-focused users. This path emphasizes research, data analysis, strategic planning, and advanced content creation.",
+      "modules": [
+        {
+          "moduleName": "Module 3.1: Advanced Research & Analysis",
+          "objective": "Leverage Claude as a powerful research assistant to analyze data, synthesize documents, and perform complex analysis.",
+          "lessons": [
+            {
+              "lessonName": "Data Interpretation and Insight Generation: Using Claude to Analyze Data, Find Patterns, and Generate Actionable Insights",
+              "keyClaudeFeatures": ["Data Analysis", "Trend Identification", "Insight Generation"],
+              "sourceLessonIds": ["2C-27"]
+            },
+            {
+              "lessonName": "Comprehensive Document Analysis: Extracting Key Information, Summarizing Multiple Documents, and Synthesizing Themes",
+              "keyClaudeFeatures": ["Document Summarization", "Information Extraction", "Literature Synthesis"],
+              "sourceLessonIds": ["2C-29", "2C-30"]
+            },
+            {
+              "lessonName": "Comparative and Competitive Analysis: Using Claude to Compare Options, Technologies, and Competitor Strategies",
+              "keyClaudeFeatures": ["Comparative Analysis", "Competitor Analysis", "Market Positioning"],
+              "sourceLessonIds": ["2C-28", "3B-51"]
+            },
+            {
+              "lessonName": "Policy and Regulation Analysis: Using Claude to Interpret and Summarize Complex Policies, Regulations, and Compliance Requirements",
+              "keyClaudeFeatures": ["Regulatory Interpretation", "Compliance Analysis", "Policy Impact"],
+              "sourceLessonIds": ["3B-53"]
+            }
+          ]
+        },
+        {
+          "moduleName": "Module 3.2: Strategic Planning & Business Operations",
+          "objective": "Use Claude as a strategic partner to develop business plans, manage projects, and optimize internal processes.",
+          "lessons": [
+            {
+              "lessonName": "Business Plan and Strategy Development: Prompting Claude to Help Create Business Plans, Strategy Documents, and Growth Plans",
+              "keyClaudeFeatures": ["Business Plan Creation", "Strategy Formulation", "Market Analysis"],
+              "sourceLessonIds": ["3C-56"]
+            },
+            {
+              "lessonName": "Project Planning and Management: Using Claude to Plan Project Milestones, Identify Risks, and Develop Management Strategies",
+              "keyClaudeFeatures": ["Project Planning", "Milestone Identification", "Risk Analysis"],
+              "sourceLessonIds": ["3C-58"]
+            },
+            {
+              "lessonName": "Process Improvement and Workflow Design: Analyzing Existing Processes and Prompting Claude to Design Optimized Workflows",
+              "keyClaudeFeatures": ["Process Analysis", "Workflow Redesign", "Optimization"],
+              "sourceLessonIds": ["3C-60"]
+            }
+          ]
+        },
+        {
+          "moduleName": "Module 3.3: Advanced Content & Communication",
+          "objective": "Master Claude for creating high-quality, long-form content, developing marketing strategies, and defining a brand voice.",
+          "lessons": [
+            {
+              "lessonName": "Technical Writing and Explanation: Creating Clear Technical Documentation, Guides, and Tutorials for Complex Topics",
+              "keyClaudeFeatures": ["Technical Writing", "Guide Creation", "Audience Adaptation"],
+              "sourceLessonIds": ["2D-32"]
+            },
+            {
+              "lessonName": "Marketing Strategy and Campaign Development: Using Claude to Brainstorm Marketing Strategies, Campaigns, and Content Calendars",
+              "keyClaudeFeatures": ["Marketing Strategy", "Campaign Planning", "Content Calendar"],
+              "sourceLessonIds": ["3D-61", "3D-63"]
+            },
+            {
+              "lessonName": "Brand Voice and Messaging: Developing a Consistent Brand Voice, Message Frameworks, and Communication Guidelines",
+              "keyClaudeFeatures": ["Brand Voice", "Message Consistency", "Communication Guidelines"],
+              "sourceLessonIds": ["3D-65"]
+            },
+            {
+              "lessonName": "Presentation and Pitch Development: Using Claude to Create Compelling Narratives, Structures, and Talking Points for Presentations",
+              "keyClaudeFeatures": ["Presentation Development", "Narrative Structure", "Pitch Creation"],
+              "sourceLessonIds": ["3D-62"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pathName": "Phase 3: The Enterprise & Team Leader",
+      "description": "This mastery-level path is for leaders, managers, and architects responsible for scaling Claude across an organization using Claude Teams and enterprise-grade architecture.",
+      "modules": [
+        {
+          "moduleName": "Module 4.1: Claude Teams Fundamentals",
+          "objective": "Learn to set up, manage, and use Claude Teams for secure, effective organizational collaboration.",
+          "lessons": [
+            {
+              "lessonName": "Claude Teams Setup and Management: Creating a Team, Managing Members, and Configuring Workspace Settings",
+              "keyClaudeFeatures": ["Team Creation", "Member Management", "Permissions"],
+              "sourceLessonIds": ["C4-181", "C4-182"]
+            },
+            {
+              "lessonName": "Team Collaboration Workflows: Using Shared Workspaces, Sharing Conversations, and Collaborating on Projects",
+              "keyClaudeFeatures": ["Shared Workspaces", "Conversation Sharing", "Project Collaboration"],
+              "sourceLessonIds": ["C4-183", "C4-184"]
+            },
+            {
+              "lessonName": "Team Knowledge Management: Building a Shared Organizational Knowledge Base and Documenting Best Practices within Claude Teams",
+              "keyClaudeFeatures": ["Knowledge Base", "Best Practices", "Organizational Learning"],
+              "sourceLessonIds": ["C4-185"]
+            }
+          ]
+        },
+        {
+          "moduleName": "Module 4.2: Team Governance & Scaling",
+          "objective": "Establish the policies, standards, and training programs needed to scale Claude responsibly and effectively.",
+          "lessons": [
+            {
+              "lessonName": "Creating Custom Instructions for Teams: Establishing Team-Level Standards, Personas, and Guidelines for Consistent Outputs",
+              "keyClaudeFeatures": ["Custom Instructions", "Team Standards", "Consistency"],
+              "sourceLessonIds": ["C4-186"]
+            },
+            {
+              "lessonName": "Establishing Team Governance and Standards: Creating Usage Guidelines, Compliance Policies, and Cost Governance Plans",
+              "keyClaudeFeatures": ["Governance Frameworks", "Compliance Policies", "Cost Governance"],
+              "sourceLessonIds": ["C4-191", "C4-193", "C4-194"]
+            },
+            {
+              "lessonName": "Building Team Expertise: Developing Training Programs and Mentoring Strategies to Scale Claude Adoption Across the Organization",
+              "keyClaudeFeatures": ["Training Development", "Mentoring", "Knowledge Sharing"],
+              "sourceLessonIds": ["4D-96", "4D-100", "C4-192"]
+            }
+          ]
+        },
+        {
+          "moduleName": "Module 4.3: Enterprise-Scale Architecture & Integration",
+          "objective": "For technical leaders: Plan and design robust, secure, and scalable enterprise-wide integrations with the Claude API, AWS, and Bedrock.",
+          "lessons": [
+            {
+              "lessonName": "Enterprise Claude API Integration: Architecting Large-Scale, Secure, and Scalable Integrations with the Claude API",
+              "keyClaudeFeatures": ["API Integration", "Enterprise Architecture", "API Scaling"],
+              "sourceLessonIds": ["4C-91", "4C-94"]
+            },
+            {
+              "lessonName": "Advanced AWS Enterprise Architecture: Using Claude to Design Multi-Account, Multi-Region, and Disaster Recovery Strategies",
+              "keyClaudeFeatures": ["Multi-Account Strategy", "Multi-Region", "Disaster Recovery"],
+              "sourceLessonIds": ["4G-151", "4G-153", "4G-154"]
+            },
+            {
+              "lessonName": "Enterprise Bedrock Deployment: Using Claude to Plan Scalable, Governed, and Responsible AI Deployments with Bedrock",
+              "keyClaudeFeatures": ["Enterprise Deployment", "Bedrock Governance", "Responsible AI"],
+              "sourceLessonIds": ["3I-147", "4G-156", "4G-160"]
+            },
+            {
+              "lessonName": "Enterprise Security and Compliance: Implementing Security, Governance, and Compliance for Claude, AWS, and Bedrock",
+              "keyClaudeFeatures": ["Data Security", "API Security", "Bedrock Security", "Compliance"],
+              "sourceLessonIds": ["C3-171", "C3-172", "C3-173", "C3-174"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}s

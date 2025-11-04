@@ -1,0 +1,137 @@
+[
+  {
+    "id": "module-1",
+    "title": "AI Foundation & Tool Fluency",
+    "subtitle": "Core AI concepts, prompt engineering, and essential tool mastery",
+    "duration": "22 hours",
+    "lessons": 66,
+    "labs": 4,
+    "prerequisites": ["No prerequisites required"],
+    "keyTopics": [
+      "AI Literacy & Mindset",
+      "Prompt Engineering & Interaction Patterns",
+      "AI Tools Hands-On",
+      "Retrieval-Augmented Generation (RAG) Fundamentals",
+      "Deployment Options & Trade-offs",
+      "LLM Limitations & Emerging Solutions"
+    ],
+    "skillsGained": [
+      "Master fundamental AI/LLM concepts and architecture",
+      "Develop expert-level prompt engineering skills",
+      "Achieve fluency with core AI tools and platforms",
+      "Understand RAG patterns and vector search",
+      "Navigate deployment options and trade-offs"
+    ]
+  },
+  {
+    "id": "module-2",
+    "title": "AI in the Software Development Lifecycle",
+    "subtitle": "Integrating AI throughout planning, development, testing, and documentation",
+    "duration": "11 hours",
+    "lessons": 32,
+    "labs": 4,
+    "prerequisites": ["Module 1: AI Foundation & Tool Fluency"],
+    "keyTopics": [
+      "AI-Powered Planning & Analysis",
+      "AI-Augmented Coding & Testing",
+      "Documentation & Knowledge Capture",
+      "Collaboration Patterns"
+    ],
+    "skillsGained": [
+      "Apply AI to requirements analysis and technical planning",
+      "Accelerate coding with AI-assisted development patterns",
+      "Automate documentation and knowledge capture",
+      "Enhance team collaboration with AI-powered workflows"
+    ]
+  },
+  {
+    "id": "module-3",
+    "title": "AI-Augmented Engineering (Role-Specific)",
+    "subtitle": "Specialized AI applications for data, QA, Salesforce, integration, and PM roles",
+    "duration": "16 hours",
+    "lessons": 48,
+    "labs": 4,
+    "prerequisites": [
+      "Module 1: AI Foundation & Tool Fluency",
+      "Module 2: AI in the Software Development Lifecycle"
+    ],
+    "keyTopics": [
+      "Data Engineers & Analysts",
+      "QA Engineers",
+      "Salesforce & SaaS Engineers",
+      "Workato / Integration Specialists",
+      "PMs & Tech Leads"
+    ],
+    "skillsGained": [
+      "Master role-specific AI tools and techniques",
+      "Implement AI-driven automation for specialized workflows",
+      "Develop expertise in domain-specific AI applications",
+      "Create custom AI solutions for professional challenges"
+    ]
+  },
+  {
+    "id": "module-4",
+    "title": "AI Agent & Platform Architecture",
+    "subtitle": "Building sophisticated AI systems with Claude Teams, Claude Code, and Cursor",
+    "duration": "14 hours",
+    "lessons": 43,
+    "labs": 4,
+    "prerequisites": ["Module 1: AI Foundation & Tool Fluency"],
+    "keyTopics": [
+      "The Collaborative AI Workspace (Claude Teams)",
+      "The Command Line as Conversation (Claude Code)",
+      "The AI-Native IDE (Cursor)",
+      "Hybrid Workflow Integration",
+      "Agent Architecture & Orchestration"
+    ],
+    "skillsGained": [
+      "Master enterprise AI collaboration platforms",
+      "Design and implement agentic workflows",
+      "Build hybrid AI development environments",
+      "Architect multi-agent systems and orchestration patterns"
+    ]
+  },
+  {
+    "id": "module-5",
+    "title": "AI Strategy, Delivery & Governance",
+    "subtitle": "Strategic implementation, risk management, and organizational transformation",
+    "duration": "8 hours",
+    "lessons": 23,
+    "labs": 4,
+    "prerequisites": [
+      "Module 1: AI Foundation & Tool Fluency",
+      "Module 2: AI in the Software Development Lifecycle"
+    ],
+    "keyTopics": [
+      "AI Delivery Strategy",
+      "Governance & Risk",
+      "Client Education & Adoption"
+    ],
+    "skillsGained": [
+      "Develop outcome-driven AI implementation strategies",
+      "Establish governance frameworks and risk management",
+      "Guide organizational AI adoption and change management",
+      "Build client trust and collaborative development processes"
+    ]
+  },
+  {
+    "id": "module-6",
+    "title": "Continuous Learning & Innovation Culture",
+    "subtitle": "Building learning organizations and measuring AI transformation success",
+    "duration": "8 hours",
+    "lessons": 24,
+    "labs": 4,
+    "prerequisites": ["Module 1: AI Foundation & Tool Fluency"],
+    "keyTopics": [
+      "Internal Learning Patterns",
+      "Innovation Tools & Habits",
+      "Organizational AI KPIs"
+    ],
+    "skillsGained": [
+      "Establish continuous learning and knowledge sharing systems",
+      "Create innovation-driven AI culture and practices",
+      "Implement measurement frameworks for AI transformation",
+      "Build sustainable competitive advantages through AI mastery"
+    ]
+  }
+]

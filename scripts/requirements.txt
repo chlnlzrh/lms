@@ -1,0 +1,6 @@
+aiohttp==3.9.1
+asyncio
+pathlib
+csv
+json
+logging
